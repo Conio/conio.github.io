@@ -1,0 +1,7 @@
+# Generated
+#
+site/
+
+# Filesystem
+#
+.DS_Store

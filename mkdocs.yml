@@ -1,0 +1,15 @@
+site_name: Conio SDK Documentation
+site_url: https://example.com/
+nav:
+    - Home: index.md
+    - 'Installazione':
+      - 'iOS': 'installation/iOS.md'
+      - 'Android': 'installation/Android.md'
+    - 'Configurazione': 'configuration/Configuration.md'
+    - 'Operazioni':
+      - 'Generale': 'operation/Operation.md'
+      - 'Crypto Request': 'operation/CryptoRequest.md'
+    - 'Utente': 'user/User.md'
+    - 'Operazioni sul mercato': 'exchange/Exchange.md'
+
+theme: windmill-dark
