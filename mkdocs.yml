@@ -1,5 +1,12 @@
+# Project information
 site_name: Conio SDK Documentation
-site_url: https://example.com/
+site_url: https://conioteam.github.io/conioteam.github.io
+
+# Repository
+repo_name: conioteam.github.io
+repo_url: https://github.com/conioteam/conioteam.github.io.git
+
+# Navigation
 nav:
     - Home: index.md
     - 'Installazione':
