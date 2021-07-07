@@ -45,3 +45,4 @@ Questo SDK rende semplice integrare un portafoglio Bitcoin Conio nella propria a
         *   [Limiti di trading](./pages/exchange/Exchange.md#recupero-limiti-di-trading)
         *   [Acquisto di Bitcoin](./pages/exchange/Exchange.md#acquisto-di-bitcoin)
         *   [Vendita di Bitcoin](./pages/exchange/Exchange.md#vendita-di-bitcoin)
+
