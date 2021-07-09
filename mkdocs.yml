@@ -19,4 +19,4 @@ nav:
     - 'Utente': 'user/User.md'
     - 'Operazioni sul mercato': 'exchange/Exchange.md'
 
-theme: windmill-dark
+#theme: windmill-dark
