@@ -19,4 +19,21 @@ nav:
     - 'Utente': 'user/User.md'
     - 'Operazioni sul mercato': 'exchange/Exchange.md'
 
-#theme: windmill-dark
+# Copyright
+# TBD
+# Theme
+theme:
+  name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    logo: material/library
+  features:
+    # - navigation.tabs
+    - navigation.instant
+    - navigation.expand
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
