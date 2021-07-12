@@ -1,14 +1,15 @@
 # Project information
 site_name: Conio SDK Documentation
-site_url: https://conioteam.github.io/conioteam.github.io
+site_url: https://sdk-docs.conio.com/
 
 # Repository
 repo_name: conioteam.github.io
-repo_url: https://github.com/conioteam/conioteam.github.io.git
+repo_url: https://github.com/Conio/conio.github.io
 
 # Navigation
 nav:
     - Home: index.md
+    - Changelog: 'CHANGELOG.md'
     - 'Installazione':
       - 'iOS': 'installation/iOS.md'
       - 'Android': 'installation/Android.md'
@@ -21,6 +22,7 @@ nav:
 
 # Copyright
 # TBD
+
 # Theme
 theme:
   name: material
@@ -37,3 +39,16 @@ theme:
     scheme: default
     primary: blue
     accent: blue
+
+# extra:
+#   alternate:
+#
+#     # Switch to English
+#     - name: English
+#       link: https://sdk-docs.conio.com/en/
+#       lang: en
+#
+#     # Switch to German
+#     - name: Italiano
+#       link: https://sdk-docs.conio.com/
+#       lang: it
