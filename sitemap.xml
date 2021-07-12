@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/</loc>
+         <loc>https://sdk-docs.conio.com/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/CHANGELOG/</loc>
+         <loc>https://sdk-docs.conio.com/CHANGELOG/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/configuration/Configuration/</loc>
+         <loc>https://sdk-docs.conio.com/configuration/Configuration/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/exchange/Exchange/</loc>
+         <loc>https://sdk-docs.conio.com/exchange/Exchange/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/installation/Android/</loc>
+         <loc>https://sdk-docs.conio.com/installation/Android/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/installation/iOS/</loc>
+         <loc>https://sdk-docs.conio.com/installation/iOS/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/operation/CryptoRequest/</loc>
+         <loc>https://sdk-docs.conio.com/operation/CryptoRequest/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/operation/Operation/</loc>
+         <loc>https://sdk-docs.conio.com/operation/Operation/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/user/User/</loc>
+         <loc>https://sdk-docs.conio.com/user/User/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://conioteam.github.io/conioteam.github.io/wallet/Wallet/</loc>
+         <loc>https://sdk-docs.conio.com/wallet/Wallet/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
