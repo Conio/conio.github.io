@@ -6,7 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://sdk-docs.conio.com/CHANGELOG/</loc>
+         <loc>https://sdk-docs.conio.com/CHANGELOG.en/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sdk-docs.conio.com/index.en/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sdk-docs.conio.com/configuration/Configuration.en/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -16,12 +26,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://sdk-docs.conio.com/exchange/Exchange.en/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://sdk-docs.conio.com/exchange/Exchange/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://sdk-docs.conio.com/installation/Android.en/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://sdk-docs.conio.com/installation/Android/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sdk-docs.conio.com/installation/iOS.en/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -41,7 +66,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://sdk-docs.conio.com/user/User.en/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://sdk-docs.conio.com/user/User/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sdk-docs.conio.com/wallet/Wallet.en/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
