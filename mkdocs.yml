@@ -8,17 +8,57 @@ repo_url: https://github.com/Conio/conio.github.io
 
 # Navigation
 nav:
-    - Home: index.md
-    - Changelog: 'CHANGELOG.md'
-    - 'Installazione':
-      - 'iOS': 'installation/iOS.md'
-      - 'Android': 'installation/Android.md'
-    - 'Configurazione': 'configuration/Configuration.md'
-    - 'Operazioni':
-      - 'Generale': 'operation/Operation.md'
-      - 'Crypto Request': 'operation/CryptoRequest.md'
-    - 'Utente': 'user/User.md'
-    - 'Operazioni sul mercato': 'exchange/Exchange.md'
+    - home: index.md
+    - home: index.en.md
+    - Changelog: 'CHANGELOG.en.md'
+    - installation:
+      - iOS: 'installation/iOS.md'
+      - iOS: 'installation/iOS.en.md'
+      - Android: 'installation/Android.md'
+      - Android: 'installation/Android.en.md'
+    - configuration: 'configuration/Configuration.md'
+    - configuration: 'configuration/Configuration.en.md'
+    - operations:
+      - general: 'operation/Operation.md'
+      # - general: 'operation/Operation.en.md'
+      - cryptoRequest: 'operation/CryptoRequest.md'
+      # - cryptoRequest: 'operation/CryptoRequest.en.md'
+    - user: 'user/User.md'
+    - user: 'user/User.en.md'
+    - exchangeOperations: 'exchange/Exchange.md'
+    - exchangeOperations: 'exchange/Exchange.en.md'
+
+# Plugins
+plugins:
+  - search
+  - i18n:
+      languages:
+        it: "Italiano"
+        en: "English"
+      default_language: 'it'
+      no_translation:
+        en: "This page isn't translated to English."
+        it: "Questa pagina non è tradotta in italiano"
+      translate_nav:
+        en:
+          home: "Home"
+          installation: "Installation"
+          configuration: "Configuration"
+          operations: "Operations"
+          general: "Overview"
+          cryptoRequest: "Crypto Requests"
+          user: "User"
+          exchangeOperations: "Exchange operations"
+        it:
+          home: "Home"
+          installation: "Installazione"
+          configuration: "Configurazione"
+          operations: "Operazioni"
+          general: "Generale"
+          cryptoRequest: "Crypto Request"
+          user: "Utente"
+          exchangeOperations: "Operazioni sul mercato"
+
 
 # Copyright
 # TBD
@@ -26,6 +66,7 @@ nav:
 # Theme
 theme:
   name: material
+  locale: it
   font:
     text: IBM Plex Sans
     code: IBM Plex Mono
@@ -40,15 +81,14 @@ theme:
     primary: blue
     accent: blue
 
-# extra:
-#   alternate:
-#
-#     # Switch to English
-#     - name: English
-#       link: https://sdk-docs.conio.com/en/
-#       lang: en
-#
-#     # Switch to German
-#     - name: Italiano
-#       link: https://sdk-docs.conio.com/
-#       lang: it
+extra:
+  alternate:
+    # Switch to English
+    - name: English
+      link: index.en/
+      lang: en
+
+    # Switch to Italian
+    - name: Italiano
+      link: ""
+      lang: it
