@@ -1,9 +1,20 @@
 # Installation
 
-## Requires
+## Prerequisites
 * iOS 10+
-* Autoconf 
-* Automake
+* [Autoconf](https://www.gnu.org/software/autoconf/) installed
+* [Automake](https://www.gnu.org/software/automake/) installed
+* [Libtool](https://www.gnu.org/software/libtool/) installed
+
+Consider using MacOS package manager [Brew](https://brew.sh/index_it) to install `Autoconf`, `Automake` e `Libtool`.
+
+```
+# Install Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Autoconf, Automake and Libtool
+brew install autoconf automake libtool
+```
 
 ## Cocoapods install
 
@@ -17,7 +28,7 @@ pod 'ConioSDK', :git => 'git@bitbucket.org:squadrone/conio-swift-sdk.git', :bran
 pod 'BitcoinKit', :git => 'https://github.com/Conio/BitcoinKit.git', :branch => 'keyconvert'
 ```
 
-Then use the command: `pod install` 
+Then use the command: `pod install`
 
 ---
 ---
@@ -28,7 +39,7 @@ autoreconf: failed to run aclocal: No such file or directory
 ```
 Try the following command:
 
- `brew install autoconf && brew install automake`. 
+ `brew install autoconf && brew install automake`.
 
 ---
 

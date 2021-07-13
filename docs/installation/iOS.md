@@ -2,8 +2,19 @@
 
 ## Prerequisiti
 * SDK supporta iOS 10+
-* Autoconf installato
-* Automake installato
+* [Autoconf](https://www.gnu.org/software/autoconf/) installato
+* [Automake](https://www.gnu.org/software/automake/) installato
+* [Libtool](https://www.gnu.org/software/libtool/) installato
+
+È consigliato l'utilizzo del gestori di pacchetti MacOS [Brew](https://brew.sh/index_it) per l'installazione di `Autoconf`, `Automake` e `Libtool`.
+
+```
+# Install Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Autoconf, Automake and Libtool
+brew install autoconf automake libtool
+```
 
 ## Installazione con Cocoapods
 
@@ -22,17 +33,17 @@ Eseguire il comando `pod install` nella cartella per ottenere l'SDK.
 ---
 ---
 ## Possibili Errori nell'installazione
-Se si dovesse verificare il seguente messaggio di errore: 
+Se si dovesse verificare il seguente messaggio di errore:
 ```bash
 autoreconf: failed to run aclocal: No such file or directory
 ```
 Eseguire il comando:
 
- `brew install autoconf && brew install automake`. 
+ `brew install autoconf && brew install automake`.
 
 ---
 
-Se si dovesse verificare il seguente messaggio di errore: 
+Se si dovesse verificare il seguente messaggio di errore:
 ```
 Can't exec "/opt/local/bin/aclocal": No such file or directory
 ```
