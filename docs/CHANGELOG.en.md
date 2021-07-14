@@ -26,7 +26,7 @@
 ## iOS
 
 ### [0.3.0] - 14-07-2021
-### Changed
+#### Changed
 - Added missing filters params in `ActivitiesParams` to correctly get wallet activities
 - Refactor on SDK errors: `ConioError` is now the only error type throwable (check [operation](/operation/Operation.md) section)
 
