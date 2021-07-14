@@ -73,6 +73,10 @@
 
 ## Android
 
+### [0.5.1] - 14-07-2021
+#### Fixed
+- Fix factory methods of `TimeFrame` class
+
 ### [0.5.0] - 06-07-2021
 #### Changed
 - SDK configuration object `ConioConfiguration` has no default value and must be explicitly initialized
