@@ -544,9 +544,17 @@
 <h2 id="prerequisiti">Prerequisiti</h2>
 <ul>
 <li>SDK supporta iOS 10+</li>
-<li>Autoconf installato</li>
-<li>Automake installato</li>
+<li><a href="https://www.gnu.org/software/autoconf/">Autoconf</a> installato</li>
+<li><a href="https://www.gnu.org/software/automake/">Automake</a> installato</li>
+<li><a href="https://www.gnu.org/software/libtool/">Libtool</a> installato</li>
 </ul>
+<p>È consigliato l'utilizzo del gestori di pacchetti MacOS <a href="https://brew.sh/index_it">Brew</a> per l'installazione di <code>Autoconf</code>, <code>Automake</code> e <code>Libtool</code>.</p>
+<pre><code># Install Brew
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+# Install Autoconf, Automake and Libtool
+brew install autoconf automake libtool
+</code></pre>
 <h2 id="installazione-con-cocoapods">Installazione con Cocoapods</h2>
 <p>L'SDK Conio è disponibile come Pod ed è possibile includerla nei progetti aggiungendo le seguenti righe al Podfile:</p>
 <pre><code class="language-ruby"># The ConioSDK Core
@@ -558,13 +566,13 @@ pod 'BitcoinKit', :git =&gt; 'https://github.com/Conio/BitcoinKit.git', :branch 
 <p>Eseguire il comando <code>pod install</code> nella cartella per ottenere l'SDK.</p>
 <h2 id="-">---</h2>
 <h2 id="possibili-errori-nellinstallazione">Possibili Errori nell'installazione</h2>
-<p>Se si dovesse verificare il seguente messaggio di errore: </p>
+<p>Se si dovesse verificare il seguente messaggio di errore:</p>
 <pre><code class="language-bash">autoreconf: failed to run aclocal: No such file or directory
 </code></pre>
 <p>Eseguire il comando:</p>
-<p><code>brew install autoconf &amp;&amp; brew install automake</code>. </p>
+<p><code>brew install autoconf &amp;&amp; brew install automake</code>.</p>
 <hr />
-<p>Se si dovesse verificare il seguente messaggio di errore: </p>
+<p>Se si dovesse verificare il seguente messaggio di errore:</p>
 <pre><code>Can't exec &quot;/opt/local/bin/aclocal&quot;: No such file or directory
 </code></pre>
 <p>Disinstallare dal sistema MacPorts eseguendo:</p>

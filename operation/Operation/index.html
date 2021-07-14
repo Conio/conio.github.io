@@ -447,6 +447,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#code_1" class="md-nav__link">
     Code
   </a>
@@ -455,7 +469,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android" class="md-nav__link">
+  <a href="#android_1" class="md-nav__link">
     Android
   </a>
   
@@ -488,7 +502,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_1" class="md-nav__link">
+  <a href="#android_2" class="md-nav__link">
     Android
   </a>
   
@@ -521,14 +535,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_2" class="md-nav__link">
+  <a href="#android_3" class="md-nav__link">
     Android
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ios" class="md-nav__link">
+  <a href="#ios_1" class="md-nav__link">
     iOS
   </a>
   
@@ -694,6 +708,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#code_1" class="md-nav__link">
     Code
   </a>
@@ -702,7 +730,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android" class="md-nav__link">
+  <a href="#android_1" class="md-nav__link">
     Android
   </a>
   
@@ -735,7 +763,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_1" class="md-nav__link">
+  <a href="#android_2" class="md-nav__link">
     Android
   </a>
   
@@ -768,14 +796,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_2" class="md-nav__link">
+  <a href="#android_3" class="md-nav__link">
     Android
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ios" class="md-nav__link">
+  <a href="#ios_1" class="md-nav__link">
     iOS
   </a>
   
@@ -854,49 +882,84 @@
 <h2 id="eccezioni-possibili">Eccezioni possibili</h2>
 <h3 id="conioerror">ConioError</h3>
 <p>Questo errore raggruppa tutte le possibili risposte di errore direttamente legate alle operazioni.</p>
-<p>Lista dei possibili ConioError:</p>
-<pre><code>APP_IMPROVEMENT_ACCEPTANCE_NOT_ACCEPTED
-ASK_ALREADY_PAID
-BID_ALREADY_PAID
-BID_EXPIRED
-BID_IS_IN_ERROR
-BID_NOT_YET_PAID
-BITHUSTLER_SERVICE_COULD_NOT_CREATE_SELLER
-CARDS_LIMITS_EXCEEDED
-CARDS_SERVICE_COULD_NOT_CREATE_PAYER
-CLIENT_SUPPORT_ACCEPTANCE_NOT_ACCEPTED
-CRYPTO_PROOF_EXPIRED
-DUPLICATE_EMAIL_ADDRESS
-DUST_ASK
-DUST_TRANSACTION
-FIAT_AMOUNT_TOO_LOW
-INCONSISTENT_STATE
-INCONSISTENT_TRANSACTION
-INVALID_CRYPTO_PROOF
-INVALID_IBAN
-INVALID_MESSAGE_SIGNATURE
-INVALID_PAYMENT_METHOD
-INVALID_TOKEN
-INVALID_TOKEN_PAYLOAD
-MULTIPLE_SELL_METHODS
-NO_SUCH3D_SECURE
-NO_SUCH_SELL_METHOD
-NO_SUCH_SELLER
-NO_SUCH_WALLET
-NO_SUCH_WITHDRAWAL_FEES_INFO
-NOT_ENOUGH_BTC_AMOUNT
-TRADE_EXPIRED
-TRADING_LIMITS_EXCEEDED
-UNAVAILABLE_BTC_SUBSYSTEM
-UNRECOVERABLE_ASK
-UNRECOVERABLE_BID
-UNSUPPORTED_PAYMENT_METHOD
-WALLET_ALREADY_CREATED_WITH_DIFFERENT_KEYS
-WALLET_ALREADY_OWNED_BY_ANOTHER_USER
+<h4 id="ios">iOS</h4>
+<pre><code class="language-swift">
+// General operation error with name and/or description
+case onOperation(String)
+// Decoding data error
+case unableToDecodeData
+// Cryptographic operation error
+case onCryptography
+// Secure storage operation error
+case onStorage
+// OAuth flow error: unable to retrieve and/or refresh access token
+case unauthorized
+// TBD
+case appImprovementAcceptanceNotAccepted
+// TBD
+case clientSupportAcceptanceNotAccepted
+// Ask operation already paid
+case askAlreadyPaid
+// Bid operation already paid
+case bidAlreadyPaid
+// Bid operation is expired
+case bidExpired
+// TBD
+case bidIsInError
+// Bid operation is not yet paid
+case bidNotYetPaid
+case bithustlerServiceCouldNotCreateSeller
+// TBD
+case cardsLimitsExceeded
+case cardsServiceCouldNotCreatePayer
+case duplicateEmailAddress
+case dustAsk
+case dustTransaction
+// Fiat amount is under the minumum level limit
+case fiatAmountTooLow
+case inconsistentState
+case inconsistentTransaction
+case invalidIban
+case invalidMessageSignature
+// Used payment method is not valid
+case invalidPaymentMethod
+case invalidToken
+case invalidTokenPayload
+// Crypto proof used for operation is invalid
+case invalidCryptoProof
+case multipleSellMethods
+case noSuch3DSecure
+case noSuchSellMethod
+// TBD
+case noSuchSeller
+// TBD
+case noSuchWallet
+case noSuchWithdrawalFeesInfo
+case notEnoughBtcAmount
+case tradeExpired
+// Bid operation exceeded user purchase max limits
+case tradingLimitsExceeded
+case unavailableBtcSubsystem
+// Ask operation is in an error status
+case unrecoverableAsk
+// Bid operation is in an error status
+case unrecoverableBid
+// Payment method used in not supported
+case unsupportedPaymentMethod
+case walletAlreadyCreatedWithDifferentKeys
+case walletAlreadyOwnedByAnotherUser
+// Unknown error with description
+case unknown(String)
+// Conio SDK version is outdated
+case outdatedSdk
+// Server is under maintenance
+case underMaintenance
 </code></pre>
+<h4 id="android">Android</h4>
+<p><code>TBD</code></p>
 <p>Ad esempio, prendiamo l'operazione <code>conio.walletService.withdrawalFees</code>: se un utente ha 1 bitcoin nel portafoglio e richiede le mining fees per un invio da 50 bitcoin, riceverà un <code>NO_SUCH_WITHDRAWAL_FEES_INFO</code>.</p>
 <h4 id="code_1">Code</h4>
-<h5 id="android">Android</h5>
+<h5 id="android_1">Android</h5>
 <pre><code class="language-java">WithdrawalFeesParams params = new WithdrawalFeesParams(
     &quot;mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt&quot;,
     100000000,
@@ -921,7 +984,7 @@ conio.walletService.withdrawalFees(params).asCallback(result -&gt; result.analys
 </ul>
 <p>Assicurarsi di avere una sessione valida, autenticandosi nuovamente tramite una <a href="../../user/User/#login">login</a> o una <a href="../../user/User/#signup">sign-up</a>.</p>
 <h4 id="codice">Codice</h4>
-<h5 id="android_1">Android</h5>
+<h5 id="android_2">Android</h5>
 <pre><code class="language-java">UserLogin user = new UserLogin(&quot;username&quot;, &quot;wrong_password&quot;);
 
 conio.userService.login(user).asCallback(result -&gt; result.analysis(
@@ -945,7 +1008,7 @@ conio.userService.login(user).asCallback(result -&gt; result.analysis(
 <p>Questo errore viene generato quando l'utente tenta di utilizzare una versione obsoleta dell'SDK.</p>
 <p>Consigliamo di gestire questo errore per notificare all'utente di aggiornare l'applicazione.</p>
 <h4 id="code_2">Code</h4>
-<h5 id="android_2">Android</h5>
+<h5 id="android_3">Android</h5>
 <pre><code class="language-java">LegalAcceptancesParams params = new LegalAcceptancesParams(Language.ITALIAN);
 
 conio.userService.getLegalAcceptances(params).asCallback(result -&gt; result.analysis(
@@ -964,7 +1027,7 @@ conio.userService.getLegalAcceptances(params).asCallback(result -&gt; result.ana
     }
 ));
 </code></pre>
-<h5 id="ios">iOS</h5>
+<h5 id="ios_1">iOS</h5>
 <pre><code class="language-swift">let params = LegalAcceptancesParams(language: .italian)
 
 conio.userService.getLegalAcceptances(params: params).asCallback { result in

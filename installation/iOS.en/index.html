@@ -315,8 +315,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requires" class="md-nav__link">
-    Requires
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
@@ -493,8 +493,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requires" class="md-nav__link">
-    Requires
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
@@ -541,12 +541,20 @@
 <li class="i18n-link i18n-link-found i18n-link-it"><a href="../../installation/iOS/">Italiano</a></li>
 </ul>
 <h1 id="installation">Installation</h1>
-<h2 id="requires">Requires</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>iOS 10+</li>
-<li>Autoconf </li>
-<li>Automake</li>
+<li><a href="https://www.gnu.org/software/autoconf/">Autoconf</a> installed</li>
+<li><a href="https://www.gnu.org/software/automake/">Automake</a> installed</li>
+<li><a href="https://www.gnu.org/software/libtool/">Libtool</a> installed</li>
 </ul>
+<p>Consider using MacOS package manager <a href="https://brew.sh/index_it">Brew</a> to install <code>Autoconf</code>, <code>Automake</code> e <code>Libtool</code>.</p>
+<pre><code># Install Brew
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+# Install Autoconf, Automake and Libtool
+brew install autoconf automake libtool
+</code></pre>
 <h2 id="cocoapods-install">Cocoapods install</h2>
 <p>Add this line to your podfile:</p>
 <pre><code class="language-ruby"># The ConioSDK Core
@@ -555,14 +563,14 @@ pod 'ConioSDK', :git =&gt; 'git@bitbucket.org:squadrone/conio-swift-sdk.git', :b
 # BitcoinKit for encryption purposes
 pod 'BitcoinKit', :git =&gt; 'https://github.com/Conio/BitcoinKit.git', :branch =&gt; 'keyconvert'
 </code></pre>
-<p>Then use the command: <code>pod install</code> </p>
+<p>Then use the command: <code>pod install</code></p>
 <h2 id="-">---</h2>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If you get the following error:</p>
 <pre><code class="language-bash">autoreconf: failed to run aclocal: No such file or directory
 </code></pre>
 <p>Try the following command:</p>
-<p><code>brew install autoconf &amp;&amp; brew install automake</code>. </p>
+<p><code>brew install autoconf &amp;&amp; brew install automake</code>.</p>
 <hr />
 <p>If you get the following error:</p>
 <pre><code>Can't exec &quot;/opt/local/bin/aclocal&quot;: No such file or directory
