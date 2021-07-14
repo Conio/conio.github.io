@@ -50,48 +50,85 @@ runBlocking {
 
 Questo errore raggruppa tutte le possibili risposte di errore direttamente legate alle operazioni.
 
-Lista dei possibili ConioError:
+#### iOS
 
+```swift
+
+// General operation error with name and/or description
+case onOperation(String)
+// Decoding data error
+case unableToDecodeData
+// Cryptographic operation error
+case onCryptography
+// Secure storage operation error
+case onStorage
+// OAuth flow error: unable to retrieve and/or refresh access token
+case unauthorized
+// TBD
+case appImprovementAcceptanceNotAccepted
+// TBD
+case clientSupportAcceptanceNotAccepted
+// Ask operation already paid
+case askAlreadyPaid
+// Bid operation already paid
+case bidAlreadyPaid
+// Bid operation is expired
+case bidExpired
+// TBD
+case bidIsInError
+// Bid operation is not yet paid
+case bidNotYetPaid
+case bithustlerServiceCouldNotCreateSeller
+// TBD
+case cardsLimitsExceeded
+case cardsServiceCouldNotCreatePayer
+case duplicateEmailAddress
+case dustAsk
+case dustTransaction
+// Fiat amount is under the minumum level limit
+case fiatAmountTooLow
+case inconsistentState
+case inconsistentTransaction
+case invalidIban
+case invalidMessageSignature
+// Used payment method is not valid
+case invalidPaymentMethod
+case invalidToken
+case invalidTokenPayload
+// Crypto proof used for operation is invalid
+case invalidCryptoProof
+case multipleSellMethods
+case noSuch3DSecure
+case noSuchSellMethod
+// TBD
+case noSuchSeller
+// TBD
+case noSuchWallet
+case noSuchWithdrawalFeesInfo
+case notEnoughBtcAmount
+case tradeExpired
+// Bid operation exceeded user purchase max limits
+case tradingLimitsExceeded
+case unavailableBtcSubsystem
+// Ask operation is in an error status
+case unrecoverableAsk
+// Bid operation is in an error status
+case unrecoverableBid
+// Payment method used in not supported
+case unsupportedPaymentMethod
+case walletAlreadyCreatedWithDifferentKeys
+case walletAlreadyOwnedByAnotherUser
+// Unknown error with description
+case unknown(String)
+// Conio SDK version is outdated
+case outdatedSdk
+// Server is under maintenance
+case underMaintenance
 ```
-APP_IMPROVEMENT_ACCEPTANCE_NOT_ACCEPTED
-ASK_ALREADY_PAID
-BID_ALREADY_PAID
-BID_EXPIRED
-BID_IS_IN_ERROR
-BID_NOT_YET_PAID
-BITHUSTLER_SERVICE_COULD_NOT_CREATE_SELLER
-CARDS_LIMITS_EXCEEDED
-CARDS_SERVICE_COULD_NOT_CREATE_PAYER
-CLIENT_SUPPORT_ACCEPTANCE_NOT_ACCEPTED
-CRYPTO_PROOF_EXPIRED
-DUPLICATE_EMAIL_ADDRESS
-DUST_ASK
-DUST_TRANSACTION
-FIAT_AMOUNT_TOO_LOW
-INCONSISTENT_STATE
-INCONSISTENT_TRANSACTION
-INVALID_CRYPTO_PROOF
-INVALID_IBAN
-INVALID_MESSAGE_SIGNATURE
-INVALID_PAYMENT_METHOD
-INVALID_TOKEN
-INVALID_TOKEN_PAYLOAD
-MULTIPLE_SELL_METHODS
-NO_SUCH3D_SECURE
-NO_SUCH_SELL_METHOD
-NO_SUCH_SELLER
-NO_SUCH_WALLET
-NO_SUCH_WITHDRAWAL_FEES_INFO
-NOT_ENOUGH_BTC_AMOUNT
-TRADE_EXPIRED
-TRADING_LIMITS_EXCEEDED
-UNAVAILABLE_BTC_SUBSYSTEM
-UNRECOVERABLE_ASK
-UNRECOVERABLE_BID
-UNSUPPORTED_PAYMENT_METHOD
-WALLET_ALREADY_CREATED_WITH_DIFFERENT_KEYS
-WALLET_ALREADY_OWNED_BY_ANOTHER_USER
-```
+
+#### Android
+
+`TBD`
 
 Ad esempio, prendiamo l'operazione `conio.walletService.withdrawalFees`: se un utente ha 1 bitcoin nel portafoglio e richiede le mining fees per un invio da 50 bitcoin, riceverà un `NO_SUCH_WITHDRAWAL_FEES_INFO`.
 
