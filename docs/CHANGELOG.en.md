@@ -25,6 +25,10 @@
 
 ## iOS
 
+### [0.3.1] - 19-07-2021
+#### Fixed
+- Avoid using app bundle identifier during keychain init
+
 ### [0.3.0] - 14-07-2021
 #### Changed
 - Added missing filters params in `ActivitiesParams` to correctly get wallet activities
@@ -117,6 +121,7 @@
 
 
 []: # "iOS tags"
+[0.3.1]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.1/
 [0.3.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.0/
 [0.2.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.2.0/
 [0.1.6]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.6/
