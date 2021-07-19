@@ -73,6 +73,10 @@
 
 ## Android
 
+### [0.5.1] - 14-07-2021
+#### Fixed
+- Fix factory methods of `TimeFrame` class
+
 ### [0.5.0] - 06-07-2021
 #### Changed
 - SDK configuration object `ConioConfiguration` has no default value and must be explicitly initialized
@@ -120,7 +124,8 @@
 [0.1.4]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.4/
 
 []: # "Android tags"
-[0.5.0]:https://bitbucket.org/squadrone/conio-android-sdk2/src/1203815eb2c6e97274b22d1e8521b14604577b55/?at=release%2F0.5.0
+[0.5.1]: https://bitbucket.org/squadrone/conio-android-sdk2/src/aa74590d773e9320cfa62a23425f09c1e8234c54/?at=release%2F0.5.1
+[0.5.0]: https://bitbucket.org/squadrone/conio-android-sdk2/src/1203815eb2c6e97274b22d1e8521b14604577b55/?at=release%2F0.5.0
 [0.4.8]: https://bitbucket.org/squadrone/conio-android-sdk2/src/071f4deb885f003fb9d65bb9d9f79a5adff1fac5/?at=release%2F0.4.8
 [0.4.7]: https://bitbucket.org/squadrone/conio-android-sdk2/src/5d71792b29a83e72c6342f658fe8920352a1296b/?at=release%2F0.4.7
 [0.4.2]: https://bitbucket.org/squadrone/conio-android-sdk2/src/b0cdb3f801c410b12e8478b434e559256b3ac264/?at=release%2F0.4.2

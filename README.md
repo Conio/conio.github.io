@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-  <h1 align="center">Conio SDK Documentation</h3>
-  </p>
+	<h1 align="center">Conio SDK Documentation</h3>
+	</p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -38,22 +38,22 @@ In order to correctly maintain and update the documentation, you need to install
 
 ### Linux
 1. Check to see if [Python3](https://www.python.org/) is installed on the system (the python3 program corresponds to Python 3 and python corresponds to Python 2):
-```
-$ which python3
-/usr/bin/python3
-$ python3 --version
-Python 3.4.2
-```
-If necessary, install Python: `$ sudo apt-get install python3`
+	```
+	$ which python3
+	/usr/bin/python3
+	$ python3 --version
+	Python 3.4.2
+	```
+	If necessary, install Python: `$ sudo apt-get install python3`
 
 2. Check to see if [Pip](https://pypi.org/project/pip/): is installed
-```
-$ which pip3
-/usr/bin/pip3
-$ pip3 --version
-pip 1.5.6 from /usr/lib/python3/dist-packages (python 3.4)
-```
-If pip3 is not installed, install it: `$ sudo apt-get install python3-pip`
+	```
+	$ which pip3
+	/usr/bin/pip3
+	$ pip3 --version
+	pip 1.5.6 from /usr/lib/python3/dist-packages (python 3.4)
+	```
+	If pip3 is not installed, install it: `$ sudo apt-get install python3-pip`
 
 3. Install MkDocs with `$ sudo pip3 install mkdocs`
 
