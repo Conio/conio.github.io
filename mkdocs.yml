@@ -31,6 +31,11 @@ nav:
 # Plugins
 plugins:
   - search
+  - pdf-export:
+     verbose: true
+     combined: true
+     combined_output_path: pdf/ConioSDK_Docs.pdf
+     #enabled_if_env: ENABLE_PDF_EXPORT
   - i18n:
       languages:
         it: "Italiano"

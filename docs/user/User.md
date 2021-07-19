@@ -1,6 +1,6 @@
 # Operazioni sull'utente
 
-## Recupero dei termini di servizio
+## [Recupero dei termini di servizio](recupero-dei-termini-di-servizio)
 
 Questa operazione consente di recuperare le `LegalAcceptances`, ovvero le condizioni che l'utente potrà/dovrà accettare in fase di signup (scelte che, durante l'[operazione signup](#signup), dovranno essere descritte tramite la classe `Acceptances`).
 L'oggetto `LegalAcceptances` recuperato conterrà gli url per mostrare le pagine dei Termini di Servizio e Privacy Policies di Conio e il dettaglio delle *acceptances* (`AcceptanceDetail`) che l'utente dovrà o meno accettare.
@@ -63,7 +63,7 @@ L'operazione di signup permette di creare un nuovo utente Conio.
 
 Un oggetto di tipo `SignupParams`, costruito tramite il metodo `SignupParams.createCryptoSignup` con:
 
-- ***acceptances***: di tipo `Acceptances` con l'esito della conferma ai termini di servizio da parte dell'utente, [recuperati tramite le `LegalAcceptances`](#recupero-dei-termini-di-servizio);
+- ***acceptances***: di tipo `Acceptances` con l'esito della conferma ai termini di servizio da parte dell'utente, recuperati tramite le [`LegalAcceptances`](recupero-dei-termini-di-servizio);
 
 - ***credentials***: di tipo `ConioCredentials` con username e password dell'utente;
 
