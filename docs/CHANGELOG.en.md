@@ -25,6 +25,10 @@
 
 ## iOS
 
+### [0.3.2] - 20-07-2021
+#### Added
+- Bitcoin network `privateMainnet` and `privateTestnet`
+
 ### [0.3.1] - 19-07-2021
 #### Fixed
 - Avoid using app bundle identifier during keychain init
@@ -125,6 +129,7 @@
 
 
 []: # "iOS tags"
+[0.3.2]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.2/
 [0.3.1]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.1/
 [0.3.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.0/
 [0.2.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.2.0/
