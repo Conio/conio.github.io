@@ -593,11 +593,6 @@
 <h1 id="inizializzazione-dellsdk">Inizializzazione dell'SDK</h1>
 <h2 id="loggetto-conio">L'oggetto Conio</h2>
 <p>Per usare l'SDK, occorre inizializzare l'oggetto <code>Conio</code> con una <code>ConioConfiguration</code>. La configurazione determinerà l'ambiente con il quale l'SDK interagirà.</p>
-<p>Possono essere utilizzate due configurazioni principali:</p>
-<ul>
-<li><code>test</code>, che si interfaccerà con l'ambiente di staging (rete Bitcoin: <strong>testnet</strong>).</li>
-<li><code>production</code>, che si interfaccerà con l'ambiente di produzione (rete Bitcoin: <strong>mainnet</strong>).</li>
-</ul>
 <p>È necessario inizializzare l'SDK con un ambiente personalizzato, specificando l'url del backend e la rete Bitcoin da utilizzare.</p>
 <p>Di seguito le specifiche per inizializzare un oggetto di tipo <code>Conio</code>.</p>
 <h3 id="parametri-conio">Parametri: <strong>Conio</strong></h3>
@@ -608,7 +603,7 @@
 <h3 id="parametri-conioconfiguration">Parametri: ConioConfiguration</h3>
 <ul>
 <li><strong>baseUrl</strong>: di tipo <code>String</code>, url del backend;</li>
-<li><strong>bitcoinNetwork</strong>: di tipo <code>BitcoinNetwork</code>, la rete Bitcoin. Può essere <code>.testnet</code> o <code>.mainnet</code>.</li>
+<li><strong>bitcoinNetwork</strong>: di tipo <code>BitcoinNetwork</code>, la rete Bitcoin. Può essere <code>.testnet</code>, <code>.mainnet</code>, <code>privateMainnet</code> o <code>privateTestnet</code>.</li>
 </ul>
 <h3 id="codice">Codice</h3>
 <h4 id="android">Android</h4>
