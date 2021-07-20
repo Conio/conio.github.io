@@ -4,11 +4,6 @@
 
 Per usare l'SDK, occorre inizializzare l'oggetto `Conio` con una `ConioConfiguration`. La configurazione determinerà l'ambiente con il quale l'SDK interagirà.
 
-Possono essere utilizzate due configurazioni principali:
-
-- `test`, che si interfaccerà con l'ambiente di staging (rete Bitcoin: **testnet**).
-- `production`, che si interfaccerà con l'ambiente di produzione (rete Bitcoin: **mainnet**).
-
 È necessario inizializzare l'SDK con un ambiente personalizzato, specificando l'url del backend e la rete Bitcoin da utilizzare.
 
 Di seguito le specifiche per inizializzare un oggetto di tipo `Conio`.
@@ -21,7 +16,7 @@ Di seguito le specifiche per inizializzare un oggetto di tipo `Conio`.
 ### Parametri: ConioConfiguration
 
 - **baseUrl**: di tipo `String`, url del backend;
-- **bitcoinNetwork**: di tipo `BitcoinNetwork`, la rete Bitcoin. Può essere `.testnet` o `.mainnet`.
+- **bitcoinNetwork**: di tipo `BitcoinNetwork`, la rete Bitcoin. Può essere `.testnet`, `.mainnet`, `privateMainnet` o `privateTestnet`.
 
 ### Codice
 
