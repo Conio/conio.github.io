@@ -81,6 +81,11 @@
 
 ## Android
 
+### [0.5.4] - 26-07-2021
+### Fixed
+- Made `cro`, `iban` and `chargedAt` fields of `Ask` class optional
+- Made `paidAt` field of `Ask` class non-optional
+
 ### [0.5.3] - 20-07-2021
 #### Added
 - Bitcoin network `privateMainnet` and `privateTestnet`
@@ -138,6 +143,7 @@
 [0.1.4]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.4/
 
 []: # "Android tags"
+[0.5.4]: https://bitbucket.org/squadrone/conio-android-sdk2/src/06d77afb5153e52f696b33d5df9329e47110b01a/?at=release%2F0.5.4
 [0.5.3]: https://bitbucket.org/squadrone/conio-android-sdk2/src/0d60053a9a1bf149cafb8a3e54200a53da2e17bf/?at=release%2F0.5.3
 [0.5.1]: https://bitbucket.org/squadrone/conio-android-sdk2/src/aa74590d773e9320cfa62a23425f09c1e8234c54/?at=release%2F0.5.1
 [0.5.0]: https://bitbucket.org/squadrone/conio-android-sdk2/src/1203815eb2c6e97274b22d1e8521b14604577b55/?at=release%2F0.5.0
