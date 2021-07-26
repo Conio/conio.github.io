@@ -82,7 +82,7 @@
 ## Android
 
 ### [0.5.4] - 26-07-2021
-### Fixed
+#### Fixed
 - Made `cro`, `iban` and `chargedAt` fields of `Ask` class optional
 - Made `paidAt` field of `Ask` class non-optional
 
