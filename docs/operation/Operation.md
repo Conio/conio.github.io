@@ -46,11 +46,9 @@ runBlocking {
 
 ## Eccezioni possibili
 
-### ConioError
+### ConioError (iOS)
 
 Questo errore raggruppa tutte le possibili risposte di errore direttamente legate alle operazioni.
-
-#### iOS
 
 ```swift
 
@@ -126,9 +124,105 @@ case outdatedSdk
 case underMaintenance
 ```
 
-#### Android
+### ConioException (Android)
 
-`TBD`
+Questo errore raggruppa (sia come namespace che come supertipo) tutte le possibili risposte di errore direttamente legate alle operazioni.
+
+```kotlin
+sealed class ConioException : Exception {
+    // General operation error with name and/or description
+    class OnOperation : ConioException
+    // Decoding data error
+    class UnableToDecodeData : ConioException
+    // Cryptographic operation error
+    class OnCryptography : ConioException
+    // Secure storage operation error
+    class OnStorage : ConioException
+    // OAuth flow error: unable to retrieve and/or refresh access token
+    class Unauthorized : ConioException
+    // Conio SDK version is outdated
+    class OutdatedSdk : ConioException
+    // Server is under maintenance
+    class UnderMaintenance : ConioException
+
+
+    class AppImprovementAcceptanceNotAccepted : ConioException
+
+    class ClientSupportAcceptanceNotAccepted : ConioException
+    // Ask operation already paid
+    class AskAlreadyPaid : ConioException
+    // Bid operation already paid
+    class BidAlreadyPaid : ConioException
+    // Bid operation is expired
+    class BidExpired : ConioException
+
+    class BidIsInError : ConioException
+    // Bid operation is not yet paid
+    class BidNotYetPaid : ConioException
+
+    class BithustlerServiceCouldNotCreateSeller : ConioException
+
+    class CardsLimitsExceeded : ConioException
+
+    class CardsServiceCouldNotCreatePayer : ConioException
+
+    class DuplicateEmailAddress : ConioException
+
+    class DustAsk : ConioException
+
+    class DustTransaction : ConioException
+    // Fiat amount is under the minumum level limit
+    class FiatAmountTooLow : ConioException
+
+    class InconsistentState : ConioException
+
+    class InconsistentTransaction : ConioException
+
+    class InvalidIban : ConioException
+
+    class InvalidMessageSignature : ConioException
+    // Used payment method is not valid
+    class InvalidPaymentMethod : ConioException
+
+    class InvalidToken : ConioException
+
+    class InvalidTokenPayload : ConioException
+    // Crypto proof used for operation is invalid
+    class InvalidCryptoProof : ConioException
+
+    class MultipleSellMethods : ConioException
+
+    class NoSuch3DSecure : ConioException
+
+    class NoSuchSellMethod : ConioException
+
+    class NoSuchSeller : ConioException
+
+    class NoSuchWallet : ConioException
+
+    class NoSuchWithdrawalFeesInfo : ConioException
+
+    class NotEnoughBtcAmount : ConioException
+
+    class TradeExpired : ConioException
+    // Bid operation exceeded user purchase max limits
+    class TradingLimitsExceeded : ConioException
+
+    class UnavailableBtcSubsystem : ConioException
+    // Ask operation is in an error status
+    class UnrecoverableAsk : ConioException
+    // Bid operation is in an error status
+    class UnrecoverableBid : ConioException
+    // Payment method used in not supported
+    class UnsupportedPaymentMethod : ConioException
+
+    class WalletAlreadyCreatedWithDifferentKeys : ConioException
+
+    class WalletAlreadyOwnedByAnotherUser : ConioException
+    // Unknown error with description
+    class Unknown : ConioException
+}
+```
 
 Ad esempio, prendiamo l'operazione `conio.walletService.withdrawalFees`: se un utente ha 1 bitcoin nel portafoglio e richiede le mining fees per un invio da 50 bitcoin, riceverà un `NO_SUCH_WITHDRAWAL_FEES_INFO`.
 
@@ -173,14 +267,7 @@ UserLogin user = new UserLogin("username", "wrong_password");
 conio.userService.login(user).asCallback(result -> result.analysis(
     success -> { /* ... */ },
     error -> {
-        if (error instanceof UnauthorizedException) {
-            /* Handle the error */
-        }
-
-        // Or
-
-        ServiceException serviceException = (ServiceException) error;
-        if (serviceException.getServiceError() == ServiceError.UNAUTHORIZED) {
+        if (error instanceof ConioException.Unauthorized) {
             /* Handle the error */
         }
     }
@@ -204,14 +291,7 @@ LegalAcceptancesParams params = new LegalAcceptancesParams(Language.ITALIAN);
 conio.userService.getLegalAcceptances(params).asCallback(result -> result.analysis(
     acceptances -> { /* ... */ },
     error -> {
-        if (error instanceof OutdatedSDKException) {
-            /* Handle the error */
-        }
-
-        // Or
-
-        ServiceException serviceException = (ServiceException) error;
-        if (serviceException.getServiceError() == ServiceError.OUTDATED_SDK) {
+        if (error instanceof ConioException.OutdatedSdk) {
             /* Handle the error */
         }
     }
@@ -228,7 +308,7 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
     case .success:
         // success
     case .failure(let error):
-        if case .outdatedSDK = error {
+        if case .outdatedSdk = error {
             print("Please update the SDK")
         }
     }
