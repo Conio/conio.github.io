@@ -439,26 +439,19 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conioerror" class="md-nav__link">
-    ConioError
+  <a href="#conioerror-ios" class="md-nav__link">
+    ConioError (iOS)
   </a>
   
-    <nav class="md-nav" aria-label="ConioError">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conioexception-android" class="md-nav__link">
+    ConioException (Android)
+  </a>
+  
+    <nav class="md-nav" aria-label="ConioException (Android)">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ios" class="md-nav__link">
-    iOS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android" class="md-nav__link">
-    Android
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#code_1" class="md-nav__link">
@@ -469,7 +462,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_1" class="md-nav__link">
+  <a href="#android" class="md-nav__link">
     Android
   </a>
   
@@ -502,7 +495,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_2" class="md-nav__link">
+  <a href="#android_1" class="md-nav__link">
     Android
   </a>
   
@@ -535,14 +528,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_3" class="md-nav__link">
+  <a href="#android_2" class="md-nav__link">
     Android
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ios_1" class="md-nav__link">
+  <a href="#ios" class="md-nav__link">
     iOS
   </a>
   
@@ -700,26 +693,19 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conioerror" class="md-nav__link">
-    ConioError
+  <a href="#conioerror-ios" class="md-nav__link">
+    ConioError (iOS)
   </a>
   
-    <nav class="md-nav" aria-label="ConioError">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conioexception-android" class="md-nav__link">
+    ConioException (Android)
+  </a>
+  
+    <nav class="md-nav" aria-label="ConioException (Android)">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ios" class="md-nav__link">
-    iOS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android" class="md-nav__link">
-    Android
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#code_1" class="md-nav__link">
@@ -730,7 +716,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_1" class="md-nav__link">
+  <a href="#android" class="md-nav__link">
     Android
   </a>
   
@@ -763,7 +749,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_2" class="md-nav__link">
+  <a href="#android_1" class="md-nav__link">
     Android
   </a>
   
@@ -796,14 +782,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#android_3" class="md-nav__link">
+  <a href="#android_2" class="md-nav__link">
     Android
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ios_1" class="md-nav__link">
+  <a href="#ios" class="md-nav__link">
     iOS
   </a>
   
@@ -880,9 +866,8 @@
 -->
 
 <h2 id="eccezioni-possibili">Eccezioni possibili</h2>
-<h3 id="conioerror">ConioError</h3>
+<h3 id="conioerror-ios">ConioError (iOS)</h3>
 <p>Questo errore raggruppa tutte le possibili risposte di errore direttamente legate alle operazioni.</p>
-<h4 id="ios">iOS</h4>
 <pre><code class="language-swift">
 // General operation error with name and/or description
 case onOperation(String)
@@ -955,11 +940,105 @@ case outdatedSdk
 // Server is under maintenance
 case underMaintenance
 </code></pre>
-<h4 id="android">Android</h4>
-<p><code>TBD</code></p>
+<h3 id="conioexception-android">ConioException (Android)</h3>
+<p>Questo errore raggruppa (sia come namespace che come supertipo) tutte le possibili risposte di errore direttamente legate alle operazioni.</p>
+<pre><code class="language-kotlin">sealed class ConioException : Exception {
+    // General operation error with name and/or description
+    class OnOperation : ConioException
+    // Decoding data error
+    class UnableToDecodeData : ConioException
+    // Cryptographic operation error
+    class OnCryptography : ConioException
+    // Secure storage operation error
+    class OnStorage : ConioException
+    // OAuth flow error: unable to retrieve and/or refresh access token
+    class Unauthorized : ConioException
+    // Conio SDK version is outdated
+    class OutdatedSdk : ConioException
+    // Server is under maintenance
+    class UnderMaintenance : ConioException
+
+
+    class AppImprovementAcceptanceNotAccepted : ConioException
+
+    class ClientSupportAcceptanceNotAccepted : ConioException
+    // Ask operation already paid
+    class AskAlreadyPaid : ConioException
+    // Bid operation already paid
+    class BidAlreadyPaid : ConioException
+    // Bid operation is expired
+    class BidExpired : ConioException
+
+    class BidIsInError : ConioException
+    // Bid operation is not yet paid
+    class BidNotYetPaid : ConioException
+
+    class BithustlerServiceCouldNotCreateSeller : ConioException
+
+    class CardsLimitsExceeded : ConioException
+
+    class CardsServiceCouldNotCreatePayer : ConioException
+
+    class DuplicateEmailAddress : ConioException
+
+    class DustAsk : ConioException
+
+    class DustTransaction : ConioException
+    // Fiat amount is under the minumum level limit
+    class FiatAmountTooLow : ConioException
+
+    class InconsistentState : ConioException
+
+    class InconsistentTransaction : ConioException
+
+    class InvalidIban : ConioException
+
+    class InvalidMessageSignature : ConioException
+    // Used payment method is not valid
+    class InvalidPaymentMethod : ConioException
+
+    class InvalidToken : ConioException
+
+    class InvalidTokenPayload : ConioException
+    // Crypto proof used for operation is invalid
+    class InvalidCryptoProof : ConioException
+
+    class MultipleSellMethods : ConioException
+
+    class NoSuch3DSecure : ConioException
+
+    class NoSuchSellMethod : ConioException
+
+    class NoSuchSeller : ConioException
+
+    class NoSuchWallet : ConioException
+
+    class NoSuchWithdrawalFeesInfo : ConioException
+
+    class NotEnoughBtcAmount : ConioException
+
+    class TradeExpired : ConioException
+    // Bid operation exceeded user purchase max limits
+    class TradingLimitsExceeded : ConioException
+
+    class UnavailableBtcSubsystem : ConioException
+    // Ask operation is in an error status
+    class UnrecoverableAsk : ConioException
+    // Bid operation is in an error status
+    class UnrecoverableBid : ConioException
+    // Payment method used in not supported
+    class UnsupportedPaymentMethod : ConioException
+
+    class WalletAlreadyCreatedWithDifferentKeys : ConioException
+
+    class WalletAlreadyOwnedByAnotherUser : ConioException
+    // Unknown error with description
+    class Unknown : ConioException
+}
+</code></pre>
 <p>Ad esempio, prendiamo l'operazione <code>conio.walletService.withdrawalFees</code>: se un utente ha 1 bitcoin nel portafoglio e richiede le mining fees per un invio da 50 bitcoin, riceverà un <code>NO_SUCH_WITHDRAWAL_FEES_INFO</code>.</p>
 <h4 id="code_1">Code</h4>
-<h5 id="android_1">Android</h5>
+<h5 id="android">Android</h5>
 <pre><code class="language-java">WithdrawalFeesParams params = new WithdrawalFeesParams(
     &quot;mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt&quot;,
     100000000,
@@ -984,20 +1063,13 @@ conio.walletService.withdrawalFees(params).asCallback(result -&gt; result.analys
 </ul>
 <p>Assicurarsi di avere una sessione valida, autenticandosi nuovamente tramite una <a href="../../user/User/#login">login</a> o una <a href="../../user/User/#signup">sign-up</a>.</p>
 <h4 id="codice">Codice</h4>
-<h5 id="android_2">Android</h5>
+<h5 id="android_1">Android</h5>
 <pre><code class="language-java">UserLogin user = new UserLogin(&quot;username&quot;, &quot;wrong_password&quot;);
 
 conio.userService.login(user).asCallback(result -&gt; result.analysis(
     success -&gt; { /* ... */ },
     error -&gt; {
-        if (error instanceof UnauthorizedException) {
-            /* Handle the error */
-        }
-
-        // Or
-
-        ServiceException serviceException = (ServiceException) error;
-        if (serviceException.getServiceError() == ServiceError.UNAUTHORIZED) {
+        if (error instanceof ConioException.Unauthorized) {
             /* Handle the error */
         }
     }
@@ -1008,26 +1080,19 @@ conio.userService.login(user).asCallback(result -&gt; result.analysis(
 <p>Questo errore viene generato quando l'utente tenta di utilizzare una versione obsoleta dell'SDK.</p>
 <p>Consigliamo di gestire questo errore per notificare all'utente di aggiornare l'applicazione.</p>
 <h4 id="code_2">Code</h4>
-<h5 id="android_3">Android</h5>
+<h5 id="android_2">Android</h5>
 <pre><code class="language-java">LegalAcceptancesParams params = new LegalAcceptancesParams(Language.ITALIAN);
 
 conio.userService.getLegalAcceptances(params).asCallback(result -&gt; result.analysis(
     acceptances -&gt; { /* ... */ },
     error -&gt; {
-        if (error instanceof OutdatedSDKException) {
-            /* Handle the error */
-        }
-
-        // Or
-
-        ServiceException serviceException = (ServiceException) error;
-        if (serviceException.getServiceError() == ServiceError.OUTDATED_SDK) {
+        if (error instanceof ConioException.OutdatedSdk) {
             /* Handle the error */
         }
     }
 ));
 </code></pre>
-<h5 id="ios_1">iOS</h5>
+<h5 id="ios">iOS</h5>
 <pre><code class="language-swift">let params = LegalAcceptancesParams(language: .italian)
 
 conio.userService.getLegalAcceptances(params: params).asCallback { result in
@@ -1035,7 +1100,7 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
     case .success:
         // success
     case .failure(let error):
-        if case .outdatedSDK = error {
+        if case .outdatedSdk = error {
             print(&quot;Please update the SDK&quot;)
         }
     }
