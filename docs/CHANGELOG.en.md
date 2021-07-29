@@ -36,7 +36,7 @@
 ### [0.3.0] - 14-07-2021
 #### Changed
 - Added missing filters params in `ActivitiesParams` to correctly get wallet activities
-- Refactor on SDK errors: `ConioError` is now the only error type throwable (check [operation](/operation/Operation.md) section)
+- Refactor on SDK errors: `ConioError` is now the only error type throwable (check [operation](./operation/Operation.md) section)
 
 ### [0.2.0] - 06-07-2021
 #### Changed
@@ -80,6 +80,14 @@
 - Rilascio versione 0.1.0
 
 ## Android
+
+### [0.6.1] - 29-07-2021
+#### Changed
+- Refactor on SDK errors: `ConioException` as the operations result error type
+
+### [0.6.0] - 28-07-2021
+#### Changed
+- Refactor on SDK errors: `ConioException` is now the only error type throwable (check [operation](./operation/Operation.md) section)
 
 ### [0.5.4] - 26-07-2021
 #### Fixed
@@ -143,6 +151,8 @@
 [0.1.4]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.4/
 
 []: # "Android tags"
+[0.6.1]: https://bitbucket.org/squadrone/conio-android-sdk2/src/300349f7414b4c6abac14f91d50573262116a553/?at=release%2F0.6.1
+[0.6.0]: https://bitbucket.org/squadrone/conio-android-sdk2/src/f95b063d89f7d3dfda8871e36c718a1031e861af/?at=release%2F0.6.0
 [0.5.4]: https://bitbucket.org/squadrone/conio-android-sdk2/src/06d77afb5153e52f696b33d5df9329e47110b01a/?at=release%2F0.5.4
 [0.5.3]: https://bitbucket.org/squadrone/conio-android-sdk2/src/0d60053a9a1bf149cafb8a3e54200a53da2e17bf/?at=release%2F0.5.3
 [0.5.1]: https://bitbucket.org/squadrone/conio-android-sdk2/src/aa74590d773e9320cfa62a23425f09c1e8234c54/?at=release%2F0.5.1
