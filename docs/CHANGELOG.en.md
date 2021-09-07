@@ -150,6 +150,7 @@
 
 
 []: # "iOS tags"
+[0.3.3]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.3/
 [0.3.2]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.2/
 [0.3.1]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.1/
 [0.3.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.0/
