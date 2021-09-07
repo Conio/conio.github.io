@@ -25,6 +25,10 @@
 
 ## iOS
 
+### [0.3.3] - 07-09-2021
+#### Changed
+- Rename `tradedFiat` to `weightedBidBalance` in `TradingInfo.swift` as per docs specifications
+
 ### [0.3.2] - 20-07-2021
 #### Added
 - Bitcoin network `privateMainnet` and `privateTestnet`
