@@ -36,6 +36,8 @@ In order to correctly maintain and update the documentation, you need to install
 
 6. Install [mkdocs-i18n](https://pypi.org/project/mkdocs-i18n/) for internationalization with `pip install mkdocs-i18n`
 
+7. Install [mkdocs-pdf-export-plugin](https://pypi.org/project/mkdocs-pdf-export-plugin/) (NB: it requires other dependencies as described [here](https://doc.courtbouillon.org/weasyprint/latest/first_steps.html#macos))
+
 ### Linux
 1. Check to see if [Python3](https://www.python.org/) is installed on the system (the python3 program corresponds to Python 3 and python corresponds to Python 2):
 	```
@@ -55,13 +57,13 @@ In order to correctly maintain and update the documentation, you need to install
 	```
 	If pip3 is not installed, install it: `$ sudo apt-get install python3-pip`
 
-3. Install MkDocs with `$ sudo pip3 install mkdocs`
+3. Install MkDocs with `$ pip3 install mkdocs`
 
-4. Install MkDocs with `pip3 install mkdocs`
+4. Install [MkDocs Material Extensions](https://pypi.org/project/mkdocs-material-extensions/) with `$ pip3 install mkdocs-material`
 
-5. Install [MkDocs Material Extensions](https://pypi.org/project/mkdocs-material-extensions/) with `sudo pip3 install mkdocs-material`
+5. Install [mkdocs-i18n](https://pypi.org/project/mkdocs-i18n/) for internationalization with `$ pip3 install mkdocs-i18n`
 
-6. Install [mkdocs-i18n](https://pypi.org/project/mkdocs-i18n/) for internationalization with `pip install mkdocs-i18n`
+6. Install [mkdocs-pdf-export-plugin](https://pypi.org/project/mkdocs-pdf-export-plugin/) (NB: it requires other dependencies as described [here](https://doc.courtbouillon.org/weasyprint/latest/first_steps.html#linux))
 
 
 Please refer to official [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/) to update and/or modify generated site settings/layout and to [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/) to customize theme.

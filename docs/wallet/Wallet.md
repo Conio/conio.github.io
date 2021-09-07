@@ -213,15 +213,15 @@ Un oggetto di tipo `ActivityDetails` contenente:
 
     - **sellMethodId**: di tipo `String`, l'identificativo del metodo di riscossione della vendita;
 
-    - **cro**: di tipo `String`, il Codice Riferimento Operazione della transazione bancaria;
+    - **@Opzionale cro**: di tipo `String`, il Codice Riferimento Operazione della transazione bancaria;
 
-    - **iban**: di tipo `String`, l'IBAN del richiedente del bonifico bancario;
+    - **@Opzionale iban**: di tipo `String`, l'IBAN del richiedente del bonifico bancario;
 
     - **createdAt**: di tipo `long`, l'istante temporale in cui è stata creata l'*Activity*, espresso come Unix Timestamp in millisecondi;
 
-    - **chargedAt**: di tipo `long`, l'istante temporale in cui è stata invaita la transazione bitcoin, espresso come Unix Timestamp in millisecondi;
+    - **@Opzionale chargedAt**: di tipo `long`, l'istante temporale in cui è stato effettuato il pagamento per la vendita dei bitcoin, espresso come Unix Timestamp in millisecondi. Nullo nel caso in cui la transazione non sia ancora stata effettuata;
 
-    - **@Opzionale paidAt**: di tipo `long`, l'istante temporale in cui è stato effettuato il pagamento per la vendita dei bitcoin, espresso come Unix Timestamp in millisecondi. Nullo nel caso in cui la transazione non sia ancora stata effettuata.
+    - **paidAt**: di tipo `long`, l'istante temporale in cui è stata invaita la transazione bitcoin, espresso come Unix Timestamp in millisecondi.
 
 ### Errori
 
