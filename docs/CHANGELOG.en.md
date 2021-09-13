@@ -25,6 +25,12 @@
 
 ## iOS
 
+### [0.4.0] - 13-09-2021
+#### Fixed
+- Wrong mapping for `rangeFrom` property in `ServiceFee`
+#### Changed
+- Update `rangeFrom` type from `UInt64?` to `FiatAmount?` in `ServiceFee` 
+
 ### [0.3.3] - 07-09-2021
 #### Changed
 - Rename `tradedFiat` to `weightedBidBalance` in `TradingInfo.swift` as per docs specifications
@@ -150,6 +156,7 @@
 
 
 []: # "iOS tags"
+[0.4.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.4.0/
 [0.3.3]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.3/
 [0.3.2]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.2/
 [0.3.1]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.1/
