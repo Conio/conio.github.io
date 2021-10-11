@@ -25,11 +25,16 @@
 
 ## iOS
 
+### [0.5.0] - 11-10-2021
+#### Changed
+- Data serialization and mapping
+- Code refactor and optimizations
+
 ### [0.4.0] - 13-09-2021
 #### Fixed
 - Wrong mapping for `rangeFrom` property in `ServiceFee`
 #### Changed
-- Update `rangeFrom` type from `UInt64?` to `FiatAmount?` in `ServiceFee` 
+- Update `rangeFrom` type from `UInt64?` to `FiatAmount?` in `ServiceFee`
 
 ### [0.3.3] - 07-09-2021
 #### Changed
@@ -156,6 +161,7 @@
 
 
 []: # "iOS tags"
+[0.5.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.5.0/
 [0.4.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.4.0/
 [0.3.3]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.3/
 [0.3.2]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.2/
