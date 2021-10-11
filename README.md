@@ -26,17 +26,23 @@ In order to correctly maintain and update the documentation, you need to install
 ### MacOS
 1. Install [Brew](https://brew.sh/)
 
-2. Install [Python3](https://www.python.org/) with `brew install python3`
+2. Install [Pip](https://pip.pypa.io/en/stable/installation/#supported-methods)
 
-3. Upgrade [Pip](https://pypi.org/project/pip/) with `pip3 install --upgrade pip`
+	2.1 `brew install python`
+	
+	2.2 `brew unlink python && brew link python`
 
-4. Install MkDocs with `pip3 install mkdocs`
+3. Install [Python3](https://www.python.org/) with `brew install python3`
 
-5. Install [MkDocs Material Extensions](https://pypi.org/project/mkdocs-material-extensions/) with `python3 -m pip install mkdocs-material-extensions`
+4. Upgrade [Pip](https://pypi.org/project/pip/) with `pip3 install --upgrade pip`
 
-6. Install [mkdocs-i18n](https://pypi.org/project/mkdocs-i18n/) for internationalization with `pip install mkdocs-i18n`
+5. Install MkDocs with `pip3 install mkdocs`
 
-7. Install [mkdocs-pdf-export-plugin](https://pypi.org/project/mkdocs-pdf-export-plugin/) (NB: it requires other dependencies as described [here](https://doc.courtbouillon.org/weasyprint/latest/first_steps.html#macos))
+6. Install [MkDocs Material Extensions](https://pypi.org/project/mkdocs-material-extensions/) with `python3 -m pip install mkdocs-material-extensions`
+
+7. Install [mkdocs-i18n](https://pypi.org/project/mkdocs-i18n/) for internationalization with `pip install mkdocs-i18n`
+
+8. Install [mkdocs-pdf-export-plugin](https://pypi.org/project/mkdocs-pdf-export-plugin/) (NB: it requires other dependencies as described [here](https://doc.courtbouillon.org/weasyprint/latest/first_steps.html#macos))
 
 ### Linux
 1. Check to see if [Python3](https://www.python.org/) is installed on the system (the python3 program corresponds to Python 3 and python corresponds to Python 2):
