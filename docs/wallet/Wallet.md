@@ -10,7 +10,7 @@ Permette di recuperare l'indirizzo corrente del portafoglio su cui sarà possibi
 
 ### Risposta
 
-Una `stringa` contenente l'indirizzo Bitcoin attuale.
+Una `string` contenente l'indirizzo Bitcoin attuale.
 
 ### Errori
 
@@ -131,6 +131,97 @@ conio.walletService.walletActivities(params: params).asCallback { result in
         // WalletActivities
     case .failure(let error):
         // Operation Error
+    }
+}
+```
+
+## Lista movimenti bitcoin in formato PDF
+
+Ciascuna operazione di invio, ricezione, acquisto e vendita di Bitcoin è rappresentata da un'`Activity`. La lista delle attività svolte dall'utente, in formato PDF, può essere recuperata tramite l'apposito metodo.
+
+### Metodo
+#### Android
+
+`walletService.activityListPdf`
+
+#### iOS
+`walletService.walletPDFActivities`
+
+### Parametri
+#### Android
+
+Un oggetto di tipo `ActivityListPdfParams` contenente:
+
+- **types**: di tipo `List<ActivityType>`, una lista di enumerati `ActivityType` che ci permette di specificare le tipologie di activities da recuperare. Tramite `ActivityType.all()` è possibile ottenere una lista di tutte le tipologie di *Activity*;
+
+- **currency**: di tipo `Currency`, la valuta nella quale si vuole conoscere il valore della transazioni di acquisto e vendita (attualmente solo Euro);
+
+- **@Default(6) limit**: di tipo `intero`, il numero massimo di transazioni da ricevere nella risposta;
+
+- **@Opzionale timeFrame**: di tipo `TimeFrame`, la finestra temporale che definisce quali *Activity* includere nella risposta.
+
+#### iOS
+Un oggetto di tipo `PDFActivitiesParams` contenente:
+
+- **types**: di tipo `Array<WalletActivityType>`, una lista di enumerati `WalletActivityType` che ci permette di specificare le tipologie di activities da recuperare. Tramite `WalletActivityType.allCases` è possibile ottenere una lista di tutte le tipologie di *Activity*;
+
+- **currency**: di tipo `Currency`, la valuta nella quale si vuole conoscere il valore della transazioni di acquisto e vendita (attualmente solo Euro);
+
+- **limit**: di tipo `Int` (default value 6), il numero massimo di transazioni da ricevere nella risposta;
+
+- **timeFrame**: di tipo `TimeFrame?`, la finestra temporale che definisce quali *Activity* includere nella risposta.
+
+### Risposta
+#### Android
+Un oggetto di tipo `InputStream` contenente il bytes stream del PDF.
+
+#### iOS
+Un oggetto di tipo `Data` contenente il byte buffer del PDF.
+
+### Errori
+
+- [Non autorizzato](../operation/Operation.md#Non-autorizzato)
+
+### Codice
+
+#### Android
+
+```java
+// Example 1: retrieve 6 activities of all type
+List<ActivityType> types = ActivityType.all;
+ActivityListPdfParams params = new ActivityListPdfParams(types, Currency.EUR);
+
+// Example 2: retrieve 10 sell activities
+List<ActivityType> types = Collections.singletonList(ActivityType.SELL);
+ActivityListPdfParams params = new ActivityListPdfParams(types, Currency.EUR, 10);
+
+// Example 3: retrieve 6 buy and receive activities of the last month
+List<ActivityType> types = Arrays.asList(ActivityType.BUY, ActivityType.RECEIVE);
+ActivityListPdfParams params = new ActivityListPdfParams(
+    types,                // types
+    Currency.EUR,         // currency
+    6,                    // limit
+    TimeFrame.lastMonth() // timeFrame
+);
+
+conio.walletService.activityListPdf(params)
+    .asCallback(result -> result.analysis(
+        stream -> { /* Handle InputStream */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let types = WalletActivityType.allCases
+let params = PDFActivitiesParams(types: types, currency: .EUR)
+conio.walletService.walletPDFActivities(with: params).asCallback { result in
+    switch result {
+    case .success(let data):
+      // PDF WalletActivities
+    case .failure(let error):
+      // Operation Error
     }
 }
 ```
