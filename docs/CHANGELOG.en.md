@@ -25,6 +25,10 @@
 
 ## iOS
 
+### [0.6.0] - 02-11-2021
+#### Added
+- User service `changeEmail`
+
 ### [0.5.0] - 11-10-2021
 #### Changed
 - Data serialization and mapping
@@ -95,6 +99,10 @@
 - Rilascio versione 0.1.0
 
 ## Android
+
+### [0.7.4] - 02-11-2021
+#### Added
+- User service `changeEmail`
 
 ### [0.7.2] - 20-10-2021
 #### Added
@@ -170,6 +178,7 @@
 
 
 []: # "iOS tags"
+[0.6.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.5.0/
 [0.5.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.5.0/
 [0.4.0]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.4.0/
 [0.3.3]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.3/
@@ -182,6 +191,7 @@
 [0.1.4]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.4/
 
 []: # "Android tags"
+[0.7.4]: https://bitbucket.org/squadrone/conio-android-sdk2/src/f29a930a953cdeb04a189a04f05a7db210e517b6/?at=release%2F0.7.4
 [0.7.2]: https://bitbucket.org/squadrone/conio-android-sdk2/src/d2802e047e511fefcb0ce9f1807be8e38742e70d/?at=release%2F0.7.2
 [0.7.0]: https://bitbucket.org/squadrone/conio-android-sdk2/src/3a22f23b0ff1a07972e4da5477c86fa98d34ef72/?at=release%2F0.7.0
 [0.6.2]: https://bitbucket.org/squadrone/conio-android-sdk2/src/922c216dadc71aada864a538e34d5b62a256850f/?at=release%2F0.6.2
