@@ -226,3 +226,52 @@ conio.userService.logout().asCallback { result in
     }
 }
 ```
+
+## Change Email
+
+Consente di modificare l'email associata all'utenza Conio.
+
+### Metodo
+
+`userService.changeEmail`
+
+### Parametri
+
+Un oggetto di tipo `ChangeEmailParams`.
+
+- ***newEmail***: di tipo `String`, è il nuovo valore utilizzato per modificare l'attuale email dell'utente.
+
+### Risposta
+#### Android
+Un oggetto di tipo `Success` che indica se l'email dell'utente è stata modificata correttamente.
+
+#### iOS
+Un oggetto di tipo `Void` che indica se l'email dell'utente è stata modificata correttamente.
+
+
+### Codice
+
+#### Android
+
+```java
+ChangeEmailParams params = new ChangeEmailParams("newEmail@conio.com");
+
+conio.userService.changeEmail(params).asCallback(result -> result.analysis(
+        activityList -> { /* Success */ },
+        error -> { /* ... */ }
+));
+```
+
+#### iOS
+
+```swift
+let params = ChangeEmailParams(newEmail: "newEmail@conio.com")
+conio.userService.changeEmail(with: params).asCallback { result in
+    switch result {
+    case .failure(let error):
+        /* ... */
+    case .success:
+        /* Success */
+    }
+}
+```

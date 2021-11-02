@@ -21,7 +21,7 @@ An `Acceptance` has 2 localization keys: one for the title and one for the conte
 #### Android
 
 ```java
-LegalAcceptancesParams params = 
+LegalAcceptancesParams params =
     new LegalAcceptancesParams(Language.ITALIAN);
 conio.userService.getLegalAcceptances(params, result -> {
     result.analysis(acceptances -> {
@@ -66,11 +66,11 @@ To generate a `Crypto Request`, you have to sign the string: `dataString` (creat
 
 ```java
     String proofId = UUID.randomUUID().toString();
-    long proofExpiration = 
+    long proofExpiration =
         new Date()
         .tenMinutesFromNow()
         .millis();
-        
+
     String userLevel = "A smart level"; // Es. "Advanced" to get adavanced limits
     String userId = login.username;
     String iban = "IBAN"; // It should be a real iban
@@ -79,11 +79,11 @@ To generate a `Crypto Request`, you have to sign the string: `dataString` (creat
     String lastName = "Rossi";
 
     String[] data = {
-        proofId, 
-        "SIGNUP", 
-        userId, 
-        userLevel, 
-        String.valueOf(proofExpiration), 
+        proofId,
+        "SIGNUP",
+        userId,
+        userLevel,
+        String.valueOf(proofExpiration),
         iban,
         email,
         firstName,
@@ -95,7 +95,7 @@ To generate a `Crypto Request`, you have to sign the string: `dataString` (creat
     PrivateKey privateKey = new PrivateKey("key.pem");
     RsaSigner rsa = new RsaSigner(privateKey);
 
-    String signature = 
+    String signature =
         rsa
         .sign("sha256", dataString)
         .toLowercase();
@@ -129,7 +129,7 @@ To generate a `Crypto Request`, you have to sign the string: `dataString` (creat
     let dataString = data.joined(separator: "|")
 
     let cryptoProof = Crypto.sign(
-        privateKey: privateKey, 
+        privateKey: privateKey,
         digestType: .sha256
     )
 
@@ -146,17 +146,17 @@ To generate a `Crypto Request`, you have to sign the string: `dataString` (creat
     )
 ```
 
-### Returns 
+### Returns
 
 An object `Acceptances` confirming which T&C the user approved during the signup.
 
 ### Errori
-* `INVALID_IBAN` 
-* `CRYPTO_PROOF_EXPIRED` 
+* `INVALID_IBAN`
+* `CRYPTO_PROOF_EXPIRED`
 * `INVALID_CRYPTO_PROOF` Crypto proof was signed incorrectly
 * `CARDS_SERVICE_COULD_NOT_CREATE_PAYER` Internal error of the payment system
-* `DUPLICATE_EMAIL_ADDRESS` 
-* `WALLET_ALREADY_OWNED_BY_ANOTHER_USER` 
+* `DUPLICATE_EMAIL_ADDRESS`
+* `WALLET_ALREADY_OWNED_BY_ANOTHER_USER`
 * `CLIENT_SUPPORT_ACCEPTANCE_NOT_ACCEPTED` Required acceptance
 * `APP_IMPROVEMENT_ACCEPTANCE_NOT_ACCEPTED` Required acceptance
 
@@ -169,9 +169,9 @@ An object `Acceptances` confirming which T&C the user approved during the signup
 UserLogin login = new UserLogin("lemonade", "secretword");
 
 // Build the acceptances list with the user choices result
-Acceptance appImprovement 
+Acceptance appImprovement
     = new Acceptance(AcceptanceType.APP_IMPROVEMENT, true);
-Acceptance clientSupport 
+Acceptance clientSupport
     = new Acceptance(AcceptanceType.CLIENT_SUPPORT, true);
 
 ArrayList<Acceptance> acceptanceList = new ArrayList<>();
@@ -203,9 +203,9 @@ let login = Login(username: "lemonade", password: "secretword")
 let cryptoRequest = buildCryptoRequest()
 
 // Build the acceptances list with the user choices result
-let appImprovement = 
+let appImprovement =
     Acceptance(type: .appImprovement, isAccepted: true)
-let clientSupport = 
+let clientSupport =
     Acceptance(type: .clientSupport, isAccepted: true)
 
 let acceptancesList = [appImprovement, clientSupport]
@@ -276,7 +276,7 @@ Disconnect from Conio.
 
 A `boolean` with the result of the operation.
 
-### Codice
+### Code
 
 #### Android
 
@@ -299,5 +299,54 @@ conio.userService.logout { result in
     }, ifFailure: { error in
         // ServiceError
     })
+}
+```
+
+## Change Email
+
+Using this operation you can update Conio user email.
+
+### Method
+
+`userService.changeEmail`
+
+### Parameters
+
+A `ChangeEmailParams` object type.
+
+- ***newEmail***: `String` type, it is the new value used to update actual user email.
+
+### Returns
+#### Android
+A `Success` object type if the operation finish with success.
+
+#### iOS
+A `Void` object type if the operation finish with success.
+
+
+### Code
+
+#### Android
+
+```java
+ChangeEmailParams params = new ChangeEmailParams("newEmail@conio.com");
+
+conio.userService.changeEmail(params).asCallback(result -> result.analysis(
+        activityList -> { /* Success */ },
+        error -> { /* ... */ }
+));
+```
+
+#### iOS
+
+```swift
+let params = ChangeEmailParams(newEmail: "newEmail@conio.com")
+conio.userService.changeEmail(with: params).asCallback { result in
+    switch result {
+    case .failure(let error):
+        /* ... */
+    case .success:
+        /* Success */
+    }
 }
 ```
