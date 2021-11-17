@@ -25,6 +25,12 @@
 
 ## iOS
 
+### [0.6.2] - 17-11-2021
+#### Changed
+- Wallet service `walletPDFActivities`, `limit` in `PDFActivitiesParams` now optional
+### Added
+- User service `getLegalAcceptances` , new `preContractualInfoUrl` param in `LegalAcceptances` response
+
 ### [0.6.0] - 02-11-2021
 #### Added
 - User service `changeEmail`
@@ -99,6 +105,12 @@
 - Rilascio versione 0.1.0
 
 ## Android
+
+### [0.7.8] - 17-11-2021
+#### Changed
+- Wallet service `activityListPdf`, `limit` in `ActivityListPdfParams` now nullable
+### Added
+- User service `getLegalAcceptances` , new `preContractualInfoUrl` param in `LegalAcceptances` response
 
 ### [0.7.4] - 02-11-2021
 #### Added
