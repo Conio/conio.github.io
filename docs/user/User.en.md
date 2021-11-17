@@ -10,7 +10,7 @@ An object `LegalAcceptancesParams` with the language you want.
 
 ### Returns
 
-A `LegalAcceptances` object containing `Acceptances`, the URL `Termini di Servizio` and the URL `Privacy Policies`.
+A `LegalAcceptances` object containing `Acceptances`, the URL `Terms of service`, the URL `Privacy Policies` and the pre-contractual info URL.
 
 ### Acceptances localization
 

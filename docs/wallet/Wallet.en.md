@@ -127,9 +127,9 @@ An `ActivityListPdfParams` struct containing:
 
 - **currency**: `Currency` object type, the fiat currency activities will be priced in (only in Euros at the moment);
 
-- **@Default(6) limit**: `int` object type, the max transactions number that will be received;
+- **@Optional @Default(6) limit**: `int?` nullable object type, the max transactions number that will be received. If `null` there will be no max transaction number on activities received.
 
-- **@Optional timeFrame**: `TimeFrame` object type, the temporary window that limit the time interval between *Activity* objects will be included in the response.
+- **@Optional timeFrame**: `TimeFrame?` object type, the temporary window that limit the time interval between *Activity* objects will be included in the response.
 
 #### iOS
 Un oggetto di tipo `PDFActivitiesParams` contenente:
@@ -138,7 +138,7 @@ Un oggetto di tipo `PDFActivitiesParams` contenente:
 
 - **currency**: `Currency` object type, the fiat currency activities will be priced in (only in Euros at the moment);
 
-- **limit**: `Int` object type (default value 6), the max transactions number that will be received;
+- **limit**: `Int?` optional object type (default value 6), the max transactions number that will be received. If `nil` there will be no max transaction number on activities received.
 
 - **timeFrame**: `TimeFrame?` object type, the temporary window that limit the time interval between *Activity* objects will be included in the response.
 

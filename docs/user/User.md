@@ -15,7 +15,7 @@ Un oggetto di tipo `LegalAcceptancesParams` contenente la lingua di riferimento 
 
 ### Risposta
 
-Un oggetto di tipo `LegalAcceptances` contenente la lista degli `AcceptanceDetail`, lo url dei *Termini di Servizio* e quello delle *Privacy Policies*.
+Un oggetto di tipo `LegalAcceptances` contenente la lista degli `AcceptanceDetail`, url dei *Termini di Servizio*, url relativo alle *Privacy Policies* e url relativo alle condizioni pre contrattuali.
 
 ### Codice
 
