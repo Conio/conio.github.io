@@ -1031,10 +1031,10 @@ conio.walletService.walletActivities(params: activitiesParams) { result in
 <p><strong>currency</strong>: <code>Currency</code> object type, the fiat currency activities will be priced in (only in Euros at the moment);</p>
 </li>
 <li>
-<p><strong>@Default(6) limit</strong>: <code>int</code> object type, the max transactions number that will be received;</p>
+<p><strong>@Optional @Default(6) limit</strong>: <code>int?</code> nullable object type, the max transactions number that will be received. If <code>null</code> there will be no max transaction number on activities received.</p>
 </li>
 <li>
-<p><strong>@Optional timeFrame</strong>: <code>TimeFrame</code> object type, the temporary window that limit the time interval between <em>Activity</em> objects will be included in the response.</p>
+<p><strong>@Optional timeFrame</strong>: <code>TimeFrame?</code> object type, the temporary window that limit the time interval between <em>Activity</em> objects will be included in the response.</p>
 </li>
 </ul>
 <h4 id="ios_3">iOS</h4>
@@ -1047,7 +1047,7 @@ conio.walletService.walletActivities(params: activitiesParams) { result in
 <p><strong>currency</strong>: <code>Currency</code> object type, the fiat currency activities will be priced in (only in Euros at the moment);</p>
 </li>
 <li>
-<p><strong>limit</strong>: <code>Int</code> object type (default value 6), the max transactions number that will be received;</p>
+<p><strong>limit</strong>: <code>Int?</code> optional object type (default value 6), the max transactions number that will be received. If <code>nil</code> there will be no max transaction number on activities received.</p>
 </li>
 <li>
 <p><strong>timeFrame</strong>: <code>TimeFrame?</code> object type, the temporary window that limit the time interval between <em>Activity</em> objects will be included in the response.</p>
