@@ -106,6 +106,10 @@
 
 ## Android
 
+### [0.7.9] - 26-11-2021
+#### Changed
+- Legal text copies on the `LegalAcceptances` model
+
 ### [0.7.8] - 17-11-2021
 #### Changed
 - Wallet service `activityListPdf`, `limit` in `ActivityListPdfParams` now nullable
@@ -203,6 +207,7 @@
 [0.1.4]: https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.4/
 
 []: # "Android tags"
+[0.7.9]: https://bitbucket.org/squadrone/conio-android-sdk2/src/c510c7a12e27f362b291e2f9711d376e3f8dbbbc/?at=release%2F0.7.9
 [0.7.4]: https://bitbucket.org/squadrone/conio-android-sdk2/src/f29a930a953cdeb04a189a04f05a7db210e517b6/?at=release%2F0.7.4
 [0.7.2]: https://bitbucket.org/squadrone/conio-android-sdk2/src/d2802e047e511fefcb0ce9f1807be8e38742e70d/?at=release%2F0.7.2
 [0.7.0]: https://bitbucket.org/squadrone/conio-android-sdk2/src/3a22f23b0ff1a07972e4da5477c86fa98d34ef72/?at=release%2F0.7.0
