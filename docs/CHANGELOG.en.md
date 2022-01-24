@@ -106,6 +106,10 @@
 
 ## Android
 
+### [0.7.13] - 26-11-2021
+#### Fixed
+- Compatibility issue below Api level 26
+
 ### [0.7.9] - 26-11-2021
 #### Changed
 - Legal text copies on the `LegalAcceptances` model
