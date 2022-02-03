@@ -106,7 +106,12 @@
 
 ## Android
 
-### [0.7.13] - 26-11-2021
+### [0.7.15] - 3-02-2022
+#### Changed
+- Improved concurrencly on service layer
+- Updated OkHttp to 4.9.0
+
+### [0.7.13] - 24-01-2022
 #### Fixed
 - Compatibility issue below Api level 26
 
