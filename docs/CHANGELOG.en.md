@@ -106,6 +106,10 @@
 
 ## Android
 
+### [0.7.16] - 4-02-2022
+#### Changed
+- Downgraded OkHttp to 3.14.9
+
 ### [0.7.15] - 3-02-2022
 #### Changed
 - Improved concurrencly on service layer
