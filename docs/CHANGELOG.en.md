@@ -106,6 +106,11 @@
 
 ## Android
 
+### [0.7.18] - 8-02-2022
+#### Changed
+- Solved retro-compatibility with OkHttp 3.x
+- Removed appsync dependency
+
 ### [0.7.16] - 4-02-2022
 #### Changed
 - Downgraded OkHttp to 3.14.9
