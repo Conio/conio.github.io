@@ -237,7 +237,7 @@ Consente di modificare l'email associata all'utenza Conio.
 
 ### Parametri
 
-Un oggetto di tipo `ChangeEmailParams`.
+Un oggetto di tipo `CryptoChangeEmailParams`.
 
 - ***newEmail***: di tipo `String`, è il nuovo valore utilizzato per modificare l'attuale email dell'utente.
 

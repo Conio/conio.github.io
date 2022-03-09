@@ -471,13 +471,17 @@ Una volta inviata la richiesta, si otterrà una `CreatedAsk` contenente, tra le 
 
 ### Parametri
 
-Un oggetto di tipo `CreateOrRefreshAskParams`, costruibile tramite i metodi factory `CreateOrRefreshAskParams.fromFiat` o `CreateOrRefreshAskParams.fromCrypto` che richiedono:
+Un oggetto di tipo `CreateOrRefreshAskParams`, costruibile tramite i metodi factory `CreateOrRefreshAskParams.fromFiat`, `CreateOrRefreshAskParams.fromCrypto` o `CreateOrRefreshAskParams.withAll` che richiedono:
 
 - **currency**: di tipo `Currency`, la valuta dell'operazione;
 
-- **amount**: di tipo `long` per `.fromCrypto` o `Decimal` (iOS) / `BigDecimal` (Android) per `.fromFiat`, l'ammontare, a seconda del metodo usato, in satoshi o nella valuta scelta che si vuole vendere;
+- **@Opzionale cryptoAmount**: di tipo `long` per `.fromCrypto`, l'ammontare in satoshi che si vuole vendere;
+
+- **@Opzionale fiatAmount**: di tipo `Decimal` (iOS) / `BigDecimal` (Android) per `.fromFiat`, l'ammontare nella valuta scelta che si vuole vendere;
 
 - **@Opzionale askId**: di tipo `String`, l'id della ask, da valorizzare solo in caso di refresh della ask stessa.
+
+Tramite il metodo factory `CreateOrRefreshAskParams.withAll` è possibile richiedere l'importo massimo vendibile. Tale importo sarà sogetto, oltre che alla disponibilità del utente, anche ai suoi limiti di vendita.
 
 ### Risposta
 
