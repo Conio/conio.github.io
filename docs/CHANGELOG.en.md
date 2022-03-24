@@ -128,6 +128,10 @@
 
 ## Android
 
+### [0.8.3](https://bitbucket.org/squadrone/conio-android-sdk2/src/0bc388e1f93bd5a211b8d629aeeee224c7770429/?at=release%2F0.8.3) - 24-03-2022
+#### Fixed
+- Initialization error caused by unusable KeyStore keys
+
 ### [0.8.0](https://bitbucket.org/squadrone/conio-android-sdk2/src/5f941a03e044c7cf518ca8ef6b0de5768bf56067/?at=release%2F0.8.0) - 9-03-2022
 #### Changed
 - Minimum Android version supported to *Android 6.0* (Android Sdk Version: *23*)
