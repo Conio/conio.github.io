@@ -560,7 +560,7 @@ Ottenuta la `Ask` da utilizzare è possibile procedere con la finalizzazione del
 
 ### Parametri
 
-Un oggetto di tipo `SellParams` contenente:
+Un oggetto di tipo `CryptoSellParams` contenente:
 
 - **askId**: di tipo `String`, l'id della `Ask`
 
@@ -586,7 +586,7 @@ Un oggetto di tipo `Success` che conferma l'avvenuta operazione.
 #### Android
 
 ```java
-SellParams params = new SellParams("askId", askCryptoRequest);
+CryptoSellParams params = new CryptoSellParams("askId", askCryptoRequest);
 
 conio.exchangeService.sell(params)
     .asCallback(result -> result.analysis(
@@ -599,7 +599,7 @@ conio.exchangeService.sell(params)
 #### iOS
 
 ```swift
-let params = SellParams(askID: askID)
+let params = CryptoSellParams(askId: askId, cryptoRequest: askCryptoRequest)
 
 conio.exchangeService.createOrRefreshAsk(params: params).asCallback { result in
     switch result {

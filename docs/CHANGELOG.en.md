@@ -24,6 +24,18 @@
 
 
 ## iOS
+## [0.7.0](https://bitbucket.org/squadrone/conio-swift-sdk/src/0.7.0/) - 07-06-2022
+### Added
+- Model `CryptoSellParams` to replace `SellParams`
+- `ConioError.onNetwork` to wrap network communication errors
+
+### Changed
+- `SellParams` deprecated
+- Factory init used to create/refresh an ask with all user available amount
+
+### Fixed
+- Always throw `ConioError.unauthorized` on session expired
+
 ## [0.6.10](https://bitbucket.org/squadrone/conio-swift-sdk/src/0.6.10/) - 09-02-2022
 ### Changed
 - Update legal acceptances
@@ -128,6 +140,13 @@
 
 ## Android
 
+### [0.8.11](https://bitbucket.org/squadrone/conio-android-sdk2/src/43ddfec2fec7ad8bd5444eaae48483ae33eec68d/?at=release%2F0.8.11) - 7-06-2022
+#### Added
+- `ConioException.OnNetwork` to wrap network communication errors
+
+#### Fixed
+- Always throw `ConioException.Unauthorized` on session expired
+
 ### [0.8.3](https://bitbucket.org/squadrone/conio-android-sdk2/src/0bc388e1f93bd5a211b8d629aeeee224c7770429/?at=release%2F0.8.3) - 24-03-2022
 #### Fixed
 - Initialization error caused by unusable KeyStore keys
@@ -136,10 +155,12 @@
 #### Changed
 - Minimum Android version supported to *Android 6.0* (Android Sdk Version: *23*)
 - Improved performance
+- `SellParams` deprecated
 
 #### Added
 - Factory method `CreateOrRefreshAskParams.withAll` to request an Ask with the maximum sellable amount
 - Model `CryptoChangeEmailParams` to replace `ChangeEmailParams`
+- Model `CryptoSellParams` to replace `SellParams`
 
 ### [0.7.18](https://bitbucket.org/squadrone/conio-android-sdk2/src/ae6273eb37b40d1daead7cdda9f218abd95224c6/?at=release%2F0.7.18) - 8-02-2022
 #### Changed
