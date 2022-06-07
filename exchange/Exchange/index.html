@@ -2114,7 +2114,7 @@ conio.exchangeService.createOrRefreshAsk(params: params).asCallback { result in
 <h3 id="metodo_8">Metodo</h3>
 <p><code>exchangeService.sell</code></p>
 <h3 id="parametri_7">Parametri</h3>
-<p>Un oggetto di tipo <code>SellParams</code> contenente:</p>
+<p>Un oggetto di tipo <code>CryptoSellParams</code> contenente:</p>
 <ul>
 <li>
 <p><strong>askId</strong>: di tipo <code>String</code>, l'id della <code>Ask</code></p>
@@ -2137,7 +2137,7 @@ conio.exchangeService.createOrRefreshAsk(params: params).asCallback { result in
 </ul>
 <h3 id="codice_7">Codice</h3>
 <h4 id="android_8">Android</h4>
-<pre><code class="language-java">SellParams params = new SellParams(&quot;askId&quot;, askCryptoRequest);
+<pre><code class="language-java">CryptoSellParams params = new CryptoSellParams(&quot;askId&quot;, askCryptoRequest);
 
 conio.exchangeService.sell(params)
     .asCallback(result -&gt; result.analysis(
@@ -2146,7 +2146,7 @@ conio.exchangeService.sell(params)
     ));
 </code></pre>
 <h4 id="ios_6">iOS</h4>
-<pre><code class="language-swift">let params = SellParams(askID: askID)
+<pre><code class="language-swift">let params = CryptoSellParams(askId: askId, cryptoRequest: askCryptoRequest)
 
 conio.exchangeService.createOrRefreshAsk(params: params).asCallback { result in
     switch result {
