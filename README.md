@@ -83,7 +83,7 @@ The dev-server also supports auto-reloading, and will rebuild your documentation
 If you add new `*.md` files, you will need to execute `mkdocs build` in order to generate new pages, check [here](https://squidfunk.github.io/mkdocs-material/) for more info.
 
 ## Deploy
-Once docs are updated and pushed to repository, you will need to deploy the new site with `mkdocs gh-deploy` command.
+Once docs are updated and pushed to repository, you will need to deploy the new site with `mkdocs gh-deploy --force` command.
 
 Check your changes visiting https://sdk-docs.conio.com/
 

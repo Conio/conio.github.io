@@ -16,8 +16,9 @@ nav:
   - Configuration:
     - iOS: Configuration/Ios.md
     - Android: Configuration/Android.md
-  - User Service: Features/UserService/UserService.md
-  - Trading Info Service: Features/TradingInfoService/TradingInfoService.md
+  - User Service: Features/UserService.md
+  - Trading Info Service: Features/TradingInfoService.md
+  - Wallet Service: Features/WalletService.md
     
 # Plugins
 plugins:
