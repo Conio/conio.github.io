@@ -1,0 +1,1315 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://sdk-docs.conio.com/Old/wallet/Wallet/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>Operazioni sul portafoglio - Conio SDK Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"IBM Plex Sans";--md-code-font-family:"IBM Plex Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operazioni-sul-portafoglio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Conio SDK Documentation" class="md-header__button md-logo" aria-label="Conio SDK Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conio SDK Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Operazioni sul portafoglio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Conio/conio.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    conioteam.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Conio SDK Documentation" class="md-nav__button md-logo" aria-label="Conio SDK Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Conio SDK Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Conio/conio.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    conioteam.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CHANGELOG/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Ios/" class="md-nav__link">
+        iOS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Configuration/Ios/" class="md-nav__link">
+        iOS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Configuration/Android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Features/UserService/UserService/" class="md-nav__link">
+        User Service
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Features/TradingInfoService/TradingInfoService/" class="md-nav__link">
+        Trading Info Service
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indirizzo-bitcoin-attuale" class="md-nav__link">
+    Indirizzo Bitcoin attuale
+  </a>
+  
+    <nav class="md-nav" aria-label="Indirizzo Bitcoin attuale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo" class="md-nav__link">
+    Metodo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risposta" class="md-nav__link">
+    Risposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errori" class="md-nav__link">
+    Errori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice" class="md-nav__link">
+    Codice
+  </a>
+  
+    <nav class="md-nav" aria-label="Codice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-movimenti-bitcoin" class="md-nav__link">
+    Lista movimenti bitcoin
+  </a>
+  
+    <nav class="md-nav" aria-label="Lista movimenti bitcoin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo_1" class="md-nav__link">
+    Metodo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri" class="md-nav__link">
+    Parametri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risposta_1" class="md-nav__link">
+    Risposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errori_1" class="md-nav__link">
+    Errori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice_1" class="md-nav__link">
+    Codice
+  </a>
+  
+    <nav class="md-nav" aria-label="Codice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_1" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_1" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-movimenti-bitcoin-in-formato-pdf" class="md-nav__link">
+    Lista movimenti bitcoin in formato PDF
+  </a>
+  
+    <nav class="md-nav" aria-label="Lista movimenti bitcoin in formato PDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo_2" class="md-nav__link">
+    Metodo
+  </a>
+  
+    <nav class="md-nav" aria-label="Metodo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_2" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_2" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri_1" class="md-nav__link">
+    Parametri
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_3" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_3" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risposta_2" class="md-nav__link">
+    Risposta
+  </a>
+  
+    <nav class="md-nav" aria-label="Risposta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_4" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_4" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errori_2" class="md-nav__link">
+    Errori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice_2" class="md-nav__link">
+    Codice
+  </a>
+  
+    <nav class="md-nav" aria-label="Codice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_5" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_5" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dettaglio-di-un-movimento" class="md-nav__link">
+    Dettaglio di un movimento
+  </a>
+  
+    <nav class="md-nav" aria-label="Dettaglio di un movimento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo_3" class="md-nav__link">
+    Metodo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri_2" class="md-nav__link">
+    Parametri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risposta_3" class="md-nav__link">
+    Risposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errori_3" class="md-nav__link">
+    Errori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice_3" class="md-nav__link">
+    Codice
+  </a>
+  
+    <nav class="md-nav" aria-label="Codice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_6" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_6" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bilancio-del-portafoglio" class="md-nav__link">
+    Bilancio del portafoglio
+  </a>
+  
+    <nav class="md-nav" aria-label="Bilancio del portafoglio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo_4" class="md-nav__link">
+    Metodo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risposta_4" class="md-nav__link">
+    Risposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errori_4" class="md-nav__link">
+    Errori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice_4" class="md-nav__link">
+    Codice
+  </a>
+  
+    <nav class="md-nav" aria-label="Codice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_7" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_7" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codice-di-recupero-bitcoin" class="md-nav__link">
+    Codice di recupero Bitcoin
+  </a>
+  
+    <nav class="md-nav" aria-label="Codice di recupero Bitcoin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risposta_5" class="md-nav__link">
+    Risposta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errori_5" class="md-nav__link">
+    Errori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice_5" class="md-nav__link">
+    Codice
+  </a>
+  
+    <nav class="md-nav" aria-label="Codice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android_8" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios_8" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Conio/conio.github.io/edit/master/docs/Old/wallet/Wallet.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="operazioni-sul-portafoglio">Operazioni sul portafoglio</h1>
+<h2 id="indirizzo-bitcoin-attuale">Indirizzo Bitcoin attuale</h2>
+<p>Permette di recuperare l'indirizzo corrente del portafoglio su cui sarà possibile ricevere delle transazioni.</p>
+<h3 id="metodo">Metodo</h3>
+<p><code>walletService.currentBitcoinAddress</code></p>
+<h3 id="risposta">Risposta</h3>
+<p>Una <code>string</code> contenente l'indirizzo Bitcoin attuale.</p>
+<h3 id="errori">Errori</h3>
+<ul>
+<li><a href="../../operation/Operation/#Non-autorizzato">Non autorizzato</a></li>
+</ul>
+<h3 id="codice">Codice</h3>
+<h4 id="android">Android</h4>
+<pre><code class="language-java">conio.walletService.currentBitcoinAddress()
+    .asCallback(result -&gt; result.analysis(
+        address -&gt; {/* Handle string wallet address */ },
+        error -&gt; { /* ... */ }
+    ));
+</code></pre>
+<h4 id="ios">iOS</h4>
+<pre><code class="language-swift">conio.walletService.currentBitcoinAddress().asCallback { result in
+    switch result {
+    case .success(let address):
+        // Handle string wallet address
+    case .failure(let error):
+        // Operation Error
+    }
+}
+</code></pre>
+<h2 id="lista-movimenti-bitcoin">Lista movimenti bitcoin</h2>
+<p>Ciascuna operazione di invio, ricezione, acquisto e vendita di Bitcoin è rappresentata da un'<code>Activity</code>. La lista delle attività svolte dall'utente può essere recuperata tramite l'apposito metodo.</p>
+<h3 id="metodo_1">Metodo</h3>
+<p><code>walletService.activityList</code></p>
+<h3 id="parametri">Parametri</h3>
+<p>Un oggetto di tipo <code>ActivityListParams</code> contenente:</p>
+<ul>
+<li>
+<p><strong>types</strong>: di tipo <code>List&lt;ActivityType&gt;</code>, una lista di enumerati <code>ActivityType</code> che ci permette di specificare le tipologie di activities da recuperare. Tramite <code>ActivityType.all()</code> è possibile ottenere una lista di tutte le tipologie di <em>Activity</em>;</p>
+</li>
+<li>
+<p><strong>currency</strong>: di tipo <code>Currency</code>, la valuta nella quale si vuole conoscere il valore della transazioni di acquisto e vendita (attualmente solo Euro);</p>
+</li>
+<li>
+<p><strong>@Default(6) limit</strong>: di tipo <code>intero</code>, il numero massimo di transazioni da ricevere nella risposta;</p>
+</li>
+<li>
+<p><strong>@Opzionale nextPage</strong>: di tipo <code>String</code>, token per la paginazione delle activities, ottenibile tramite il risultato di una prima richiesta di <em>lista movimenti</em> con questo valore nullo. Inserendo tale valore è possibile ottenere le successive <code>n</code> <em>Activity</em> (con <code>n</code> = valore inserito come <strong>limit</strong>);</p>
+</li>
+<li>
+<p><strong>@Opzionale timeFrame</strong>: di tipo <code>TimeFrame</code>, la finestra temporale che definisce quali <em>Activity</em> includere nella risposta.</p>
+</li>
+</ul>
+<h3 id="risposta_1">Risposta</h3>
+<p>Un oggetto di tipo <code>ActivityList</code> contenente:</p>
+<ul>
+<li>
+<p><strong>activities</strong>: di tipo <code>List&lt;SimpleActivity&gt;</code>, ovvero la lista delle <em>Activity</em> dell'utente richieste;</p>
+</li>
+<li>
+<p><strong>@Opzionale nextPage</strong>: di tipo <code>String</code>, token per la paginazione delle activity, che può essere inserito in una successiva richiesta di <em>lista movimenti</em>. Quando questo campo è nullo, significa che non esistono ulteriori <em>Activity</em> tra quelle che rispettano i filtri inseriti.</p>
+</li>
+</ul>
+<p>Ogni <em>Activity</em> resituita (di tipo <code>SimpleActivity</code>) contiene:</p>
+<ul>
+<li>
+<p><strong>activityId</strong>: di tipo <code>String</code>, l'identificativo univoco della <em>Activity</em>;</p>
+</li>
+<li>
+<p><strong>type</strong>: di tipo <code>ActivityType</code>, la tipologia di <em>Activity</em> (<code>SEND</code>, <code>BUY</code>, <code>SELL</code>, <code>RECEIVE</code>);</p>
+</li>
+<li>
+<p><strong>status</strong>: di tipo <code>TransactionStatus</code>, lo stato di conferma della transazione Bitcoin legata all'<em>Activity</em> (<code>UNCONFIRMED</code>, <code>PARTIALLY_CONFIRMED</code>, <code>CONFIRMED</code>);</p>
+</li>
+<li>
+<p><strong>createdAt</strong>: di tipo <code>long</code>, l'istante temporale in cui è stata creata l'<em>Activity</em>, espresso come Unix Timestamp in millisecondi.</p>
+</li>
+<li>
+<p><strong>cryptoAmount</strong>: di tipo <code>long</code>, l'ammontare in <strong>satoshi</strong> (1 bitcoin = 100.000.000 satoshi), movimentato dall'<em>Activity</em>;</p>
+</li>
+<li>
+<p><strong>fiatAmount</strong>: di tipo <code>Decimal</code> (iOS) / <code>BigDecimal</code> (Android), il corrispettivo ammontare di <strong>cryptoAmount</strong>, calcolato nella valuta indicata tramite il campo <strong>currency</strong>;</p>
+</li>
+</ul>
+<h3 id="errori_1">Errori</h3>
+<ul>
+<li><a href="../../operation/Operation/#Non-autorizzato">Non autorizzato</a></li>
+</ul>
+<h3 id="codice_1">Codice</h3>
+<h4 id="android_1">Android</h4>
+<pre><code class="language-java">// Example 1: retrieve 6 activities of all type
+List&lt;ActivityType&gt; types = ActivityType.all;
+ActivityListParams params = new ActivityListParams(types, Currency.EUR);
+
+// Example 2: retrieve 10 sell activities
+List&lt;ActivityType&gt; types = Collections.singletonList(ActivityType.SELL);
+ActivityListParams params = new ActivityListParams(types, Currency.EUR, 10);
+
+// Example 3: retrieve 6 buy and receive activities of the last month
+List&lt;ActivityType&gt; types = Arrays.asList(ActivityType.BUY, ActivityType.RECEIVE);
+ActivityListParams params = new ActivityListParams(
+    types,                // types
+    Currency.EUR,         // currency
+    6,                    // limit
+    null,                 // nextPage
+    TimeFrame.lastMonth() // timeFrame
+);
+
+conio.walletService.activityList(params)
+    .asCallback(result -&gt; result.analysis(
+        activityList -&gt; { /* Handle ActivityList */ },
+        error -&gt; { /* ... */ }
+    ));
+</code></pre>
+<h4 id="ios_1">iOS</h4>
+<pre><code class="language-swift">let types = WalletActivityType.allCases
+let params = ActivitiesParams(nextPage: &quot;string&quot;, types: types)
+conio.walletService.walletActivities(params: params).asCallback { result in
+    switch result {
+    case .success(let activities):
+        // WalletActivities
+    case .failure(let error):
+        // Operation Error
+    }
+}
+</code></pre>
+<h2 id="lista-movimenti-bitcoin-in-formato-pdf">Lista movimenti bitcoin in formato PDF</h2>
+<p>Ciascuna operazione di invio, ricezione, acquisto e vendita di Bitcoin è rappresentata da un'<code>Activity</code>. La lista delle attività svolte dall'utente, in formato PDF, può essere recuperata tramite l'apposito metodo.</p>
+<h3 id="metodo_2">Metodo</h3>
+<h4 id="android_2">Android</h4>
+<p><code>walletService.activityListPdf</code></p>
+<h4 id="ios_2">iOS</h4>
+<p><code>walletService.walletPDFActivities</code></p>
+<h3 id="parametri_1">Parametri</h3>
+<h4 id="android_3">Android</h4>
+<p>Un oggetto di tipo <code>ActivityListPdfParams</code> contenente:</p>
+<ul>
+<li>
+<p><strong>types</strong>: di tipo <code>List&lt;ActivityType&gt;</code>, una lista di enumerati <code>ActivityType</code> che ci permette di specificare le tipologie di activities da recuperare. Tramite <code>ActivityType.all()</code> è possibile ottenere una lista di tutte le tipologie di <em>Activity</em>;</p>
+</li>
+<li>
+<p><strong>currency</strong>: di tipo <code>Currency</code>, la valuta nella quale si vuole conoscere il valore della transazioni di acquisto e vendita (attualmente solo Euro);</p>
+</li>
+<li>
+<p><strong>@Default(6) limit</strong>: di tipo <code>intero</code>, il numero massimo di transazioni da ricevere nella risposta;</p>
+</li>
+<li>
+<p><strong>@Opzionale timeFrame</strong>: di tipo <code>TimeFrame</code>, la finestra temporale che definisce quali <em>Activity</em> includere nella risposta.</p>
+</li>
+</ul>
+<h4 id="ios_3">iOS</h4>
+<p>Un oggetto di tipo <code>PDFActivitiesParams</code> contenente:</p>
+<ul>
+<li>
+<p><strong>types</strong>: di tipo <code>Array&lt;WalletActivityType&gt;</code>, una lista di enumerati <code>WalletActivityType</code> che ci permette di specificare le tipologie di activities da recuperare. Tramite <code>WalletActivityType.allCases</code> è possibile ottenere una lista di tutte le tipologie di <em>Activity</em>;</p>
+</li>
+<li>
+<p><strong>currency</strong>: di tipo <code>Currency</code>, la valuta nella quale si vuole conoscere il valore della transazioni di acquisto e vendita (attualmente solo Euro);</p>
+</li>
+<li>
+<p><strong>limit</strong>: di tipo <code>Int</code> (default value 6), il numero massimo di transazioni da ricevere nella risposta;</p>
+</li>
+<li>
+<p><strong>timeFrame</strong>: di tipo <code>TimeFrame?</code>, la finestra temporale che definisce quali <em>Activity</em> includere nella risposta.</p>
+</li>
+</ul>
+<h3 id="risposta_2">Risposta</h3>
+<h4 id="android_4">Android</h4>
+<p>Un oggetto di tipo <code>InputStream</code> contenente il bytes stream del PDF.</p>
+<h4 id="ios_4">iOS</h4>
+<p>Un oggetto di tipo <code>Data</code> contenente il byte buffer del PDF.</p>
+<h3 id="errori_2">Errori</h3>
+<ul>
+<li><a href="../../operation/Operation/#Non-autorizzato">Non autorizzato</a></li>
+</ul>
+<h3 id="codice_2">Codice</h3>
+<h4 id="android_5">Android</h4>
+<pre><code class="language-java">// Example 1: retrieve 6 activities of all type
+List&lt;ActivityType&gt; types = ActivityType.all;
+ActivityListPdfParams params = new ActivityListPdfParams(types, Currency.EUR);
+
+// Example 2: retrieve 10 sell activities
+List&lt;ActivityType&gt; types = Collections.singletonList(ActivityType.SELL);
+ActivityListPdfParams params = new ActivityListPdfParams(types, Currency.EUR, 10);
+
+// Example 3: retrieve 6 buy and receive activities of the last month
+List&lt;ActivityType&gt; types = Arrays.asList(ActivityType.BUY, ActivityType.RECEIVE);
+ActivityListPdfParams params = new ActivityListPdfParams(
+    types,                // types
+    Currency.EUR,         // currency
+    6,                    // limit
+    TimeFrame.lastMonth() // timeFrame
+);
+
+conio.walletService.activityListPdf(params)
+    .asCallback(result -&gt; result.analysis(
+        stream -&gt; { /* Handle InputStream */ },
+        error -&gt; { /* ... */ }
+    ));
+</code></pre>
+<h4 id="ios_5">iOS</h4>
+<pre><code class="language-swift">let types = WalletActivityType.allCases
+let params = PDFActivitiesParams(types: types, currency: .EUR)
+conio.walletService.walletPDFActivities(with: params).asCallback { result in
+    switch result {
+    case .success(let data):
+      // PDF WalletActivities
+    case .failure(let error):
+      // Operation Error
+    }
+}
+</code></pre>
+<h2 id="dettaglio-di-un-movimento">Dettaglio di un movimento</h2>
+<p>Recuperata la lista delle attività è possibile ottenere ulteriori informazioni su un <em>Activity</em> specifica richiedendone il dettaglio.</p>
+<h3 id="metodo_3">Metodo</h3>
+<p><code>walletService.activityDetails</code></p>
+<h3 id="parametri_2">Parametri</h3>
+<p>Un oggetto di tipo <code>ActivityDetailsParams</code> contenente:</p>
+<ul>
+<li>
+<p><strong>activityId</strong>: di tipo <code>String</code>, l'id dell'<em>Activity</em> della quale si vuole leggere il dettaglio;</p>
+</li>
+<li>
+<p><strong>currency</strong>: di tipo <code>Currency</code>, la valuta nella quale si vuole conoscere il valore della transazioni di acquisto e vendita (attualmente solo Euro);</p>
+</li>
+</ul>
+<h3 id="risposta_3">Risposta</h3>
+<p>Un oggetto di tipo <code>ActivityDetails</code> contenente:</p>
+<ul>
+<li>
+<p><strong>activityId</strong>: di tipo <code>String</code>, l'id dell'attività;</p>
+</li>
+<li>
+<p><strong>type</strong>: di tipo <code>ActivityType</code>, la tipologia di <em>Activity</em> (<code>SEND</code>, <code>BUY</code>, <code>SELL</code>, <code>RECEIVE</code>);</p>
+</li>
+<li>
+<p><strong>createdAt</strong>: di tipo <code>Long</code>, l'istante temporale in cui è stata creata l'<em>Activity</em>, espresso come Unix Timestamp in millisecondi.</p>
+</li>
+<li>
+<p><strong>@Opzionale transaction</strong>: di tipo <code>Transaction</code>, la transazione annessa. Popolato nel caso in cui sia stata effettuata una transazione. Contiene informazioni sulla transazione Bitcoin associata all'<em>Activity</em>, quali:</p>
+<ul>
+<li>
+<p><strong>hash</strong>: di tipo <code>String</code>, l'hash della transazione Bitcoin;</p>
+</li>
+<li>
+<p><strong>status</strong>: di tipo <code>TransactionStatus</code>, lo stato di conferma della transazione Bitcoin legata all'<em>Activity</em> (<code>UNCONFIRMED</code>, <code>PARTIALLY_CONFIRMED</code>, <code>CONFIRMED</code>);</p>
+</li>
+<li>
+<p><strong>type</strong>: di tipo <code>TransactionType</code>, il tipo di transazione Bitcoin (<code>GENERIC</code> o <code>REDEPOSIT</code>, ovvero una transazione verso se stessi);</p>
+</li>
+<li>
+<p><strong>addresses</strong>: di tipo <code>List&lt;String&gt;</code>, gli indirizzi Bitcoin dei dei <strong>mittenti</strong> (per le transazioni in entrata) o <strong>dei destinatari</strong> (per le transazioni in uscita);</p>
+</li>
+<li>
+<p><strong>cryptoAmount</strong>: di tipo <code>long</code></p>
+</li>
+<li>
+<p><strong>miningFees</strong>: di tipo <code>long</code>, le commissioni pagate alle rete Bitcoin per processare la transazione;</p>
+</li>
+<li>
+<p><strong>isIncoming</strong>: di tipo <code>booleano</code>, flag indicante se la transazione è in entrata o in uscita rispetto al portafoglio dell'utente;</p>
+</li>
+<li>
+<p><strong>isLocal</strong>: di tipo <code>booleano</code>, flag indicante se la transazione è stata ricevuta/inviata da/a un portafoglio Conio.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>@Opzionale associatedBid</strong>: l'offerta di acquisto annessa. Popolato in caso di attività di acquisto. Contiene le informazioni sulla richiesta di acquisto, quali:</p>
+<ul>
+<li>
+<p><strong>status</strong>: di tipo <code>BidStatus</code>, lo stato del pagamento della richiesta di acquisto (<code>PAID</code>, <code>CHARGED</code>);</p>
+</li>
+<li>
+<p><strong>cryptoAmount</strong>: di tipo <code>long</code>, l'ammontare in <strong>satoshi</strong> (1 bitcoin = 100.000.000 satoshi) acquistato;</p>
+</li>
+<li>
+<p><strong>fiatAmount</strong>: di tipo <code>Decimal</code> (iOS) / <code>BigDecimal</code> (Android), il controvalore (rispetto al <strong>cryptoAmount</strong>) accordato per l'acquisto dei bitcoin, calcolato nella valuta indicata dal campo <strong>currency</strong>;</p>
+</li>
+<li>
+<p><strong>serviceFee</strong>: di tipo <code>Decimal</code> (iOS) / <code>BigDecimal</code> (Android), le commissioni pagate per la fruizione del servizio, calcolato nella valuta indicata dal campo <strong>currency</strong>;</p>
+</li>
+<li>
+<p><strong>currency</strong>: di tipo <code>Currency</code>, la valuta usata per l'acquisto dei bitcoin;</p>
+</li>
+<li>
+<p><strong>paymentMethodId</strong>: di tipo <code>String</code>, l'identificativo del metodo di pagamento;</p>
+</li>
+<li>
+<p><strong>createdAt</strong>: di tipo <code>long</code>, l'istante temporale in cui è stata creata l'<em>Activity</em>, espresso come Unix Timestamp in millisecondi;</p>
+</li>
+<li>
+<p><strong>paidAt</strong>: di tipo <code>long</code>, l'istante temporale in cui è stato effettuato il pagamento per l'acquisto dei bitcoin, espresso come Unix Timestamp in millisecondi;</p>
+</li>
+<li>
+<p><strong>@Opzionale chargedAt</strong>: di tipo <code>long</code>, l'istante temporale in cui è stata invaita la transazione bitcoin, espresso come Unix Timestamp in millisecondi. Nullo nel caso in cui la transazione non sia ancora stata effettuata.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>@Opzionale associatedAsk</strong>: l'offerta di vendita annessa. Popolato in caso di attività di vendita, Contiene le informazioni sulla richeista di vendita, quali:</p>
+<ul>
+<li>
+<p><strong>status</strong>: di tipo <code>AskStatus</code>, lo stato del pagamento della richiesta di vendita (<code>CHARGED</code>, <code>PAID</code>)</p>
+</li>
+<li>
+<p><strong>cryptoAmount</strong>: di tipo <code>long</code>, l'ammontare in <strong>satoshi</strong> (1 bitcoin = 100.000.000 satoshi) venduto;</p>
+</li>
+<li>
+<p><strong>fiatAmount</strong>: di tipo <code>Decimal</code> (iOS) / <code>BigDecimal</code> (Android), il controvalore (rispetto al <strong>cryptoAmount</strong>) accordato per la vendita dei bitcoin, calcolato nella valuta indicata dal campo <strong>currency</strong>;</p>
+</li>
+<li>
+<p><strong>serviceFee</strong>: di tipo <code>Decimal</code> (iOS) / <code>BigDecimal</code> (Android), le commissioni pagate per la fruizione del servizio, calcolato nella valuta indicata dal campo <strong>currency</strong>;</p>
+</li>
+<li>
+<p><strong>currency</strong>: di tipo <code>Currency</code>, la valuta usata per la vendita dei bitcoin;</p>
+</li>
+<li>
+<p><strong>sellMethodId</strong>: di tipo <code>String</code>, l'identificativo del metodo di riscossione della vendita;</p>
+</li>
+<li>
+<p><strong>@Opzionale cro</strong>: di tipo <code>String</code>, il Codice Riferimento Operazione della transazione bancaria;</p>
+</li>
+<li>
+<p><strong>@Opzionale iban</strong>: di tipo <code>String</code>, l'IBAN del richiedente del bonifico bancario;</p>
+</li>
+<li>
+<p><strong>createdAt</strong>: di tipo <code>long</code>, l'istante temporale in cui è stata creata l'<em>Activity</em>, espresso come Unix Timestamp in millisecondi;</p>
+</li>
+<li>
+<p><strong>@Opzionale chargedAt</strong>: di tipo <code>long</code>, l'istante temporale in cui è stato effettuato il pagamento per la vendita dei bitcoin, espresso come Unix Timestamp in millisecondi. Nullo nel caso in cui la transazione non sia ancora stata effettuata;</p>
+</li>
+<li>
+<p><strong>paidAt</strong>: di tipo <code>long</code>, l'istante temporale in cui è stata invaita la transazione bitcoin, espresso come Unix Timestamp in millisecondi.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="errori_3">Errori</h3>
+<ul>
+<li><a href="../../operation/Operation/#Non-autorizzato">Non autorizzato</a></li>
+</ul>
+<h3 id="codice_3">Codice</h3>
+<h4 id="android_6">Android</h4>
+<pre><code class="language-java">ActivityDetailsParams params = new ActivityDetailsParams(&quot;activityId&quot;, Currency.EUR);
+
+conio.walletService.activityDetails(params)
+    .asCallback(result -&gt; result.analysis(
+        details -&gt; { /* Handle ActivityDetails */ },
+        error -&gt; { /* ... */ }
+    ));
+</code></pre>
+<h4 id="ios_6">iOS</h4>
+<pre><code class="language-swift">let params = ActivityDetailsParams(activityId: &quot;activityId&quot;, currency: .eur)
+
+conio.walletService.activityDetails(params: params).asCallback { result in
+    switch result {
+    case .success(let details):
+        // ActivityDetails
+    case .failure(let error):
+        // Operation Error
+    }
+}
+</code></pre>
+<h2 id="bilancio-del-portafoglio">Bilancio del portafoglio</h2>
+<p>Permette di recuperare il bilancio del portafoglio Bitcoin dell'utente.</p>
+<h3 id="metodo_4">Metodo</h3>
+<p><code>walletService.walletBalances</code></p>
+<h3 id="risposta_4">Risposta</h3>
+<p>Un oggetto di tipo <code>WalletBalances</code> contenente il valore di bitcoin presente nel wallet espresso in <strong>satoshi</strong> (1 bitcoin = 100.000.000 satoshi). Il valore si divide in:</p>
+<ul>
+<li>
+<p><strong>confirmedBalance</strong>: di tipo <code>long</code>, valore con almeno 3 conferme sulla blockchain Bitcoin e quindi disponibile per l'utente;</p>
+</li>
+<li>
+<p><strong>unconfirmedBalance</strong>: di tipo <code>long</code>, valore con meno di 3 conferme e quindi non ancora disponibile.</p>
+</li>
+</ul>
+<h3 id="errori_4">Errori</h3>
+<ul>
+<li><a href="../../operation/Operation/#Non-autorizzato">Non autorizzato</a></li>
+</ul>
+<h3 id="codice_4">Codice</h3>
+<h4 id="android_7">Android</h4>
+<pre><code class="language-java">conio.walletService.walletBalances()
+    .asCallback(result -&gt; result.analysis(
+        balances -&gt; { /* Handle WalletBalances */ },
+        error -&gt; { /* ... */ }
+    ));
+</code></pre>
+<h4 id="ios_7">iOS</h4>
+<pre><code class="language-swift">conio.walletService.walletBalances().asCallback { result in
+    switch result {
+    case .success(let balances):
+        // WalletBalances
+    case .failure(let error):
+        // Operation Error
+    }
+}
+</code></pre>
+<h2 id="codice-di-recupero-bitcoin">Codice di recupero Bitcoin</h2>
+<p>Permette di recuperare dalla memoria del dispositivo il "Codie di recupero Bitcoin": 12 parole di backup del portafoglio Bitcoin.</p>
+<h3 id="risposta_5">Risposta</h3>
+<p>Un oggetto di tipo <code>MnemonicWords</code> contenente un array di 12 stringhe.</p>
+<h3 id="errori_5">Errori</h3>
+<ul>
+<li><a href="../../operation/Operation/#Non-autorizzato">Non autorizzato</a></li>
+</ul>
+<h3 id="codice_5">Codice</h3>
+<h4 id="android_8">Android</h4>
+<pre><code class="language-java">conio.walletService.readMnemonic()
+    .asCallback(result -&gt; result.analysis(
+        mnemonic -&gt; { /* Handle MnemonicWords */ },
+        error -&gt; { /* ... */ }
+    ));
+</code></pre>
+<h4 id="ios_8">iOS</h4>
+<pre><code class="language-swift">conio.walletService.readMnemonic().asCallback { result in
+    switch result {
+    case .success(let mnemonic):
+        // MnemonicWords
+    case .failure(let error):
+        // Operation Error
+    }
+}
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>
