@@ -15,8 +15,16 @@ Conio SDK provides a set of Android and iOS native APIs for Conio services to le
     *   [iOS](./Configuration/Ios.md)    
     *   [Android](./Configuration/Android.md)
 *  Features
-    *   [User Service](./Features/UserService/UserService.md)
-    *   [Trading Info Service](./Features/TradingInfoService/TradingInfoService.md)
+    *   [User Service](./Features/UserService.md)
+    *   [Trading Info Service](./Features/TradingInfoService.md)
+    *   [Wallet Service](./Features/WalletService.md)
+    *   [BTC Transaction Management Service](./Features/BtcTransactionManagementService.md)
+    *   [Trading Buy Service](./Features/TradingBuyService.md)
+    *   [Trading Sell Service](./Features/TradingSellService.md)
+    *   [Trading Price Service](./Features/TradingPriceService.md)
+    *   [Swap Service](./Features/SwapService.md)
+    *   [Transfer Service](./Features/TransferService.md)
+    *   [Activities Service](./Features/ActivitiesService.md)
 
 ## Old
 ---

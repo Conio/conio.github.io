@@ -10,9 +10,11 @@ The Conio SDK provides a suite of modular services tailored to specific function
 
 ## Trading Info Service
 ---
+- [Trading Info Service](./Features/TradingInfoService.md)
 
 ## Wallet Service
 ---
+- [Wallet Service](./Features/WalletService.md)
 
 ## BTC Transaction Management Service
 ---
