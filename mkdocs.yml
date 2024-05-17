@@ -82,8 +82,8 @@ theme:
     - navigation.expand
   palette:
     scheme: default
-    primary: blue
-    accent: blue
+    primary: teal
+    accent: teal
 
 # extra:
 #   alternate:

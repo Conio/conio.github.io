@@ -9,4 +9,4 @@ The `ActivitiesService` contains all the API that provides information about wal
 - [Fetch Activities](ActivitiesService/FetchActivities.md)
 
 ### Single Activity
-- [Fetch Activity](Activities/FetchActivity.md)
+- [Fetch Activity](ActivitiesService/FetchActivity.md)
