@@ -20,10 +20,7 @@ The `CreateBidParams` used to initialized and perform `createBid` API.
 ---
 ### iOS
 ```swift
-let params = CreateBidParams
-    .makeBTC(
-        amount: .fiat(value: 100)
-    )
+let params = CreateBidParams.makeBTC(amount: ...)
 
 tradingBuyService
     .createBid(with: params)
