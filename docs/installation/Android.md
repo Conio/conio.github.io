@@ -1,45 +1,37 @@
-# Installazione su Android #
+# Android Installation
 
-L'SDK si installa utilizzando il repository Maven di Artifactory.
-Per potersi autenticare al repository è necessario configurare le credenziali nel file **gradle.properties** come segue:
+## Prerequisites
+---
 
-#### gradle.properties
+- Min Android SDK: 23 (Android 6.0 “Marshmallow”)
 
-```gradle
-artifactory_user={username}
-artifactory_password={password}
+## Installation
+---
+The Conio Android SDK is located in a private Maven repository on *JFrog Artifactory*, so it is necessary to configure the authentication as follow.
+
+- Add the Artifactory credentials provided by Conio to your global `gradle.properties`
+```
+artifactory_user=<username provided by Conio>
+    artifactory_password=<password provided by Conio>
 ```
 
-A questo punto sarà possibile aggiungere l'indirizzo del repository nel **build.gradle** dell'applicazione:
-
-#### app/build.gradle
-
-```gradle
+- Add the Conio Artifactory repository to your `build.gradle`
+```
 repositories {
-
-    ...
-
-    maven {
-        url "https://artifactory.conio.com/artifactory/gradle-release-local"
-        credentials(PasswordCredentials) {
-            username "${artifactory_user}"
-            password "${artifactory_password}"
+        // ...
+        maven {
+            url "https://artifactory.conio.com/artifactory/gradle-release-local"
+            credentials(PasswordCredentials) {
+                username "${artifactory_user}"
+                password "${artifactory_password}"
         }
     }
 }
 ```
-
-Dopo aver specificato l'indirizzo del repository dal quale verranno sincronizzati gli artefatti sarà possibile aggiungere il **Conio SDK** come dipendeza dell'applicazione:
-
-#### app/build.gradle
-
-```gradle
+- Add the Conio SDK dependency
+```
 dependencies {
-
-    ...
-
-    implementation 'com.conio:sdk2:[VERSION]'
+    // ...
+    implementation 'com.conio:sdk-b2b:[VERSION]'
 }
 ```
-
-Sincronizzando il progetto con Gradle sarà possibile utilizzare l'SDK.

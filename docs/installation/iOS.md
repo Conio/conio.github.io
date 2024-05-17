@@ -1,12 +1,14 @@
-# Installazione
+# iOS Installation
 
-## Prerequisiti
-* SDK supporta iOS 10+
-* [Autoconf](https://www.gnu.org/software/autoconf/) installato
-* [Automake](https://www.gnu.org/software/automake/) installato
-* [Libtool](https://www.gnu.org/software/libtool/) installato
+## Prerequisites
+---
 
-È consigliato l'utilizzo del gestori di pacchetti MacOS [Brew](https://brew.sh/index_it) per l'installazione di `Autoconf`, `Automake` e `Libtool`.
+- iOS 13+
+- [Autoconf](https://www.gnu.org/software/autoconf/) installed
+- [Automake](https://www.gnu.org/software/automake/) installed
+- [Libtool](https://www.gnu.org/software/libtool/) installed
+
+Consider using MacOS package manager [Brew](https://brew.sh/index_it) to install `Autoconf`, `Automake` e `Libtool`.
 
 ```
 # Install Brew
@@ -16,37 +18,28 @@
 brew install autoconf automake libtool
 ```
 
-## Installazione con Cocoapods
-
-L'SDK Conio è disponibile come Pod ed è possibile includerla nei progetti aggiungendo le seguenti righe al Podfile:
-
-```ruby
-# The ConioSDK Core
-pod 'ConioSDK', :git => 'git@bitbucket.org:squadrone/conio-swift-sdk.git', :branch => 'master'
-
-# BitcoinKit for encryption purposes
-pod 'BitcoinKit', :git => 'https://github.com/Conio/BitcoinKit.git', :branch => 'keyconvert'
-```
-
-Eseguire il comando `pod install` nella cartella per ottenere l'SDK.
-
----
----
-## Possibili Errori nell'installazione
-Se si dovesse verificare il seguente messaggio di errore:
-```bash
-autoreconf: failed to run aclocal: No such file or directory
-```
-Eseguire il comando:
-
- `brew install autoconf && brew install automake`.
-
+## Swift Package Manger
 ---
 
-Se si dovesse verificare il seguente messaggio di errore:
+Simply add the following lines to dependencies of your `Package.swift`:
 ```
-Can't exec "/opt/local/bin/aclocal": No such file or directory
+.package(url: "git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git", .upToNextMinor(from: "2.0.0"))
 ```
-Disinstallare dal sistema MacPorts eseguendo:
 
+Note: in order to correctly fetch package you will need to have access to project repository.
+
+## Troubleshooting
+---
+
+If you get the following error:
+
+`autoreconf: failed to run aclocal: No such file or directory` 
+
+try the following command:
+
+`brew install autoconf && brew install automake`
+
+If you get the following error:
+`Can't exec "/opt/local/bin/aclocal": No such file or directory`
+Uninstall MacPorts with:
 `sudo port -fp uninstall --follow-dependents installed`
