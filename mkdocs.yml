@@ -8,26 +8,17 @@ repo_url: https://github.com/Conio/conio.github.io
 
 # Navigation
 nav:
-    - home: index.md
-    - home: index.en.md
-    - Changelog: 'CHANGELOG.en.md'
-    - installation:
-      - iOS: 'installation/iOS.md'
-      - iOS: 'installation/iOS.en.md'
-      - Android: 'installation/Android.md'
-      - Android: 'installation/Android.en.md'
-    - configuration: 'configuration/Configuration.md'
-    - configuration: 'configuration/Configuration.en.md'
-    - operations:
-      - general: 'operation/Operation.md'
-      # - general: 'operation/Operation.en.md'
-      - cryptoRequest: 'operation/CryptoRequest.md'
-      # - cryptoRequest: 'operation/CryptoRequest.en.md'
-    - user: 'user/User.md'
-    - user: 'user/User.en.md'
-    - exchangeOperations: 'exchange/Exchange.md'
-    - exchangeOperations: 'exchange/Exchange.en.md'
-
+  - Home: index.md
+  - Changelog: CHANGELOG.md
+  - Installation:
+    - iOS: Installation/Ios.md
+    - Android: Installation/Android.md
+  - Configuration:
+    - iOS: Configuration/Ios.md
+    - Android: Configuration/Android.md
+  - User Service: Features/UserService/UserService.md
+  - Trading Info Service: Features/TradingInfoService/TradingInfoService.md
+    
 # Plugins
 plugins:
   - search
@@ -36,33 +27,33 @@ plugins:
      combined: true
      combined_output_path: pdf/ConioSDK_Docs.pdf
      #enabled_if_env: ENABLE_PDF_EXPORT
-  - i18n:
-      languages:
-        it: "Italiano"
-        en: "English"
-      default_language: 'it'
-      no_translation:
-        en: "This page isn't translated to English."
-        it: "Questa pagina non è tradotta in italiano"
-      translate_nav:
-        en:
-          home: "Home"
-          installation: "Installation"
-          configuration: "Configuration"
-          operations: "Operations"
-          general: "Overview"
-          cryptoRequest: "Crypto Requests"
-          user: "User"
-          exchangeOperations: "Exchange operations"
-        it:
-          home: "Home"
-          installation: "Installazione"
-          configuration: "Configurazione"
-          operations: "Operazioni"
-          general: "Generale"
-          cryptoRequest: "Crypto Request"
-          user: "Utente"
-          exchangeOperations: "Operazioni sul mercato"
+  # - i18n:
+  #     languages:
+  #       it: "Italiano"
+  #       en: "English"
+  #     default_language: 'en'
+  #     no_translation:
+  #       en: "This page isn't translated to English."
+  #       it: "Questa pagina non è tradotta in italiano"
+  #     translate_nav:
+  #       en:
+  #         home: "Home"
+  #         installation: "Installation"
+  #         configuration: "Configuration"
+  #         operations: "Operations"
+  #         general: "Overview"
+  #         cryptoRequest: "Crypto Requests"
+  #         user: "User"
+  #         exchangeOperations: "Exchange operations"
+  #       it:
+  #         home: "Home"
+  #         installation: "Installazione"
+  #         configuration: "Configurazione"
+  #         operations: "Operazioni"
+  #         general: "Generale"
+  #         cryptoRequest: "Crypto Request"
+  #         user: "Utente"
+  #         exchangeOperations: "Operazioni sul mercato"
 
 
 # Copyright
@@ -86,14 +77,14 @@ theme:
     primary: blue
     accent: blue
 
-extra:
-  alternate:
-    # Switch to English
-    - name: English
-      link: index.en/
-      lang: en
+# extra:
+#   alternate:
+#     # Switch to English
+#     - name: English
+#       link: index.en/
+#       lang: en
 
-    # Switch to Italian
-    - name: Italiano
-      link: ""
-      lang: it
+#     # Switch to Italian
+#     - name: Italiano
+#       link: ""
+#       lang: it
