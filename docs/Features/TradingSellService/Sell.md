@@ -10,10 +10,11 @@ The `SellParams` used to initialized and perform `sell` API.
 
 - ask id: the existing ask quotation identifier used to execute and finalize the sell operation
 - crypto request: the crypto signature used to validate the sell operation
+- wait until paid: prevent the service to complete until the ask is not in `paid` status (or in another end status, like `charged` or `error`)
 
 ## Result
 ---
-Success or error.
+The [AskResult](AskResult.md) with the updated `status`. If the `status` is different from `paid` or `charged`, the transaction can still end with an error (use the [Fetch Ask service](FetchAsk.md) to keep checking the status).
 
 ## Code
 ---

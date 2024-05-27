@@ -10,10 +10,11 @@ The `TransferParams` used to initialized and perform `transfer` API.
 
 - transfer id: the existing transfer quotation identifier used to execute and finalize the transfer operation
 - crypto request: the crypto signature used to validate the transfer operation
+- wait until paid: prevent the service to complete until the swap is not in `paid` status (or in another end status, like `finalized` or `error`)
 
 ## Result
 ---
-Success or error.
+The [TransferResult](TransferResult.md) with the updated `status`. If the `status` is different from `paid` or `finalized`, the transaction can still end with an error (use the [Fetch Transfer service](FetchTransfer.md) to keep checking the status).
 
 ## Code
 ---
