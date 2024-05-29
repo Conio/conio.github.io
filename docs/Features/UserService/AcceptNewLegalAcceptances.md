@@ -38,4 +38,26 @@ luserService
 ```
 
 ### Android
-(TBD)
+```kotlin
+val acceptances = listOf(
+    Acceptance(AcceptanceType.AppImprovement, isAccepted = true),
+    Acceptance(AcceptanceType.ClientSupport, isAccepted = true),
+)
+
+val credentials = Credentials(
+    username = "..." // user unique identifier,
+    password = "..."
+)
+
+val params = AcceptNewLegalAcceptancesParams(
+    acceptances = B2BModelAcceptances.acceptedAcceptances,
+    credentials = credentials
+)
+
+conio.userService
+    .acceptNewLegalAcceptances(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
+```
