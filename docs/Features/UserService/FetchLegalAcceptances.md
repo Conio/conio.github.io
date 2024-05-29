@@ -2,7 +2,7 @@
 
 ## Overview
 ---
-`fetchLegalAcceptances` API fetches the signup acceptances, terms and conditions and privacy policies information. 
+`fetchLegalAcceptances` API fetches the acceptances, terms and conditions and privacy policies information.
 
 ## Parameters
 ---
@@ -12,11 +12,11 @@ The `FetchLegalAcceptancesParams` used to initialized and perform `fetchLegalAcc
 
 ## Result
 ---
-The `LegalAcceptancesResult` signup acceptances, terms and conditions and privacy policies information.
+The `LegalAcceptancesResult` acceptances, terms and conditions and privacy policies information.
 
 - terms and conditions url: the T&C url
 - privacy policies url: the privacy policies url
-- acceptances: the signup acceptances list
+- acceptances: the acceptances list
 
 ## Code
 ---
