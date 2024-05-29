@@ -2,7 +2,7 @@
 
 ## Overview
 ---
-`login` API executes the signup process in Conio services. It allows client to create a new user and setting up a valid user session with passed username, password and crypto signature request.
+`signup` API executes the signup process in Conio services. It allows client to create a new user and setting up a valid user session with passed username, password and crypto signature request.
 
 ## Parameters
 ---
