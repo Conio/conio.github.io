@@ -37,5 +37,15 @@ btcTransactionManagementService
 
 ### Android
 ```kotlin
-(TBD)
+val params = SpeedUpParams(
+    transactionHash = "...",
+    feePerByte = CryptoAmount(...)
+)
+
+conio.btcTransactionService
+    .speedUp(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```

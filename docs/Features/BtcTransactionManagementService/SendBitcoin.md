@@ -39,5 +39,21 @@ btcTransactionManagementService
 
 ### Android
 ```kotlin
-(TBD)
+// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+val params = SendParams(
+    destinationAddress = "...",
+    btcAmount = amount,
+    feePerByte = CryptoAmount(...)
+)
+
+conio.btcTransactionService
+    .send(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```
