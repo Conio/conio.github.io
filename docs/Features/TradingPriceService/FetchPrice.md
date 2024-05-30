@@ -33,5 +33,15 @@ tradingPriceService
 
 ### Android
 ```kotlin
+val params = FetchPriceParams(
+    cryptoId = ...,
+    amount = CryptoAmount(...), // default null
+)
 
+conio.tradingPriceService
+    .fetchPrice(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```

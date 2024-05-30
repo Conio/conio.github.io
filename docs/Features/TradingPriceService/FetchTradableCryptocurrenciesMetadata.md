@@ -33,5 +33,17 @@ tradingPriceService
 
 ### Android
 ```kotlin
+// val language = Language.Italian
+val language = Language.English
 
+val params = FetchCryptoCurrenciesMetadataParams(
+    language = language
+)
+
+conio.tradingPriceService
+    .fetchCryptoCurrenciesMetadata(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```

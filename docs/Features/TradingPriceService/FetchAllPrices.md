@@ -32,5 +32,10 @@ tradingPriceService
 
 ### Android
 ```kotlin
-(TBD)
+conio.tradingPriceService
+    .fetchAllUnitPrices()
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```
