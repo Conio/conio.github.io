@@ -32,4 +32,11 @@ tradingInfoService
 ```
 
 ### Android
-(TBD)
+```kotlin
+conio.tradingInfoService
+	.fetchTradingSummary()
+	.asFlow()
+	.collect { result ->
+		// ...
+	}
+```

@@ -27,4 +27,11 @@ tradingInfoService
 
 
 ### Android
-(TBD)
+```kotlin
+conio.tradingInfoService
+	.fetchTradingFees()
+	.asFlow()
+	.collect { result ->
+		// ...
+	}
+```

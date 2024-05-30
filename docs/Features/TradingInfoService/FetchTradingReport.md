@@ -32,4 +32,18 @@ tradingInfoService
 ```
 
 ### Android
-(TBD)
+```kotlin
+// val reportPeriod = FetchTradingReportParams.ReportPeriod.LastYear
+val reportPeriod = FetchTradingReportParams.ReportPeriod("2023")
+
+val params = FetchTradingReportParams(
+	period = reportPeriod
+)
+
+conio.tradingInfoService
+	.fetchTradingReport(params)
+	.asFlow()
+	.collect { result ->
+		// ...
+	}
+```
