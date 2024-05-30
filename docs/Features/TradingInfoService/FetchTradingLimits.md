@@ -34,4 +34,11 @@ tradingInfoService
 ```
 
 ### Android
-(TBD)
+```kotlin
+conio.tradingInfoService
+	.fetchTradingLimits()
+	.asFlow()
+	.collect { result ->
+		// ...
+	}
+```
