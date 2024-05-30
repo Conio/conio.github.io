@@ -42,5 +42,21 @@ tradingBuyService
 
 ### Android
 ```kotlin
-(TBD)
+val cryptoRequest = BidCryptoRequest(
+    cryptoProof = ...,
+    proofId = ...,
+    expiration = ...,
+)
+
+val params = BuyParams(
+    bidId = "...",
+    cryptoRequest = cryptoRequest
+)
+
+conio.buyService
+    .buy(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```

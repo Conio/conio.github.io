@@ -34,5 +34,20 @@ tradingBuyService
 
 ### Android
 ```kotlin
-(TBD)
+// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+val params = UpdateBidParams(
+    bidId = "...",
+    newAmount = amount
+)
+
+conio.buyService
+    .updateBid(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```
