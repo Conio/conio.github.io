@@ -33,5 +33,14 @@ btcTransactionManagementService
 
 ### Android
 ```kotlin
-(TBD)
+val params = FetchSpeedUpAvailableFeesParams(
+    transactionHash = "...",
+)
+
+conio.btcTransactionService
+    .fetchSpeedUpAvailableFees(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```
