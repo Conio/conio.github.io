@@ -30,5 +30,14 @@ tradingSellService
 
 ### Android
 ```kotlin
-(TBD)
+val params = FetchAskParams(
+    askId = "...",
+)
+
+conio.sellService
+    .fetchAsk(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```
