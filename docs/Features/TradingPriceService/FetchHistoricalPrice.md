@@ -42,5 +42,22 @@ tradingPriceService
 
 ### Android
 ```kotlin
-(TBD)
+val oneDayInMillis = 24L * 60 * 60 * 1000
+val timeFrame = TimeFrame(
+    fromTimeInMillis = TimeFrame.now() - oneDayInMillis,
+    toTimeInMillis = TimeFrame.now(),
+)
+
+val params = FetchHistoricalPricesParams(
+    cryptoId = ...,
+    timeFrame = timeFrame,
+    priceInterval = PriceSamplingInterval.MINUTES_15,
+)
+
+conio.tradingPriceService
+    .fetchHistoricalPrices(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```
