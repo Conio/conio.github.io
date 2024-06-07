@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://sdk-docs.conio.com/Features/UserService/UserService/">
+        <link rel="canonical" href="https://sdk-docs.conio.com/Features/UserService/FetchLegalAcceptances/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>User Service - Conio SDK Documentation</title>
+        <title>Fetch Legal Acceptances - Conio SDK Documentation</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#user-service" class="md-skip">
+        <a href="#fetch-legal-acceptances" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User Service
+              Fetch Legal Acceptances
             
           </span>
         </div>
@@ -509,51 +509,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#apis" class="md-nav__link">
-    APIs
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="APIs">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Code">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#login" class="md-nav__link">
-    Login
+  <a href="#ios" class="md-nav__link">
+    iOS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#signup" class="md-nav__link">
-    Signup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#logout" class="md-nav__link">
-    Logout
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fetch-signup-legal-acceptances" class="md-nav__link">
-    Fetch Signup Legal Acceptances
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fech-user-permissions" class="md-nav__link">
-    Fech User Permissions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accept-new-legal-acceptances" class="md-nav__link">
-    Accept New Legal Acceptances
+  <a href="#android" class="md-nav__link">
+    Android
   </a>
   
 </li>
@@ -575,39 +568,53 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Conio/conio.github.io/edit/master/docs/Features/UserService/UserService.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Conio/conio.github.io/edit/master/docs/Features/UserService/FetchLegalAcceptances.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="user-service">User Service</h1>
-<p>The <code>UserService</code> contains all the APIs used to manage a Conio user.</p>
-<h2 id="apis">APIs</h2>
+                <h1 id="fetch-legal-acceptances">Fetch Legal Acceptances</h1>
+<h2 id="overview">Overview</h2>
 <hr />
-<h3 id="login">Login</h3>
+<p><code>fetchLegalAcceptances</code> API fetches the acceptances, terms and conditions and privacy policies information.</p>
+<h2 id="parameters">Parameters</h2>
+<hr />
+<p>The <code>FetchLegalAcceptancesParams</code> used to initialized and perform <code>fetchLegalAcceptances</code> API.</p>
 <ul>
-<li><a href="../UserLogin/">User Login</a></li>
+<li>language: the legal acceptances language translation</li>
 </ul>
-<h3 id="signup">Signup</h3>
+<h2 id="result">Result</h2>
+<hr />
+<p>The <code>LegalAcceptancesResult</code> acceptances, terms and conditions and privacy policies information.</p>
 <ul>
-<li><a href="../UserSignup/">User Signup</a></li>
+<li>terms and conditions url: the T&amp;C url</li>
+<li>privacy policies url: the privacy policies url</li>
+<li>acceptances: the acceptances list</li>
 </ul>
-<h3 id="logout">Logout</h3>
-<ul>
-<li><a href="../UserLogout/">User Logout</a></li>
-</ul>
-<h3 id="fetch-signup-legal-acceptances">Fetch Signup Legal Acceptances</h3>
-<ul>
-<li><a href="../FetchSignupLegalAcceptances/">Fetch Legal Acceptances</a></li>
-</ul>
-<h3 id="fech-user-permissions">Fech User Permissions</h3>
-<ul>
-<li><a href="../FetchPermissions/">Fetch Permissions</a></li>
-</ul>
-<h3 id="accept-new-legal-acceptances">Accept New Legal Acceptances</h3>
-<ul>
-<li><a href="../AcceptNewLegalAcceptances/">Accept New Legal Acceptances</a></li>
-</ul>
+<h2 id="code">Code</h2>
+<hr />
+<h3 id="ios">iOS</h3>
+<pre><code class="language-swift">let params = FetchLegalAcceptancesParams.makeItalian()
+
+userService
+    .fetchLegalAcceptances(with: params)
+    .asPublisher()
+    .sink { result in 
+        ...
+    }
+</code></pre>
+<h3 id="android">Android</h3>
+<pre><code class="language-kotlin">val params = FetchLegalAcceptancesParams(
+    language = Language.English,
+)
+
+conio.userService
+    .fetchLegalAcceptances(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
+</code></pre>
                 
               
               
