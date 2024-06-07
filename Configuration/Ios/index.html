@@ -319,9 +319,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          iOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         iOS
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -514,6 +544,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -531,7 +576,74 @@
                 
                 <h1 id="ios-configuration">iOS Configuration</h1>
 <p><code>ConioB2BSDK</code> is divided into multiple services, each one providing a different set of APIs.<br></p>
-<p>(TBD)</p>
+<p>Each service is independent and can be initialized through a <code>ServiceConfiguration</code> configuration using its own factory.</p>
+<pre><code class="language-swift">let conioConfig = ConioConfiguration.makeTestConfiguration(baseUrl: ...)
+let userService = UserServiceFactory().makeServiceUsingConfiguration(conioConfig)
+
+// User Service ready to be used
+userService
+    .login(with: ...)
+    .asPublisher()
+    .sink { ... }
+// ...  
+</code></pre>
+<p>Otherwise, <code>ConioB2BServiceFactory</code> factory leverages on a single <code>ServiceFactory</code> to make the requested <code>Service</code>.</p>
+<pre><code class="language-swift">let conioConfig = ConioConfiguration.makeTestConfiguration(baseUrl: ...)
+let userService = ConioB2BServiceFactory.makeServiceUsingFactory(UserServiceFactory(), serviceConfiguration: conioConfig)
+let walletService = ConioB2BServiceFactory.makeServiceUsingFactory(WalletServiceFactory(), serviceConfiguration: conioConfig)
+let activitiesService = ConioB2BServiceFactory.makeServiceUsingFactory(ActivitiesServiceFactory(), serviceConfiguration: conioConfig)
+// ...  
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>The single <code>Service</code> API is initialized with its specific <code>Params</code> parameters (if necessary) and the output can be read through its <code>OperationResult</code> result.</p>
+<pre><code class="language-swift">// ...
+let params = LoginParams
+    .make(
+        username: ...,
+        password: ...,
+        cryptoRequest: ...
+    )
+
+userService
+    .login(with: params)
+    .asPublisher()
+    .sink { result in
+        switch result {
+        case .success:
+            // ...
+        case .failure(let error):
+            // ...
+        }
+    }
+    .store(in: ...)
+// ...  
+</code></pre>
+<p>Each API is returned as <code>ServiceConsumer</code> and can be consumed in three different ways:</p>
+<ul>
+<li><code>asPublisher()</code>, used to handle the result in a declarative way leveraging on <a href="https://developer.apple.com/documentation/combine">Combine</a>;</li>
+<li><code>asCallback()</code>, used to handle the result in closure/lambda style as self-contained block;</li>
+<li><code>run()</code>, used to execute the API without handling the result.</li>
+</ul>
+<pre><code class="language-swift">// asPublisher()
+let cancellable = userService
+    .logout()
+    .asPublisher()
+    .sink { result in 
+        // ...
+    }
+
+// asCallback()
+userService
+    logout()
+    .asCallback { result in
+        // ...        
+    }
+
+// run()
+userService
+    .logout()
+    .run()  
+</code></pre>
                 
               
               
