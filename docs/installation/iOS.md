@@ -21,9 +21,27 @@ brew install autoconf automake libtool
 ## Swift Package Manger
 ---
 
-Simply add the following lines to dependencies of your `Package.swift`:
+### Via Xcode
+
+1. In Xcode, install Conio B2B SDK by navigating to *File > Add Packages*
+2. In the prompt that appears, insert the repository:
+
 ```
-.package(url: "git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git", .upToNextMinor(from: "2.0.0"))
+git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git
+```
+or 
+```
+https://bitbucket.org/squadrone/conio-sdk-b2b-ios.git
+```
+
+### Via `Package.swift`
+
+Simply add the following lines to `dependencies` of your `Package.swift` manifest:
+```
+dependencies: [
+  .package(url: "git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git", branch: "main")
+  // ...
+],
 ```
 
 Note: in order to correctly fetch package you will need to have access to project repository.
