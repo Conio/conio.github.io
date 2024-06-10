@@ -2,387 +2,387 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sdk-docs.conio.com/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/CHANGELOG/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Configuration/Android/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Configuration/Ios/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/ActivitiesService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/BtcTransactionManagementService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/SwapService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingBuyService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingInfoService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingPriceService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingSellService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TransferService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/UserService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/WalletService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/ActivitiesService/FetchActivities/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/ActivitiesService/FetchActivity/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/BtcTransactionManagementService/FetchAddress/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/BtcTransactionManagementService/FetchSpeedUpAvailableFees/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/BtcTransactionManagementService/FetchTransactionAvailableFees/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/BtcTransactionManagementService/SendBitcoin/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/BtcTransactionManagementService/SpeedUpTransaction/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/SwapService/CreateSwap/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/SwapService/FetchSwap/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/SwapService/Swap/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/SwapService/SwapResult/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/SwapService/UpdateSwap/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingBuyService/BidResult/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingBuyService/Buy/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingBuyService/CreateBid/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingBuyService/FetchBid/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingBuyService/UpdateBid/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingInfoService/FetchTradingFees/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingInfoService/FetchTradingLimits/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingInfoService/FetchTradingReport/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingInfoService/FetchTradingSummary/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingInfoService/TradingInfoService/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingPriceService/FetchAllPrices/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingPriceService/FetchHistoricalPrice/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingPriceService/FetchPrice/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingPriceService/FetchTradableCryptocurrenciesMetadata/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingSellService/AskResult/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingSellService/CreateAsk/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingSellService/FetchAsk/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingSellService/Sell/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TradingSellService/UpdateAsk/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TransferService/CreateTransfer/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TransferService/FetchTransfer/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TransferService/Transfer/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TransferService/TransferResult/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/TransferService/UpdateTransfer/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/UserService/AcceptNewLegalAcceptances/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/UserService/FetchLegalAcceptances/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/UserService/FetchPermissions/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/UserService/UserLogin/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/UserService/UserLogout/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/UserService/UserSignup/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/WalletService/FetchBalances/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Features/WalletService/FetchMnemonic/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Installation/Android/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Installation/Ios/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/index.en/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/configuration/Configuration.en/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/configuration/Configuration/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/exchange/Exchange.en/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/exchange/Exchange/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/installation/Android.en/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/installation/Android/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/installation/iOS.en/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/installation/iOS/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/operation/CryptoRequest/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/operation/Operation/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/user/User.en/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/user/User/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/wallet/Wallet.en/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/Old/wallet/Wallet/</loc>
-         <lastmod>2024-06-07</lastmod>
+         <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

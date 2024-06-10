@@ -300,6 +300,26 @@
     Swift Package Manger
   </a>
   
+    <nav class="md-nav" aria-label="Swift Package Manger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-xcode" class="md-nav__link">
+    Via Xcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-packageswift" class="md-nav__link">
+    Via Package.swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -576,6 +596,26 @@
     Swift Package Manger
   </a>
   
+    <nav class="md-nav" aria-label="Swift Package Manger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-xcode" class="md-nav__link">
+    Via Xcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-packageswift" class="md-nav__link">
+    Via Package.swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -620,8 +660,22 @@ brew install autoconf automake libtool
 </code></pre>
 <h2 id="swift-package-manger">Swift Package Manger</h2>
 <hr />
-<p>Simply add the following lines to dependencies of your <code>Package.swift</code>:</p>
-<pre><code>.package(url: &quot;git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git&quot;, .upToNextMinor(from: &quot;2.0.0&quot;))
+<h3 id="via-xcode">Via Xcode</h3>
+<ol>
+<li>In Xcode, install Conio B2B SDK by navigating to <em>File &gt; Add Packages</em></li>
+<li>In the prompt that appears, insert the repository:</li>
+</ol>
+<pre><code>git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git
+</code></pre>
+<p>or </p>
+<pre><code>https://bitbucket.org/squadrone/conio-sdk-b2b-ios.git
+</code></pre>
+<h3 id="via-packageswift">Via <code>Package.swift</code></h3>
+<p>Simply add the following lines to <code>dependencies</code> of your <code>Package.swift</code> manifest:</p>
+<pre><code>dependencies: [
+  .package(url: &quot;git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git&quot;, branch: &quot;main&quot;)
+  // ...
+],
 </code></pre>
 <p>Note: in order to correctly fetch package you will need to have access to project repository.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
