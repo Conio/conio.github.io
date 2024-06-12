@@ -1,6 +1,6 @@
 # User Service
 
-The `UserService` contains all the APIs used to manage a Conio user.
+The `UserService` contains all the APIs used to manage a Conio user. It provides methods to manage a Conio user.
 
 ## APIs
 ---

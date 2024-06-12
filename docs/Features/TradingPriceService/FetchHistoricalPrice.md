@@ -31,6 +31,7 @@ let params = FetchHistoricalPricesParams
         timeFrame: .makeUsingLastDay(),
         priceInterval: .fifteenMinutes
     )
+    
 tradingPriceService
     .fetchHistoricalPrices(with: params)
     .asPublisher()

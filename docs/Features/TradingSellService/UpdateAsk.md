@@ -24,6 +24,7 @@ let params = UpdateAskParams
         askId: ..., 
         newAmount: ...
     )
+    
 tradingSellService
     .updateAsk(with: params)
     .asPublisher()

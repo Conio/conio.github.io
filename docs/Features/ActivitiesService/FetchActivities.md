@@ -25,7 +25,19 @@ The `ActivitiesResult` contains the list of activities and an identifier to fetc
 ---
 ### iOS
 ```swift
-(TBD)
+let params = FetchActivitiesParams
+    .makeUsingAllActivityTypes(
+        cryptoId: "cETH",
+        timeFrame: .makeUsingLasYear(),
+        paginationLimit: 6
+    )
+
+    activitiesService
+    .fetchActivities(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android

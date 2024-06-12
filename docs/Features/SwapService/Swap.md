@@ -20,7 +20,25 @@ The [SwapResult](SwapResult.md) with the updated `status`. If the `status` is di
 ---
 ### iOS
 ```swift
-(TBD)
+let cryptoRequest = SwapParams.CryptoRequest
+    .make(
+        proofId: ...,
+        expiration: ...,
+        cryptoProof: ...
+    )      
+    
+let params = SwapParams
+    .make(
+        swapId: ...,
+        cryptoRequest: cryptoRequest
+    )
+
+swapService
+    .swap(with: params)
+    .asPublisher()
+    .sink { result in
+        // ..,
+    }
 ```
 
 ### Android

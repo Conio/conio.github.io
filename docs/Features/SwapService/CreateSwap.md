@@ -20,7 +20,19 @@ The `CreateSwapParams` used to initialized and perform `createSwap` API.
 ---
 ### iOS
 ```swift
-(TBD)
+let params = CreateSwapParams
+    .make(
+        sourceCryptoId: "cBTC",
+        destinationCryptoId: "cETH",
+        sourceCryptoAmount: .max
+    )
+
+swapService
+    .createSwap(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android

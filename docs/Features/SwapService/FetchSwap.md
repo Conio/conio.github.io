@@ -18,7 +18,14 @@ The `FetchSwapParams` used to initialized and perform `fetchSwap` API.
 ---
 ### iOS
 ```swift
-(TBD)
+let params = FetchSwapParams.make(swapId: ...) 
+
+swapService
+    .fetchSwap(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android

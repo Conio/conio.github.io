@@ -1,6 +1,6 @@
 # Transfer Service
 
-The `TransferService` contains all the APIs designed to facilitate the cryptocurrency amount transferring from an On-Chain Wallet to an Off-Chain Wallet of the same cryptocurrency and viceversa. The service manages the process of creating, updating, fetching, and finalizing transfer cryptocurrency between On-Chain and Off-Chain Wallet.
+The `TransferService` contains all the APIs designed to facilitate the cryptocurrency amount transferring from an On-Chain Wallet to an Off-Chain Wallet of the same cryptocurrency and viceversa. It provides methods for creating, updating, fetching and finalizing transfer cryptocurrency between On-Chain and Off-Chain Wallet.
 
 ## APIs
 ---

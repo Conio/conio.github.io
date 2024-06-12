@@ -1,6 +1,6 @@
 # Trading Price Service
 
-The `TradingPriceService` contains all the APIs that provides cryptocurrencies trading price information.
+The `TradingPriceService` contains all the APIs that provides cryptocurrencies trading price information. It provides methods for fetching current or historical crypto prices and tradable metadata, including cryptocurrency ids.
 
 ## APIs
 

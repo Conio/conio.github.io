@@ -29,6 +29,7 @@ let cryptoRequest = LoginParams
         expiration: Timestamp(Date().timeIntervalSince1970 + (30 * 60 * 1000)),
         cryptoProof: ...
     )
+    
 userService
     .login(with: params)
     .asPublisher()

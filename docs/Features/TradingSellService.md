@@ -1,6 +1,6 @@
 # Trading Sell Service
 
-The `TradingSellService` contains all the APIs designed to facilitate the sale of cryptocurrencies through trading operations. It provides methods for creating asks updating asks, selling cryptos, and fetching ask information.
+The `TradingSellService` contains all the APIs designed to facilitate the sale of cryptocurrencies through trading operations. It provides methods for creating, updating, fetching and finalizing ask quotations.
 
 ## APIs
 ---
@@ -14,5 +14,5 @@ The `TradingSellService` contains all the APIs designed to facilitate the sale o
 ### Fetch Existing Ask
 - [Fetch Ask](TradingSellService/FetchAsk.md)
 
-### Sell Bitcoin
+### Sell Cryptocurrency
 - [Sell](TradingSellService/Sell.md)

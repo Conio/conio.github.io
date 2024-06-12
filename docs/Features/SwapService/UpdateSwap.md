@@ -19,10 +19,21 @@ The `UpdateSwapParams` used to initialized and perform `updateSwap` API.
 ---
 ### iOS
 ```swift
+let params = UpdateSwapParams
+    .make(
+        swapId: ..., 
+        newSourceAmount: ...
+    )
 
+swapService
+    .updateSwap(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android
 ```kotlin
-
+(TBD)
 ```

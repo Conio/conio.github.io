@@ -1,6 +1,6 @@
 # Trading Buy Service
 
-The `TradingBuyService` contains all the APIs designed to facilitate the purchase of cryptocurrencies through trading operations. It provides methods for creating bids, updating bids, purchasing cryptocurrencies and fetching bid information.
+The `TradingBuyService` contains all the APIs designed to facilitate the purchase of cryptocurrencies through trading operations. It provides methods for creating, updating, fetching and finalizing bid quotations.
 
 ## APIs
 ---

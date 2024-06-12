@@ -1,6 +1,6 @@
 # Swap Service
 
-The `SwapService` contains all the APIs designed to facilitate the cryptocurrency swap functionality. The service manages the process of creating, updating, fetching, and finalizing swaps between cryptocurrencies.
+The `SwapService` contains all the APIs designed to facilitate the cryptocurrency swap functionality. It provides methods for creating, updating, fetching and finalizing swap quotations between cryptos.
 
 ## APIs
 ---

@@ -27,6 +27,7 @@ let params = FetchTransactionAvailableFeesParams
         destinationAddress: ...,
         amount: .cryptoAmount(value: ...)
     )
+    
 btcTransactionManagementService
     .fetchTransactionAvailableFees(with: params)
     .asPublisher()

@@ -21,7 +21,7 @@ The `PriceResult` data with cryptocurrency current price values.
 ---
 ### iOS
 ```swift
-let params = FetchPriceParams.makeUnitCurrenPrice(cryptoId: ...)
+let params = FetchPriceParams.makeUnitCurrenPrice(cryptoId: "cADA")
 
 tradingPriceService
 	.fetchPrice(params: params)

@@ -28,7 +28,7 @@ let cryptoRequest = BuyParams.CryptoRequest
     
 let params = BuyParams
     .make(
-        bidId: bidResult.id,
+        bidId: ...,
         cryptoRequest: cryptoRequest
     )
 

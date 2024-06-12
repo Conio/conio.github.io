@@ -20,7 +20,14 @@ The `ActivityResult` contains.
 ---
 ### iOS
 ```swift
-(TBD)
+let params = FetchActivityParams.make(activityId: ...)
+    
+    activitiesService
+    .fetchActivities(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android

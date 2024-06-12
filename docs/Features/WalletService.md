@@ -1,6 +1,6 @@
 # Wallet Service
 
-The `WalletService` contains all the APIs that provides information about the user Wallets, such  balance and mnemonic.
+The `WalletService` contains all the APIs that provides information about the user Wallets, such balance and mnemonic. 
 
 ## APIs
 ---
