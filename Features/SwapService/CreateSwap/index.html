@@ -593,7 +593,19 @@
 <h2 id="code">Code</h2>
 <hr />
 <h3 id="ios">iOS</h3>
-<pre><code class="language-swift">(TBD)
+<pre><code class="language-swift">let params = CreateSwapParams
+    .make(
+        sourceCryptoId: &quot;cBTC&quot;,
+        destinationCryptoId: &quot;cETH&quot;,
+        sourceCryptoAmount: .max
+    )
+
+swapService
+    .createSwap(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 </code></pre>
 <h3 id="android">Android</h3>
 <pre><code class="language-kotlin">(TBD)

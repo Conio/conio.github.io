@@ -592,10 +592,21 @@
 <h2 id="code">Code</h2>
 <hr />
 <h3 id="ios">iOS</h3>
-<pre><code class="language-swift">
+<pre><code class="language-swift">let params = UpdateSwapParams
+    .make(
+        swapId: ..., 
+        newSourceAmount: ...
+    )
+
+swapService
+    .updateSwap(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">
+<pre><code class="language-kotlin">(TBD)
 </code></pre>
                 
               
