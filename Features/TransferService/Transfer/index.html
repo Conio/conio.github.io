@@ -581,8 +581,8 @@
 <hr />
 <p>The <code>TransferParams</code> used to initialized and perform <code>transfer</code> API.</p>
 <ul>
-<li>transfer id: the existing transfer quotation identifier used to execute and finalize the transfer operation</li>
-<li>crypto request: the crypto signature used to validate the transfer operation</li>
+<li>transfer id: the existing transfer quotation identifier used to execute and finalize the transfer quotation</li>
+<li>crypto request: the crypto signature used to validate the transfer quotation</li>
 <li>wait until paid: prevent the service to complete until the swap is not in <code>paid</code> status (or in another end status, like <code>finalized</code> or <code>error</code>)</li>
 </ul>
 <h2 id="result">Result</h2>
@@ -591,7 +591,25 @@
 <h2 id="code">Code</h2>
 <hr />
 <h3 id="ios">iOS</h3>
-<pre><code class="language-swift">TBD
+<pre><code class="language-swift">let cryptoRequest = TransferParams.CryptoRequest
+    .make(
+        proofId: ...,
+        expiration: ...,
+        cryptoProof: ...
+    )      
+
+let params = TransferParams
+    .make(
+        transferId: ...,
+        cryptoRequest: cryptoRequest
+    )
+
+transferService
+    .transfer(with: params)
+    .asPublisher()
+    .sink { result in
+        // ..,
+    }
 </code></pre>
 <h3 id="android">Android</h3>
 <pre><code class="language-kotlin">TBD

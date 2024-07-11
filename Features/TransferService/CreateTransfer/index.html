@@ -581,9 +581,9 @@
 <hr />
 <p>The <code>CreateTransferParams</code> used to initialized and perform <code>createTransfer</code> API.</p>
 <ul>
-<li>source crypto id: the source cryptocurrency identifier used to create the transfer operation</li>
-<li>destination crypto id: the destination cryptocurrency identifier used to create the transfer operation</li>
-<li>source amount: the source cryptocurrency amount used to create the transfer</li>
+<li>source crypto: the source cryptocurrency used to create the transfer quotation</li>
+<li>destination crypto: the destination cryptocurrency used to create the transfer quotation</li>
+<li>source amount: the source cryptocurrency amount used to create the transfer quotation</li>
 </ul>
 <h2 id="result">Result</h2>
 <hr />
@@ -593,7 +593,19 @@
 <h2 id="code">Code</h2>
 <hr />
 <h3 id="ios">iOS</h3>
-<pre><code class="language-swift">(TBD)
+<pre><code class="language-swift">let params = CreateTransferParams
+    .make(
+        sourceCrypto: .onChainBtc,
+        destinationCrypto: .offChainBtc,
+        sourceCryptoAmount: .max
+    )
+
+transferService
+    .createTransfer(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 </code></pre>
 <h3 id="android">Android</h3>
 <pre><code class="language-kotlin">(TBD)
