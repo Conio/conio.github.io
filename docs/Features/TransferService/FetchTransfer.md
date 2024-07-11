@@ -18,7 +18,14 @@ The `FetchTransferParams` used to initialized and perform `fetchTransfer` API.
 ---
 ### iOS
 ```swift
-(TBD)
+let params = FetchTransferParams.make(transferId: ...) 
+
+transferService
+    .fetchTransfer(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android

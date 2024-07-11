@@ -8,9 +8,9 @@
 ---
 The `CreateTransferParams` used to initialized and perform `createTransfer` API.
 
-- source crypto id: the source cryptocurrency identifier used to create the transfer operation
-- destination crypto id: the destination cryptocurrency identifier used to create the transfer operation
-- source amount: the source cryptocurrency amount used to create the transfer
+- source crypto: the source cryptocurrency used to create the transfer quotation
+- destination crypto: the destination cryptocurrency used to create the transfer quotation
+- source amount: the source cryptocurrency amount used to create the transfer quotation
 
 ## Result
 ---
@@ -20,7 +20,19 @@ The `CreateTransferParams` used to initialized and perform `createTransfer` API.
 ---
 ### iOS
 ```swift
-(TBD)
+let params = CreateTransferParams
+    .make(
+        sourceCrypto: .onChainBtc,
+        destinationCrypto: .offChainBtc,
+        sourceCryptoAmount: .max
+    )
+
+transferService
+    .createTransfer(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android

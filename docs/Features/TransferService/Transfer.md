@@ -8,8 +8,8 @@
 ---
 The `TransferParams` used to initialized and perform `transfer` API.
 
-- transfer id: the existing transfer quotation identifier used to execute and finalize the transfer operation
-- crypto request: the crypto signature used to validate the transfer operation
+- transfer id: the existing transfer quotation identifier used to execute and finalize the transfer quotation
+- crypto request: the crypto signature used to validate the transfer quotation
 - wait until paid: prevent the service to complete until the swap is not in `paid` status (or in another end status, like `finalized` or `error`)
 
 ## Result
@@ -20,7 +20,25 @@ The [TransferResult](TransferResult.md) with the updated `status`. If the `statu
 ---
 ### iOS
 ```swift
-TBD
+let cryptoRequest = TransferParams.CryptoRequest
+    .make(
+        proofId: ...,
+        expiration: ...,
+        cryptoProof: ...
+    )      
+    
+let params = TransferParams
+    .make(
+        transferId: ...,
+        cryptoRequest: cryptoRequest
+    )
+
+transferService
+    .transfer(with: params)
+    .asPublisher()
+    .sink { result in
+        // ..,
+    }
 ```
 
 ### Android

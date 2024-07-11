@@ -19,7 +19,18 @@ The `UpdateTransferParams` used to initialized and perform `updateTransfer` API.
 ---
 ### iOS
 ```swift
-(TBD)
+let params = UpdateTransferParams
+    .make(
+        transferId: ...,
+        newSourceAmount: ...
+    )
+
+transferService
+    .updateTransfer(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android
