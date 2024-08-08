@@ -23,7 +23,24 @@
 []: # "Remove section if no new implementation was done ... )"
 
 
-## iOS
+# iOS
+## [2.0.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.0.1/) - 07-08-2024
+### Changed
+- Update ConioSDK
+
+## [2.0.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.0.0/) - 13-06-2024
+### Added
+- TSK-4503: Trading Info Service
+- TSK-4504: Btc Transaction Management Service
+- TSK-4505: Trading Buy Service
+- TSK-4506: Trading Sell Service
+- TSK-4509: Trading Price Service
+- TSK-4510: Swap Service
+
+### Changed
+- TSK-4502: User Service
+- TSK-4598: Wallet Service
+
 ## [0.7.0](https://bitbucket.org/squadrone/conio-swift-sdk/src/0.7.0/) - 07-06-2022
 ### Added
 - Model `CryptoSellParams` to replace `SellParams`

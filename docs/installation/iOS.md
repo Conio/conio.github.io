@@ -4,19 +4,7 @@
 ---
 
 - iOS 13+
-- [Autoconf](https://www.gnu.org/software/autoconf/) installed
-- [Automake](https://www.gnu.org/software/automake/) installed
-- [Libtool](https://www.gnu.org/software/libtool/) installed
-
-Consider using MacOS package manager [Brew](https://brew.sh/index_it) to install `Autoconf`, `Automake` e `Libtool`.
-
-```
-# Install Brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install Autoconf, Automake and Libtool
-brew install autoconf automake libtool
-```
+- Swift 5.9
 
 ## Swift Package Manger
 ---
@@ -39,7 +27,7 @@ https://bitbucket.org/squadrone/conio-sdk-b2b-ios.git
 Simply add the following lines to `dependencies` of your `Package.swift` manifest:
 ```
 dependencies: [
-  .package(url: "git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git", branch: "main")
+  .package(url: "git@bitbucket.org:squadrone/conio-sdk-b2b-ios.git")
   // ...
 ],
 ```
@@ -53,7 +41,7 @@ If you get the following error:
 
 `autoreconf: failed to run aclocal: No such file or directory` 
 
-try the following command:
+try the following command using [Brew](https://brew.sh/index_it):
 
 `brew install autoconf && brew install automake`
 
