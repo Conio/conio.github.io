@@ -43,5 +43,21 @@ tradingSellService
 
 ### Android
 ```kotlin
-(TBD)
+val cryptoRequest = SellCryptoRequest(
+    cryptoProof = ...,
+    proofId = ...,
+    expiration = ...,
+)
+
+val params = SellParams(
+    askId = "...",
+    cryptoRequest = cryptoRequest,
+)
+
+conio.sellService
+    .sell(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```

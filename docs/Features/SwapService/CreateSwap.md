@@ -37,5 +37,21 @@ swapService
 
 ### Android
 ```kotlin
-(TBD)
+// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+val params = CreateSwapParams(
+    sourceCryptoId = "...",
+    destinationCryptoId = "...",
+    sourceAmount = amount
+)
+
+conio.swapService
+    .createSwap(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```
