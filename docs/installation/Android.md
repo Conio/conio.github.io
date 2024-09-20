@@ -12,18 +12,18 @@ The Conio Android SDK is located in a private Maven repository on *JFrog Artifac
 - Add the Artifactory credentials provided by Conio to your global `gradle.properties`
 ```
 artifactory_user=<username provided by Conio>
-    artifactory_password=<password provided by Conio>
+artifactory_password=<password provided by Conio>
 ```
 
 - Add the Conio Artifactory repository to your `build.gradle`
 ```
 repositories {
-        // ...
-        maven {
-            url "https://artifactory.conio.com/artifactory/gradle-release-local"
-            credentials(PasswordCredentials) {
-                username "${artifactory_user}"
-                password "${artifactory_password}"
+    // ...
+    maven {
+        url "https://artifactory.conio.com/artifactory/gradle-release-local"
+        credentials(PasswordCredentials) {
+            username "${artifactory_user}"
+            password "${artifactory_password}"
         }
     }
 }
