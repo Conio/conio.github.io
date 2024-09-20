@@ -43,5 +43,21 @@ swapService
 
 ### Android
 ```kotlin
-(TBD)
+val cryptoRequest = SwapCryptoRequest(
+    cryptoProof = ...,
+    proofId = ...,
+    expiration = ...,
+)
+
+val params = SwapParams(
+    swapId = "...",
+    cryptoRequest = cryptoRequest
+)
+
+conio.swapService
+    .swap(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```

@@ -30,5 +30,14 @@ swapService
 
 ### Android
 ```kotlin
-(TBD)
+val params = FetchSwapParams(
+    swapId = "..."
+)
+
+conio.swapService
+    .fetchSwap(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```
