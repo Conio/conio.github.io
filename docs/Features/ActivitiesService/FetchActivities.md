@@ -32,7 +32,7 @@ let params = FetchActivitiesParams
         paginationLimit: 6
     )
 
-    activitiesService
+activitiesService
     .fetchActivities(with: params)
     .asPublisher()
     .sink { result in
@@ -42,5 +42,20 @@ let params = FetchActivitiesParams
 
 ### Android
 ```kotlin
-(TBD)
+import kotlin.time.Duration.Companion.days
+
+val params = FetchActivitiesParams(
+    cryptoId = "cETH",
+    timeFrame = TimeFrame(
+        fromTimeInMillis = TimeFrame.now() - 365.days.inWholeMilliseconds
+    ),
+    paginationLimit = 6
+)
+
+conio.activityService
+    .fetchActivities(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```

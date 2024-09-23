@@ -22,7 +22,7 @@ The `ActivityResult` contains.
 ```swift
 let params = FetchActivityParams.make(activityId: ...)
     
-    activitiesService
+activitiesService
     .fetchActivities(with: params)
     .asPublisher()
     .sink { result in
@@ -32,5 +32,14 @@ let params = FetchActivityParams.make(activityId: ...)
 
 ### Android
 ```kotlin
-(TBD)
+val params = FetchActivityParams(
+    activityId = "..."
+)
+
+conio.activityService
+    .fetchActivity(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```
