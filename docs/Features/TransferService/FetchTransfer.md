@@ -30,5 +30,14 @@ transferService
 
 ### Android
 ```kotlin
-(TBD)
+val params = FetchTransferParams(
+    transferId = "...",
+)
+
+conio.transferService
+    .fetchTransfer(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```

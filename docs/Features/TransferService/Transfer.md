@@ -10,7 +10,7 @@ The `TransferParams` used to initialized and perform `transfer` API.
 
 - transfer id: the existing transfer quotation identifier used to execute and finalize the transfer quotation
 - crypto request: the crypto signature used to validate the transfer quotation
-- wait until paid: prevent the service to complete until the swap is not in `paid` status (or in another end status, like `finalized` or `error`)
+- wait until paid: prevent the service to complete until the transfer is not in `paid` status (or in another end status, like `finalized` or `error`)
 
 ## Result
 ---
@@ -43,5 +43,21 @@ transferService
 
 ### Android
 ```kotlin
-TBD
+val cryptoRequest = TransferCryptoRequest(
+    cryptoProof = ...,
+    proofId = "...",
+    expiration = ...,
+)
+
+val params = TransferParams(
+    transferId = "...",
+    cryptoRequest = cryptoRequest 
+)
+
+conio.transferService
+    .transfer(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```

@@ -37,5 +37,21 @@ transferService
 
 ### Android
 ```kotlin
-(TBD)
+// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+val params = CreateTransferParams(
+    sourceCryptoId = "...",
+    destinationCryptoId = "...",
+    sourceAmount = amount
+)
+
+conio.transferService
+    .createTransfer(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 ```
