@@ -590,7 +590,13 @@
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<p>(TBD)</p>
+<pre><code class="language-kotlin">conio.tradingInfoService
+    .fetchTradingFees()
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
+</code></pre>
                 
               
               

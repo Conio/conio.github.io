@@ -601,7 +601,16 @@ swapService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">val params = FetchSwapParams(
+    swapId = &quot;...&quot;
+)
+
+conio.swapService
+    .fetchSwap(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 </code></pre>
                 
               

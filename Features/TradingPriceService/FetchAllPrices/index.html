@@ -602,7 +602,12 @@ tradingPriceService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">conio.tradingPriceService
+    .fetchAllUnitPrices()
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

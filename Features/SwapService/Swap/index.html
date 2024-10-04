@@ -612,7 +612,23 @@ swapService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">val cryptoRequest = SwapCryptoRequest(
+    cryptoProof = ...,
+    proofId = ...,
+    expiration = ...,
+)
+
+val params = SwapParams(
+    swapId = &quot;...&quot;,
+    cryptoRequest = cryptoRequest
+)
+
+conio.swapService
+    .swap(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 </code></pre>
                 
               

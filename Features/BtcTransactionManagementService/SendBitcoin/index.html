@@ -609,7 +609,23 @@ btcTransactionManagementService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+val params = SendParams(
+    destinationAddress = &quot;...&quot;,
+    btcAmount = amount,
+    feePerByte = CryptoAmount(...)
+)
+
+conio.btcTransactionService
+    .send(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

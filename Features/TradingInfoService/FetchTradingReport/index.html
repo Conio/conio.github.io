@@ -602,7 +602,20 @@ tradingInfoService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<p>(TBD)</p>
+<pre><code class="language-kotlin">// val reportPeriod = FetchTradingReportParams.ReportPeriod.LastYear
+val reportPeriod = FetchTradingReportParams.ReportPeriod(&quot;2023&quot;)
+
+val params = FetchTradingReportParams(
+    period = reportPeriod
+)
+
+conio.tradingInfoService
+    .fetchTradingReport(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
+</code></pre>
                 
               
               

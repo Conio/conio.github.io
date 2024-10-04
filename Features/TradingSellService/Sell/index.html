@@ -612,7 +612,23 @@ tradingSellService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">val cryptoRequest = SellCryptoRequest(
+    cryptoProof = ...,
+    proofId = ...,
+    expiration = ...,
+)
+
+val params = SellParams(
+    askId = &quot;...&quot;,
+    cryptoRequest = cryptoRequest,
+)
+
+conio.sellService
+    .sell(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

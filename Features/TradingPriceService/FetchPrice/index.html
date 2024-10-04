@@ -603,7 +603,17 @@ tradingPriceService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">
+<pre><code class="language-kotlin">val params = FetchPriceParams(
+    cryptoId = ...,
+    amount = CryptoAmount(...), // default null
+)
+
+conio.tradingPriceService
+    .fetchPrice(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

@@ -603,7 +603,16 @@ btcTransactionManagementService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">val params = FetchSpeedUpAvailableFeesParams(
+    transactionHash = &quot;...&quot;,
+)
+
+conio.btcTransactionService
+    .fetchSpeedUpAvailableFees(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

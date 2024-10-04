@@ -608,7 +608,30 @@ btcTransactionManagementService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+// val speeds = TransactionSpeed.Type.all
+val speeds = setOf(
+    TransactionSpeed.Type.SpeedOne,  // Fastest
+    TransactionSpeed.Type.SpeedFive, // Slowest
+    ...
+)
+
+val params = FetchTransactionAvailableFeesParams(
+    destinationAddress = &quot;...&quot;,
+    btcAmount = amount,
+    transactionSpeeds = speeds,
+)
+
+conio.btcTransactionService
+    .fetchTransactionAvailableFees(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

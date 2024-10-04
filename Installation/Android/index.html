@@ -601,18 +601,18 @@
 <li>Add the Artifactory credentials provided by Conio to your global <code>gradle.properties</code></li>
 </ul>
 <pre><code>artifactory_user=&lt;username provided by Conio&gt;
-    artifactory_password=&lt;password provided by Conio&gt;
+artifactory_password=&lt;password provided by Conio&gt;
 </code></pre>
 <ul>
 <li>Add the Conio Artifactory repository to your <code>build.gradle</code></li>
 </ul>
 <pre><code>repositories {
-        // ...
-        maven {
-            url &quot;https://artifactory.conio.com/artifactory/gradle-release-local&quot;
-            credentials(PasswordCredentials) {
-                username &quot;${artifactory_user}&quot;
-                password &quot;${artifactory_password}&quot;
+    // ...
+    maven {
+        url &quot;https://artifactory.conio.com/artifactory/gradle-release-local&quot;
+        credentials(PasswordCredentials) {
+            username &quot;${artifactory_user}&quot;
+            password &quot;${artifactory_password}&quot;
         }
     }
 }

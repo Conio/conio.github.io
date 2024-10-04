@@ -608,7 +608,28 @@ luserService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<p>(TBD)</p>
+<pre><code class="language-kotlin">val acceptances = listOf(
+    Acceptance(AcceptanceType.AppImprovement, isAccepted = true),
+    Acceptance(AcceptanceType.ClientSupport, isAccepted = true),
+)
+
+val credentials = Credentials(
+    username = &quot;...&quot; // user unique identifier,
+    password = &quot;...&quot;
+)
+
+val params = AcceptNewLegalAcceptancesParams(
+    acceptances = B2BModelAcceptances.acceptedAcceptances,
+    credentials = credentials
+)
+
+conio.userService
+    .acceptNewLegalAcceptances(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
+</code></pre>
                 
               
               

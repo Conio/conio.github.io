@@ -583,7 +583,7 @@
 <ul>
 <li>transfer id: the existing transfer quotation identifier used to execute and finalize the transfer quotation</li>
 <li>crypto request: the crypto signature used to validate the transfer quotation</li>
-<li>wait until paid: prevent the service to complete until the swap is not in <code>paid</code> status (or in another end status, like <code>finalized</code> or <code>error</code>)</li>
+<li>wait until paid: prevent the service to complete until the transfer is not in <code>paid</code> status (or in another end status, like <code>finalized</code> or <code>error</code>)</li>
 </ul>
 <h2 id="result">Result</h2>
 <hr />
@@ -612,7 +612,23 @@ transferService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">TBD
+<pre><code class="language-kotlin">val cryptoRequest = TransferCryptoRequest(
+    cryptoProof = ...,
+    proofId = &quot;...&quot;,
+    expiration = ...,
+)
+
+val params = TransferParams(
+    transferId = &quot;...&quot;,
+    cryptoRequest = cryptoRequest 
+)
+
+conio.transferService
+    .transfer(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 </code></pre>
                 
               

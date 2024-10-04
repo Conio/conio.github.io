@@ -603,7 +603,22 @@ tradingBuyService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+val params = CreateBidParams(
+    cryptoId = &quot;...&quot;,
+    amount = amount
+)
+
+conio.buyService
+    .createBid(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

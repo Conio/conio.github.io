@@ -611,7 +611,23 @@ tradingBuyService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">val cryptoRequest = BidCryptoRequest(
+    cryptoProof = ...,
+    proofId = ...,
+    expiration = ...,
+)
+
+val params = BuyParams(
+    bidId = &quot;...&quot;,
+    cryptoRequest = cryptoRequest
+)
+
+conio.buyService
+    .buy(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

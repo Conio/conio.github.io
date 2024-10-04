@@ -608,7 +608,23 @@ transferService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">// val amount = AmountParams.Max
+val amount = AmountParams.Crypto(
+    value = CryptoAmount(...)
+)
+
+val params = CreateTransferParams(
+    sourceCryptoId = &quot;...&quot;,
+    destinationCryptoId = &quot;...&quot;,
+    sourceAmount = amount
+)
+
+conio.transferService
+    .createTransfer(params)
+    .asFlow()
+    .collect {
+        // ...
+    }
 </code></pre>
                 
               

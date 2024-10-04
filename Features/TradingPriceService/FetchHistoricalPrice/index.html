@@ -582,8 +582,8 @@
 <p>The <code>FetchHistoricalPricesParams</code> used to initialized and perform <code>fetchHistoricalPrices</code> API.</p>
 <ul>
 <li>crypto id: the cryptocurrency identifier used to retrieve the specific cryptocurrency historical price data</li>
-<li>time frame: the time frame in the past used to retrieve the specific cryptocurrency historical price data</li>
-<li>price interval: the price time interval used to retrieve the specific cryptocurrency historical price data</li>
+<li>time frame: the available time frames used to retrieve the specific cryptocurrency historical price data</li>
+<li>fiat currency: the fiat currency used to retrieve historical price data</li>
 </ul>
 <h2 id="result">Result</h2>
 <hr />
@@ -592,7 +592,6 @@
 <li>cryptocurrency: the Wallet <code>Cryptocurrency</code></li>
 <li>price points: the cryptocurrency historical price points</li>
 <li>price analytics: the cryptocurrency historical analytics</li>
-<li>interval: the cryptocurrency time interval</li>
 </ul>
 <h2 id="code">Code</h2>
 <hr />
@@ -600,8 +599,7 @@
 <pre><code class="language-swift">let params = FetchHistoricalPricesParams
     .make(
         cryptoId: ...,
-        timeFrame: .makeUsingLastDay(),
-        priceInterval: .fifteenMinutes
+        timeFrame: .max,
     )
 
 tradingPriceService
@@ -612,7 +610,24 @@ tradingPriceService
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">(TBD)
+<pre><code class="language-kotlin">val oneDayInMillis = 24L * 60 * 60 * 1000
+val timeFrame = TimeFrame(
+    fromTimeInMillis = TimeFrame.now() - oneDayInMillis,
+    toTimeInMillis = TimeFrame.now(),
+)
+
+val params = FetchHistoricalPricesParams(
+    cryptoId = ...,
+    timeFrame = timeFrame,
+    priceInterval = PriceSamplingInterval.MINUTES_15,
+)
+
+conio.tradingPriceService
+    .fetchHistoricalPrices(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               

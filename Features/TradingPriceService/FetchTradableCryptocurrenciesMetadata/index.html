@@ -603,7 +603,19 @@ tradingPriceService
 
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">
+<pre><code class="language-kotlin">// val language = Language.Italian
+val language = Language.English
+
+val params = FetchCryptoCurrenciesMetadataParams(
+    language = language
+)
+
+conio.tradingPriceService
+    .fetchCryptoCurrenciesMetadata(params)
+    .asFlow()
+    .collect { result -&gt;
+        // ...
+    }
 </code></pre>
                 
               
