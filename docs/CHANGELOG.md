@@ -24,9 +24,12 @@
 
 
 # iOS
+## [2.1.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.1/) - 04-10-2024
+### Changed
+- TSK-6182: Update Fetch Historical Prices
+
 ## [2.1.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.0/) - 18-09-2024
 ### Changed
-### Added
 - TSK-4511: Transfer Service
 
 ## [2.0.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.0.1/) - 07-08-2024

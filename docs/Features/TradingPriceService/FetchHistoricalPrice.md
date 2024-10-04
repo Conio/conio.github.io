@@ -9,8 +9,8 @@
 The `FetchHistoricalPricesParams` used to initialized and perform `fetchHistoricalPrices` API.
 
 - crypto id: the cryptocurrency identifier used to retrieve the specific cryptocurrency historical price data
-- time frame: the time frame in the past used to retrieve the specific cryptocurrency historical price data
-- price interval: the price time interval used to retrieve the specific cryptocurrency historical price data
+- time frame: the available time frames used to retrieve the specific cryptocurrency historical price data
+- fiat currency: the fiat currency used to retrieve historical price data
 
 ## Result
 ---
@@ -19,7 +19,6 @@ The `HistoricalPricesResult` data with cryptocurrency historical prices values.
 - cryptocurrency: the Wallet `Cryptocurrency`
 - price points: the cryptocurrency historical price points
 - price analytics: the cryptocurrency historical analytics
-- interval: the cryptocurrency time interval
 
 ## Code
 ---
@@ -28,8 +27,7 @@ The `HistoricalPricesResult` data with cryptocurrency historical prices values.
 let params = FetchHistoricalPricesParams
     .make(
         cryptoId: ...,
-        timeFrame: .makeUsingLastDay(),
-        priceInterval: .fifteenMinutes
+        timeFrame: .max,
     )
     
 tradingPriceService
