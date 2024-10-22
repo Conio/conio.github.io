@@ -533,18 +533,23 @@
 <li><a href="#android">Android</a></li>
 </ul>
 <h1 id="ios">iOS</h1>
-<h2 id="211-04-10-2024"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.1/">2.1.1</a> - 04-10-2024</h2>
+<h2 id="212-22-10-2024"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.2/">2.1.2</a> - 22-10-2024</h2>
 <h3 id="changed">Changed</h3>
+<ul>
+<li>Update ConioSDK</li>
+</ul>
+<h2 id="211-04-10-2024"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.1/">2.1.1</a> - 04-10-2024</h2>
+<h3 id="changed_1">Changed</h3>
 <ul>
 <li>TSK-6182: Update Fetch Historical Prices</li>
 </ul>
 <h2 id="210-18-09-2024"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.0/">2.1.0</a> - 18-09-2024</h2>
-<h3 id="changed_1">Changed</h3>
+<h3 id="changed_2">Changed</h3>
 <ul>
 <li>TSK-4511: Transfer Service</li>
 </ul>
 <h2 id="201-07-08-2024"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.0.1/">2.0.1</a> - 07-08-2024</h2>
-<h3 id="changed_2">Changed</h3>
+<h3 id="changed_3">Changed</h3>
 <ul>
 <li>Update ConioSDK</li>
 </ul>
@@ -558,7 +563,7 @@
 <li>TSK-4509: Trading Price Service</li>
 <li>TSK-4510: Swap Service</li>
 </ul>
-<h3 id="changed_3">Changed</h3>
+<h3 id="changed_4">Changed</h3>
 <ul>
 <li>TSK-4502: User Service</li>
 <li>TSK-4598: Wallet Service</li>
@@ -569,7 +574,7 @@
 <li>Model <code>CryptoSellParams</code> to replace <code>SellParams</code></li>
 <li><code>ConioError.onNetwork</code> to wrap network communication errors</li>
 </ul>
-<h3 id="changed_4">Changed</h3>
+<h3 id="changed_5">Changed</h3>
 <ul>
 <li><code>SellParams</code> deprecated</li>
 <li>Factory init used to create/refresh an ask with all user available amount</li>
@@ -579,12 +584,12 @@
 <li>Always throw <code>ConioError.unauthorized</code> on session expired</li>
 </ul>
 <h2 id="0610-09-02-2022"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.6.10/">0.6.10</a> - 09-02-2022</h2>
-<h3 id="changed_5">Changed</h3>
+<h3 id="changed_6">Changed</h3>
 <ul>
 <li>Update legal acceptances</li>
 </ul>
 <h2 id="069-08-02-2022"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.6.9/">0.6.9</a> - 08-02-2022</h2>
-<h3 id="changed_6">Changed</h3>
+<h3 id="changed_7">Changed</h3>
 <ul>
 <li>Error mapping as <code>unauthorized</code> on 401 status code</li>
 </ul>
@@ -598,7 +603,7 @@
 <li>User data handling APIs</li>
 <li>User permissions map update</li>
 </ul>
-<h3 id="changed_7">Changed</h3>
+<h3 id="changed_8">Changed</h3>
 <ul>
 <li>Updated model: withdrawal transaction, available fee</li>
 </ul>
@@ -609,7 +614,7 @@
 <li>Missing password hash on B2B signup</li>
 </ul>
 <h3 id="062-17-11-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.6.2/">0.6.2</a> - 17-11-2021</h3>
-<h4 id="changed_8">Changed</h4>
+<h4 id="changed_9">Changed</h4>
 <ul>
 <li>Wallet service <code>walletPDFActivities</code>, <code>limit</code> in <code>PDFActivitiesParams</code> now optional</li>
 </ul>
@@ -623,7 +628,7 @@
 <li>User service <code>changeEmail</code></li>
 </ul>
 <h3 id="050-11-10-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.5.0/">0.5.0</a> - 11-10-2021</h3>
-<h4 id="changed_9">Changed</h4>
+<h4 id="changed_10">Changed</h4>
 <ul>
 <li>Data serialization and mapping</li>
 <li>Code refactor and optimizations</li>
@@ -633,12 +638,12 @@
 <ul>
 <li>Wrong mapping for <code>rangeFrom</code> property in <code>ServiceFee</code></li>
 </ul>
-<h4 id="changed_10">Changed</h4>
+<h4 id="changed_11">Changed</h4>
 <ul>
 <li>Update <code>rangeFrom</code> type from <code>UInt64?</code> to <code>FiatAmount?</code> in <code>ServiceFee</code></li>
 </ul>
 <h3 id="033-07-09-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.3/">0.3.3</a> - 07-09-2021</h3>
-<h4 id="changed_11">Changed</h4>
+<h4 id="changed_12">Changed</h4>
 <ul>
 <li>Rename <code>tradedFiat</code> to <code>weightedBidBalance</code> in <code>TradingInfo.swift</code> as per docs specifications</li>
 </ul>
@@ -653,13 +658,13 @@
 <li>Avoid using app bundle identifier during keychain init</li>
 </ul>
 <h3 id="030-14-07-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.0/">0.3.0</a> - 14-07-2021</h3>
-<h4 id="changed_12">Changed</h4>
+<h4 id="changed_13">Changed</h4>
 <ul>
 <li>Added missing filters params in <code>ActivitiesParams</code> to correctly get wallet activities</li>
 <li>Refactor on SDK errors: <code>ConioError</code> is now the only error type throwable (check <a href="./operation/Operation.md">operation</a> section)</li>
 </ul>
 <h3 id="020-06-07-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.2.0/">0.2.0</a> - 06-07-2021</h3>
-<h4 id="changed_13">Changed</h4>
+<h4 id="changed_14">Changed</h4>
 <ul>
 <li>SDK configuration object <code>ConioConfiguration</code> has no default value and must be explicitly initialized</li>
 </ul>
@@ -669,7 +674,7 @@
 <li>Avoid build error on Xcode 12.4 in <code>OpenAPIConioBuilder</code></li>
 </ul>
 <h3 id="016-25-06-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.6/">0.1.6</a> - 25-06-2021</h3>
-<h4 id="changed_14">Changed</h4>
+<h4 id="changed_15">Changed</h4>
 <ul>
 <li>Explicit fees represented as intervals</li>
 <li><code>WiretransferPayeeInfo</code> in <code>CreatedBid</code> has now two dedicated properties representing standard and custom wire transfer payee info</li>
@@ -677,7 +682,7 @@
 <li>All fiat amounts are now represented as <code>Decimal</code></li>
 </ul>
 <h3 id="015-15-06-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.5/">0.1.5</a> - 15-06-2021</h3>
-<h4 id="changed_15">Changed</h4>
+<h4 id="changed_16">Changed</h4>
 <ul>
 <li><code>Models</code> update</li>
 <li><code>Bid</code>, <code>Ask</code> e <code>Transaction</code> properties linked to amount/balance now are declared with type <code>UInt64</code></li>
@@ -687,7 +692,7 @@
 <li><code>ConioError</code> entity to map operation errors</li>
 </ul>
 <h3 id="014-10-06-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.1.4/">0.1.4</a> - 10-06-2021</h3>
-<h4 id="changed_16">Changed</h4>
+<h4 id="changed_17">Changed</h4>
 <ul>
 <li><code>Models</code> update</li>
 <li><code>Bid</code>, <code>Ask</code>, <code>WalletBalances</code> e <code>SimpleActivity</code> properties now have public control access</li>
@@ -723,7 +728,7 @@
 <li>Initialization error caused by unusable KeyStore keys</li>
 </ul>
 <h3 id="080-9-03-2022"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/5f941a03e044c7cf518ca8ef6b0de5768bf56067/?at=release%2F0.8.0">0.8.0</a> - 9-03-2022</h3>
-<h4 id="changed_17">Changed</h4>
+<h4 id="changed_18">Changed</h4>
 <ul>
 <li>Minimum Android version supported to <em>Android 6.0</em> (Android Sdk Version: <em>23</em>)</li>
 <li>Improved performance</li>
@@ -736,18 +741,18 @@
 <li>Model <code>CryptoSellParams</code> to replace <code>SellParams</code></li>
 </ul>
 <h3 id="0718-8-02-2022"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/ae6273eb37b40d1daead7cdda9f218abd95224c6/?at=release%2F0.7.18">0.7.18</a> - 8-02-2022</h3>
-<h4 id="changed_18">Changed</h4>
+<h4 id="changed_19">Changed</h4>
 <ul>
 <li>Solved retro-compatibility with OkHttp 3.x</li>
 <li>Removed appsync dependency</li>
 </ul>
 <h3 id="0716-4-02-2022"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/f9767748347ef76b94022cf704c2b7ac166e5cb7/?at=release%2F0.7.16">0.7.16</a> - 4-02-2022</h3>
-<h4 id="changed_19">Changed</h4>
+<h4 id="changed_20">Changed</h4>
 <ul>
 <li>Downgraded OkHttp to 3.14.9</li>
 </ul>
 <h3 id="0715-3-02-2022"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/3c83fd26a3c17c33b1f330cf4d896068341d89a8/?at=release%2F0.7.15">0.7.15</a> - 3-02-2022</h3>
-<h4 id="changed_20">Changed</h4>
+<h4 id="changed_21">Changed</h4>
 <ul>
 <li>Improved concurrencly on service layer</li>
 <li>Updated OkHttp to 4.9.0</li>
@@ -758,12 +763,12 @@
 <li>Compatibility issue below Api level 26</li>
 </ul>
 <h3 id="079-26-11-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/c510c7a12e27f362b291e2f9711d376e3f8dbbbc/?at=release%2F0.7.9">0.7.9</a> - 26-11-2021</h3>
-<h4 id="changed_21">Changed</h4>
+<h4 id="changed_22">Changed</h4>
 <ul>
 <li>Legal text copies on the <code>LegalAcceptances</code> model</li>
 </ul>
 <h3 id="078-17-11-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/20827d74d45354d62230a4ea6a11f649c44e1f24/?at=release%2F0.7.8">0.7.8</a> - 17-11-2021</h3>
-<h4 id="changed_22">Changed</h4>
+<h4 id="changed_23">Changed</h4>
 <ul>
 <li>Wallet service <code>activityListPdf</code>, <code>limit</code> in <code>ActivityListPdfParams</code> now nullable</li>
 </ul>
@@ -782,7 +787,7 @@
 <li>API to get activities in PDF format</li>
 </ul>
 <h3 id="070-11-10-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/3a22f23b0ff1a07972e4da5477c86fa98d34ef72/?at=release%2F0.7.0">0.7.0</a> - 11-10-2021</h3>
-<h4 id="changed_23">Changed</h4>
+<h4 id="changed_24">Changed</h4>
 <ul>
 <li>Data serialization and mapping</li>
 <li>Code refactor and optimizations</li>
@@ -793,12 +798,12 @@
 <li>Security issue</li>
 </ul>
 <h3 id="061-29-07-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/300349f7414b4c6abac14f91d50573262116a553/?at=release%2F0.6.1">0.6.1</a> - 29-07-2021</h3>
-<h4 id="changed_24">Changed</h4>
+<h4 id="changed_25">Changed</h4>
 <ul>
 <li>Refactor on SDK errors: <code>ConioException</code> as the operations result error type</li>
 </ul>
 <h3 id="060-28-07-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/f95b063d89f7d3dfda8871e36c718a1031e861af/?at=release%2F0.6.0">0.6.0</a> - 28-07-2021</h3>
-<h4 id="changed_25">Changed</h4>
+<h4 id="changed_26">Changed</h4>
 <ul>
 <li>Refactor on SDK errors: <code>ConioException</code> is now the only error type throwable (check <a href="./operation/Operation.md">operation</a> section)</li>
 </ul>
@@ -819,12 +824,12 @@
 <li>Fix factory methods of <code>TimeFrame</code> class</li>
 </ul>
 <h3 id="050-06-07-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/1203815eb2c6e97274b22d1e8521b14604577b55/?at=release%2F0.5.0">0.5.0</a> - 06-07-2021</h3>
-<h4 id="changed_26">Changed</h4>
+<h4 id="changed_27">Changed</h4>
 <ul>
 <li>SDK configuration object <code>ConioConfiguration</code> has no default value and must be explicitly initialized</li>
 </ul>
 <h3 id="048-25-06-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/071f4deb885f003fb9d65bb9d9f79a5adff1fac5/?at=release%2F0.4.8">0.4.8</a> - 25-06-2021</h3>
-<h4 id="changed_27">Changed</h4>
+<h4 id="changed_28">Changed</h4>
 <ul>
 <li>Explicit fees represented as intervals</li>
 <li><code>WiretransferPayeeInfo</code> in <code>CreatedBid</code> has now two dedicated properties representing standard and custom wire transfer payee info</li>
