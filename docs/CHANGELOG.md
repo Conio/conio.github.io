@@ -24,6 +24,10 @@
 
 
 # iOS
+## [2.1.2](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.2/) - 22-10-2024
+### Changed
+- Update ConioSDK
+
 ## [2.1.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.1/) - 04-10-2024
 ### Changed
 - TSK-6182: Update Fetch Historical Prices
