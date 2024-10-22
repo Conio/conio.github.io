@@ -169,6 +169,23 @@
 
 ## Android
 
+### [2.1.0](https://bitbucket.org/squadrone/conio-android-sdk2/src/b2b-2.1.0/) - 17-10-2024
+
+#### Added
+
+- Swap Services
+- Transfer Services
+
+#### Changed
+
+- `FetchHistoricalPricesParams` fields used to specify the timeframe to a pre-defined timestamp set
+
+### [1.0.0](https://bitbucket.org/squadrone/conio-android-sdk2/src/b2b-1.0.0/) - 16-07-2024
+
+#### Changed
+
+First multicrypto SDK release
+
 ### [0.8.11](https://bitbucket.org/squadrone/conio-android-sdk2/src/43ddfec2fec7ad8bd5444eaae48483ae33eec68d/?at=release%2F0.8.11) - 7-06-2022
 #### Added
 - `ConioException.OnNetwork` to wrap network communication errors
