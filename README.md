@@ -89,5 +89,6 @@ Check your changes visiting https://sdk-docs.conio.com/
 
 ## Contacts
 
-* Matteo Gazzato - matteo.gazzato@conio.com
+* Alessandro Farina - alessandro.farina@conio.com
+* Beatrice Buran - beatrice.buran@conio.com
 * Giovanni Di Donato - giovanni@conio.com

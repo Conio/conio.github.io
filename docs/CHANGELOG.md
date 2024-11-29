@@ -24,17 +24,25 @@
 
 
 # iOS
+## [2.1.3](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.3/) - 29-11-2024
+### Changed
+- Replaced `SignupParams.LegalAcceptance` and `LegalAcceptancesParams.LegalAcceptance` models with unified `LegalAcceptance` model
+- Replaced `SignupParams.LegalAcceptanceType` and `LegalAcceptancesParams.LegalAcceptanceType` models with unified `LegalAcceptanceType` model
+
+### Fixed
+- Added missing `LegalAcceptancesResult.Acceptance.type`
+
 ## [2.1.2](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.2/) - 22-10-2024
 ### Changed
 - Update ConioSDK
 
 ## [2.1.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.1/) - 04-10-2024
 ### Changed
-- TSK-6182: Update Fetch Historical Prices
+- Update Fetch Historical Prices
 
 ## [2.1.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.0/) - 18-09-2024
 ### Changed
-- TSK-4511: Transfer Service
+- Transfer Service
 
 ## [2.0.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.0.1/) - 07-08-2024
 ### Changed
@@ -42,16 +50,16 @@
 
 ## [2.0.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.0.0/) - 13-06-2024
 ### Added
-- TSK-4503: Trading Info Service
-- TSK-4504: Btc Transaction Management Service
-- TSK-4505: Trading Buy Service
-- TSK-4506: Trading Sell Service
-- TSK-4509: Trading Price Service
-- TSK-4510: Swap Service
+- Trading Info Service
+- Btc Transaction Management Service
+- Trading Buy Service
+- Trading Sell Service
+- Trading Price Service
+- Swap Service
 
 ### Changed
-- TSK-4502: User Service
-- TSK-4598: Wallet Service
+- User Service
+- Wallet Service
 
 ## [0.7.0](https://bitbucket.org/squadrone/conio-swift-sdk/src/0.7.0/) - 07-06-2022
 ### Added

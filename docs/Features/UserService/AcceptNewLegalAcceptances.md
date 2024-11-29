@@ -19,17 +19,14 @@ Success or error.
 ---
 ### iOS
 ```swift
-let acceptences = [
-    SignupParams.LegalAcceptance.makeAccepted(type: .clientSupport),
-    SignupParams.LegalAcceptance.makeAccepted(type: .appImprovement)
-]
+let acceptences = LegalAcceptancesParams.makeAllAccepted()
 let params = AcceptNewLegalAcceptancesParams
     .make(
         username: ...,
         password: ...,
         legalAcceptances: acceptances
     )
-luserService
+userService
 	.acceptNewLegalAcceptances(with: params)
 	.asPublisher()
 	.sink { result in 
