@@ -747,17 +747,14 @@
 <h2 id="code">Code</h2>
 <hr />
 <h3 id="ios">iOS</h3>
-<pre><code class="language-swift">let acceptences = [
-    SignupParams.LegalAcceptance.makeAccepted(type: .clientSupport),
-    SignupParams.LegalAcceptance.makeAccepted(type: .appImprovement)
-]
+<pre><code class="language-swift">let acceptences = LegalAcceptancesParams.makeAllAccepted()
 let params = AcceptNewLegalAcceptancesParams
     .make(
         username: ...,
         password: ...,
         legalAcceptances: acceptances
     )
-luserService
+userService
     .acceptNewLegalAcceptances(with: params)
     .asPublisher()
     .sink { result in 
