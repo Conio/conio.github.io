@@ -24,6 +24,14 @@
 
 
 # iOS
+## [2.1.3](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.3/) - 29-11-2024
+### Changed
+- Replaced `SignupParams.LegalAcceptance` and `LegalAcceptancesParams.LegalAcceptance` models with unified `LegalAcceptance` model
+- Replaced `SignupParams.LegalAcceptanceType` and `LegalAcceptancesParams.LegalAcceptanceType` models with unified `LegalAcceptanceType` model
+
+### Fixed
+- Added missing `LegalAcceptancesResult.Acceptance.type`
+
 ## [2.1.2](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.2/) - 22-10-2024
 ### Changed
 - Update ConioSDK
