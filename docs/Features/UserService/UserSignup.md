@@ -28,7 +28,7 @@ let cryptoRequest = SignupParams
         proofId: ...,
 	    cryptoProof: ...,
 	    proofExpiration: Timestamp(Date().timeIntervalSince1970 + (30 * 60 * 1000)),
-	    username: username.,
+	    username: username,
 	    userLevel: ...,
 	    iban: ...,
 	    email: ...,
@@ -36,13 +36,13 @@ let cryptoRequest = SignupParams
 	    lastName: ...
     )
 let acceptences = [
-    SignupParams.LegalAcceptance.makeAccepted(type: .clientSupport),
-    SignupParams.LegalAcceptance.makeAccepted(type: .appImprovement)
+    LegalAcceptance.makeAccepted(type: .clientSupport),
+    LegalAcceptance.makeAccepted(type: .appImprovement)
 ]
 let params = SignupParams
     .make(
-        username: usernamem
-        password: password:
+        username: username,
+        password: password,
         acceptances: acceptances,
         cryptoRequest: cryptoRequest
     )
