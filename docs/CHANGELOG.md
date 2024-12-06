@@ -177,6 +177,16 @@
 
 # Android
 
+## [2.1.1](https://bitbucket.org/squadrone/conio-android-sdk2/src/b2b-2.1.1/) - 05-12-2024
+
+### Fixed
+
+- deadlock on `UserService.signup` and `UserService.login`
+
+### Added
+
+- Mining fees in transfer activity
+
 ## [2.1.0](https://bitbucket.org/squadrone/conio-android-sdk2/src/b2b-2.1.0/) - 17-10-2024
 
 ### Added
