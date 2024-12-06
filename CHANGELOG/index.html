@@ -872,8 +872,17 @@
 <li>Rilascio versione 0.1.0</li>
 </ul>
 <h1 id="android">Android</h1>
-<h2 id="210-17-10-2024"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/b2b-2.1.0/">2.1.0</a> - 17-10-2024</h2>
+<h2 id="211-05-12-2024"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/b2b-2.1.1/">2.1.1</a> - 05-12-2024</h2>
+<h3 id="fixed_7">Fixed</h3>
+<ul>
+<li>deadlock on <code>UserService.signup</code> and <code>UserService.login</code></li>
+</ul>
 <h3 id="added_8">Added</h3>
+<ul>
+<li>Mining fees in transfer activity</li>
+</ul>
+<h2 id="210-17-10-2024"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/b2b-2.1.0/">2.1.0</a> - 17-10-2024</h2>
+<h3 id="added_9">Added</h3>
 <ul>
 <li>Swap Services</li>
 <li>Transfer Services</li>
@@ -886,16 +895,16 @@
 <h3 id="changed_20">Changed</h3>
 <p>First multicrypto SDK release</p>
 <h2 id="0811-7-06-2022"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/43ddfec2fec7ad8bd5444eaae48483ae33eec68d/?at=release%2F0.8.11">0.8.11</a> - 7-06-2022</h2>
-<h3 id="added_9">Added</h3>
+<h3 id="added_10">Added</h3>
 <ul>
 <li><code>ConioException.OnNetwork</code> to wrap network communication errors</li>
 </ul>
-<h3 id="fixed_7">Fixed</h3>
+<h3 id="fixed_8">Fixed</h3>
 <ul>
 <li>Always throw <code>ConioException.Unauthorized</code> on session expired</li>
 </ul>
 <h2 id="083-24-03-2022"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/0bc388e1f93bd5a211b8d629aeeee224c7770429/?at=release%2F0.8.3">0.8.3</a> - 24-03-2022</h2>
-<h3 id="fixed_8">Fixed</h3>
+<h3 id="fixed_9">Fixed</h3>
 <ul>
 <li>Initialization error caused by unusable KeyStore keys</li>
 </ul>
@@ -906,7 +915,7 @@
 <li>Improved performance</li>
 <li><code>SellParams</code> deprecated</li>
 </ul>
-<h3 id="added_10">Added</h3>
+<h3 id="added_11">Added</h3>
 <ul>
 <li>Factory method <code>CreateOrRefreshAskParams.withAll</code> to request an Ask with the maximum sellable amount</li>
 <li>Model <code>CryptoChangeEmailParams</code> to replace <code>ChangeEmailParams</code></li>
@@ -930,7 +939,7 @@
 <li>Updated OkHttp to 4.9.0</li>
 </ul>
 <h2 id="0713-24-01-2022"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/94c4223c400d31d89dda595ac3acf601c26c2ea2/?at=release%2F0.7.13">0.7.13</a> - 24-01-2022</h2>
-<h3 id="fixed_9">Fixed</h3>
+<h3 id="fixed_10">Fixed</h3>
 <ul>
 <li>Compatibility issue below Api level 26</li>
 </ul>
@@ -944,17 +953,17 @@
 <ul>
 <li>Wallet service <code>activityListPdf</code>, <code>limit</code> in <code>ActivityListPdfParams</code> now nullable</li>
 </ul>
-<h3 id="added_11">Added</h3>
+<h3 id="added_12">Added</h3>
 <ul>
 <li>User service <code>getLegalAcceptances</code> , new <code>preContractualInfoUrl</code> param in <code>LegalAcceptances</code> response</li>
 </ul>
 <h2 id="074-02-11-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/f29a930a953cdeb04a189a04f05a7db210e517b6/?at=release%2F0.7.4">0.7.4</a> - 02-11-2021</h2>
-<h3 id="added_12">Added</h3>
+<h3 id="added_13">Added</h3>
 <ul>
 <li>User service <code>changeEmail</code></li>
 </ul>
 <h2 id="072-20-10-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/d2802e047e511fefcb0ce9f1807be8e38742e70d/?at=release%2F0.7.2">0.7.2</a> - 20-10-2021</h2>
-<h3 id="added_13">Added</h3>
+<h3 id="added_14">Added</h3>
 <ul>
 <li>API to get activities in PDF format</li>
 </ul>
@@ -965,7 +974,7 @@
 <li>Code refactor and optimizations</li>
 </ul>
 <h2 id="062-03-08-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/922c216dadc71aada864a538e34d5b62a256850f/?at=release%2F0.6.2">0.6.2</a> - 03-08-2021</h2>
-<h3 id="fixed_10">Fixed</h3>
+<h3 id="fixed_11">Fixed</h3>
 <ul>
 <li>Security issue</li>
 </ul>
@@ -980,18 +989,18 @@
 <li>Refactor on SDK errors: <code>ConioException</code> is now the only error type throwable (check <a href="./operation/Operation.md">operation</a> section)</li>
 </ul>
 <h2 id="054-26-07-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/06d77afb5153e52f696b33d5df9329e47110b01a/?at=release%2F0.5.4">0.5.4</a> - 26-07-2021</h2>
-<h3 id="fixed_11">Fixed</h3>
+<h3 id="fixed_12">Fixed</h3>
 <ul>
 <li>Made <code>cro</code>, <code>iban</code> and <code>chargedAt</code> fields of <code>Ask</code> class optional</li>
 <li>Made <code>paidAt</code> field of <code>Ask</code> class non-optional</li>
 </ul>
 <h2 id="053-20-07-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/0d60053a9a1bf149cafb8a3e54200a53da2e17bf/?at=release%2F0.5.3">0.5.3</a> - 20-07-2021</h2>
-<h3 id="added_14">Added</h3>
+<h3 id="added_15">Added</h3>
 <ul>
 <li>Bitcoin network <code>privateMainnet</code> and <code>privateTestnet</code></li>
 </ul>
 <h2 id="051-14-07-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/aa74590d773e9320cfa62a23425f09c1e8234c54/?at=release%2F0.5.1">0.5.1</a> - 14-07-2021</h2>
-<h3 id="fixed_12">Fixed</h3>
+<h3 id="fixed_13">Fixed</h3>
 <ul>
 <li>Fix factory methods of <code>TimeFrame</code> class</li>
 </ul>
@@ -1019,7 +1028,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="added_15">Added</h3>
+<h3 id="added_16">Added</h3>
 <ul>
 <li><code>ConioError</code>:<ul>
 <li>INVALID_CRYPTO_PROOF,</li>
@@ -1028,7 +1037,7 @@
 </li>
 </ul>
 <h2 id="047-01-06-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/5d71792b29a83e72c6342f658fe8920352a1296b/?at=release%2F0.4.7">0.4.7</a> - 01-06-2021</h2>
-<h3 id="added_16">Added</h3>
+<h3 id="added_17">Added</h3>
 <ul>
 <li>Aggiunta di <code>weightedBidBalance</code> alle <code>TradingInfo</code>: controvalore investito</li>
 </ul>
@@ -1037,12 +1046,12 @@
 <li>Modifica alle <code>TradingFees</code>: supporto fasce di commissioni</li>
 </ul>
 <h2 id="042-13-04-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/b0cdb3f801c410b12e8478b434e559256b3ac264/?at=release%2F0.4.2">0.4.2</a> - 13-04-2021</h2>
-<h3 id="added_17">Added</h3>
+<h3 id="added_18">Added</h3>
 <ul>
 <li>Rilascio versione 0.4.2</li>
 </ul>
 <h2 id="041-12-04-2021"><a href="https://bitbucket.org/squadrone/conio-android-sdk2/src/e3d4d6d5fe4778aff99b5a72ead9316f9e0ef581/?at=release%2F0.4.1">0.4.1</a> - 12-04-2021</h2>
-<h3 id="added_18">Added</h3>
+<h3 id="added_19">Added</h3>
 <ul>
 <li>Rilascio versione 0.4.1</li>
 </ul>
