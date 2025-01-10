@@ -24,6 +24,15 @@
 
 
 # iOS
+
+## [2.1.5](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.5/) - 10-01-2025
+### Fixed
+- No stored session after login with user that need to accept the new T&C
+
+## [2.1.4](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.4/) - 09-12-2024
+### Fixed
+- Swift Lint build issue
+
 ## [2.1.3](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.3/) - 29-11-2024
 ### Changed
 - Replaced `SignupParams.LegalAcceptance` and `LegalAcceptancesParams.LegalAcceptance` models with unified `LegalAcceptance` model
