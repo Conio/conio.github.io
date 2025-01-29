@@ -70,29 +70,15 @@ plugins:
 # Theme
 theme:
   name: material
-  locale: it
+  locale: en
   font:
     text: IBM Plex Sans
     code: IBM Plex Mono
-  icon:
-    logo: material/library
+  logo: assets/images/logo.webp
   features:
-    # - navigation.tabs
     - navigation.instant
     - navigation.expand
   palette:
     scheme: default
-    primary: teal
+    primary: blue greys
     accent: teal
-
-# extra:
-#   alternate:
-#     # Switch to English
-#     - name: English
-#       link: index.en/
-#       lang: en
-
-#     # Switch to Italian
-#     - name: Italiano
-#       link: ""
-#       lang: it
