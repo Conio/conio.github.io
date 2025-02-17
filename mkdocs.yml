@@ -31,41 +31,10 @@ nav:
 plugins:
   - search
   - pdf-export:
-     verbose: true
-     combined: true
-     combined_output_path: pdf/ConioSDK_Docs.pdf
-     #enabled_if_env: ENABLE_PDF_EXPORT
-  # - i18n:
-  #     languages:
-  #       it: "Italiano"
-  #       en: "English"
-  #     default_language: 'en'
-  #     no_translation:
-  #       en: "This page isn't translated to English."
-  #       it: "Questa pagina non è tradotta in italiano"
-  #     translate_nav:
-  #       en:
-  #         home: "Home"
-  #         installation: "Installation"
-  #         configuration: "Configuration"
-  #         operations: "Operations"
-  #         general: "Overview"
-  #         cryptoRequest: "Crypto Requests"
-  #         user: "User"
-  #         exchangeOperations: "Exchange operations"
-  #       it:
-  #         home: "Home"
-  #         installation: "Installazione"
-  #         configuration: "Configurazione"
-  #         operations: "Operazioni"
-  #         general: "Generale"
-  #         cryptoRequest: "Crypto Request"
-  #         user: "Utente"
-  #         exchangeOperations: "Operazioni sul mercato"
-
-
-# Copyright
-# TBD
+      enabled: !ENV [PDF_EXPORT, true]
+      verbose: true
+      combined: true
+      combined_output_path: pdf/ConioSDK_Docs.pdf
 
 # Theme
 theme:
