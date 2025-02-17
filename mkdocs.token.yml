@@ -1,0 +1,50 @@
+# Project information
+site_name: Conio Token SDK Documentation
+site_url: https://sdk-docs.conio.com
+
+# Repository
+repo_name: conioteam.github.io
+repo_url: https://github.com/Conio/conio.github.io
+
+# Navigation
+nav:
+  - Home: token/index.md
+  - Installation:
+    - iOS: token/Installation/Ios.md
+    - Android: token/Installation/Android.md
+  - Configuration:
+    - iOS: token/Configuration/Ios.md
+    - Android: token/Configuration/Android.md
+  - Features:
+    - User Service: token/Features/UserService
+    - Common Errors: token/Features/Errors.md
+
+# Plugins
+plugins:
+  - search
+  - pdf-export:
+      enabled: !ENV [PDF_EXPORT, true]
+      verbose: true
+      combined: true
+      combined_output_path: pdf/ConioSDK_Docs.pdf
+
+# Theme
+theme:
+  name: material
+  locale: en
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  logo: assets/images/logo.webp
+  features:
+    - navigation.instant
+    - navigation.expand
+  palette:
+    scheme: default
+    primary: blue greys
+    accent: teal
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
