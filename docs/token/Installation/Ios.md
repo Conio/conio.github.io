@@ -5,7 +5,7 @@
 - iOS 13+
 - Swift 5.9
 
-## Swift Package Manger
+## Swift Package Manager
 
 ### Via Xcode
 

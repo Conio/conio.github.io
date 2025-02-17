@@ -2,7 +2,7 @@
 
 To use the Conio SDK, you need to create an instance of the `Conio` class, providing an Android `Context` and a  `ConioConfiguration`.
 
-The `ConioConfiguration` allow you to specify the execution environment of the Conio SDK (e.g. test or production) and can be created with the url of the Conio Back-end and with the related Bitcoin Network.
+The `ConioConfiguration` allows you to specify the execution environment of the Conio SDK (e.g. test or production) and can be created with the url of the Conio Back-end and with the related Bitcoin Network.
 
 ```
 val configuration = ConioConfiguration(
@@ -13,7 +13,7 @@ val configuration = ConioConfiguration(
 
 	// optional
 
-	// http headers added to each request, usefull for debug purpose
+	// http headers added to each request, useful for debugging purposes
 	headers = mapOf("header_key" to "header_value"),
 )
 
