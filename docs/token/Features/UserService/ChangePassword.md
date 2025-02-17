@@ -10,7 +10,7 @@
 
 ## Parameters
 
-The `ChangePasswordParams` used to initialized and perform `changePassword` API.
+The `ChangePasswordParams` used to initialize and perform `changePassword` API.
 
 - old password: the current user password, needed to approve the change password request
 - new password: the new user password

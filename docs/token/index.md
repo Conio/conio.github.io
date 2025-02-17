@@ -1,4 +1,4 @@
-# Conio
+# Conio Token SDK Documentation
 
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)]()
 [![Platform](https://img.shields.io/badge/platform-Android-lightgrey.svg)]()

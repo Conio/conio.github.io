@@ -6,7 +6,7 @@
 
 ## Parameters
 
-The `LoginParams` used to initialized and perform `login` API.
+The `LoginParams` used to initialize and perform `login` API.
 
 - username: the username used to execute the login
 - password: the user password used to execute the login
