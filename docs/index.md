@@ -1,4 +1,5 @@
-# Conio
+# Conio SDK
+
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)]()
 [![Platform](https://img.shields.io/badge/platform-Android-lightgrey.svg)]()
 [![Swift Package Manager](https://img.shields.io/badge/spm-compatible-brightgreen.svg)](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/main/)
@@ -9,22 +10,12 @@ Conio SDK provides a set of Android and iOS native APIs for Conio services to le
 ## Overview
 ---
 *   Installation
-    *   [iOS](./Installation/Ios.md)    
+    *   [iOS](./Installation/iOS.md)    
     *   [Android](./Installation/Android.md)
 *   Configuration
-    *   [iOS](./Configuration/Ios.md)    
+    *   [iOS](./Configuration/iOS.md)    
     *   [Android](./Configuration/Android.md)
-*  Features
-    *   [User Service](./Features/UserService.md)
-    *   [Trading Info Service](./Features/TradingInfoService.md)
-    *   [Wallet Service](./Features/WalletService.md)
-    *   [BTC Transaction Management Service](./Features/BtcTransactionManagementService.md)
-    *   [Trading Buy Service](./Features/TradingBuyService.md)
-    *   [Trading Sell Service](./Features/TradingSellService.md)
-    *   [Trading Price Service](./Features/TradingPriceService.md)
-    *   [Swap Service](./Features/SwapService.md)
-    *   [Transfer Service](./Features/TransferService.md)
-    *   [Activities Service](./Features/ActivitiesService.md)
+*  [Services](./Features/index.md)
 
 ## Old
 ---

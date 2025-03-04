@@ -1,4 +1,4 @@
-# User Signup
+# Signup
 
 ## Overview
 ---

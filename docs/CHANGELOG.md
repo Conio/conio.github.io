@@ -181,7 +181,7 @@
 ## [0.3.0](https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.0/) - 14-07-2021
 ### Changed
 - Added missing filters params in `ActivitiesParams` to correctly get wallet activities
-- Refactor on SDK errors: `ConioError` is now the only error type throwable (check [operation](./operation/Operation.md) section)
+- Refactor on SDK errors: `ConioError` is now the only error type throwable (check [operation](./Old/operation/Operation.md) section)
 
 ## [0.2.0](https://bitbucket.org/squadrone/conio-swift-sdk/src/0.2.0/) - 06-07-2021
 ### Changed
@@ -332,7 +332,7 @@ First multicrypto SDK release
 
 ## [0.6.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.6.0) - 28-07-2021
 ### Changed
-- Refactor on SDK errors: `ConioException` is now the only error type throwable (check [operation](./operation/Operation.md) section)
+- Refactor on SDK errors: `ConioException` is now the only error type throwable (check [operation](./Old/operation/Operation.md) section)
 
 ## [0.5.4](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.5.4) - 26-07-2021
 ### Fixed
