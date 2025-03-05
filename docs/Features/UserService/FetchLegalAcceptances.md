@@ -1,17 +1,17 @@
 # Fetch Legal Acceptances
 
 ## Overview
----
+
 `fetchLegalAcceptances` API fetches the acceptances, terms and conditions and privacy policies information.
 
 ## Parameters
----
+
 The `FetchLegalAcceptancesParams` used to initialized and perform `fetchLegalAcceptances` API.
 
 - language: the legal acceptances language translation
 
 ## Result
----
+
 The `LegalAcceptancesResult` acceptances, terms and conditions and privacy policies information.
 
 - terms and conditions url: the T&C url
@@ -19,7 +19,7 @@ The `LegalAcceptancesResult` acceptances, terms and conditions and privacy polic
 - acceptances: the acceptances list
 
 ## Code
----
+
 ### iOS
 ```swift
 let params = FetchLegalAcceptancesParams.makeItalian()

@@ -1,11 +1,11 @@
 # Transfer Result
 
 ## Overview
----
+
 The `TransferResult` quotation with updated data used execute a transfer operation.
 
 ## Properties
----
+
 - transfer id: the transfer unique identifier
 - source cryptocurrency: the transfer source `Cryptocurrency`
 - destination cryptocurrency: the transfer destination `Cryptocurrency`

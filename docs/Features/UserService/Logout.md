@@ -1,15 +1,15 @@
 # Logout
 
 ## Overview
----
+
 `logout` API executes the user logout from Conio services invalidating user session.
 
 ## Result
----
+
 Success or error.
 
 ## Code
----
+
 ### iOS
 ```swift
 userService

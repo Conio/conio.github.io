@@ -1,11 +1,11 @@
 # Swap Result
 
 ## Overview
----
+
 The `SwapResult` quotation with updated data used execute a swap operation.
 
 ## Properties
----
+
 - swap id: the swap unique identifier
 - source cryptocurrency: the swap source `Cryptocurrency`
 - destination cryptocurrency: the swap destination `Cryptocurrency`

@@ -1,11 +1,11 @@
 # Signup
 
 ## Overview
----
+
 `signup` API executes the signup process in Conio services. It allows client to create a new user and setting up a valid user session with passed username, password and crypto signature request.
 
 ## Parameters
----
+
 The `SignupParams` used to initialize and perform `signup` API.
 
 - credentials: the username and password used to execute the signup
@@ -13,11 +13,11 @@ The `SignupParams` used to initialize and perform `signup` API.
 - crypto request: the crypto signature used to validate the signup
 
 ## Result
----
+
 Success or error.
 
 ## Code
----
+
 ### iOS
 ```swift
 let username: String = ...

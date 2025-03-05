@@ -1,11 +1,11 @@
 # Fetch Trading Fees
 
 ## Overview
----
+
 `fetchTradingFees` API is used to retrieve the trading fees linked to Conio user. It allows client to fetch the trading fees involved in the Conio user trading operations.
 
 ## Result
----
+
 The `TradingFeesResult` trading fees involved in the Conio user trading operations.
 
 - buy service fees: the buy trading fees list
@@ -14,7 +14,7 @@ The `TradingFeesResult` trading fees involved in the Conio user trading operatio
 - transfer service fees: the transfer trading fees list
 
 ## Code
----
+
 ### iOS
 ```swift
 tradingInfoService

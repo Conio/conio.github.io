@@ -1,11 +1,11 @@
 # Send Bitcoin 
 
 ## Overview
----
+
 `send` API is used to send Bitcoin to a recipient. It allows client to send Bitcoin to a recipient based on the wallet destination address, the BTC amount to send and the fee per byte to be paid for the transaction.
 
 ## Params
----
+
 The `SendParams` used to initialized and perform `send` API.
 
 - destination address: the recipient BTC wallet address
@@ -13,14 +13,14 @@ The `SendParams` used to initialized and perform `send` API.
 - fee per byte: the fee per byte to be paid for the send transaction
 
 ## Result
----
+
 The `SendTransactionResult` executed BTC send transaction data.
 
 - hash: the transaction hash identifier
 - activity id: the Conio services transaction activity identifier
 
 ## Code
----
+
 ### iOS
 ```swift
 let params = SendParams
