@@ -18,6 +18,7 @@ nav:
     - Android: Configuration/Android.md
   - Services:
     - Categories: Features/index.md
+    - Common errors: Features/Errors.md
     - User Service:
       - Features/UserService/Login.md
       - Features/UserService/Signup.md
