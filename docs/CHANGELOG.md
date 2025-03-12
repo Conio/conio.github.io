@@ -25,6 +25,38 @@
 
 # iOS
 
+## [2.2.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.0/) - 06-03-2025
+
+### Fixed
+
+### Added
+
+- `BuyActivity` model properties: `cryptoCurrency`, `cryptoAmount`, `fiatAmount` and `serviceFee`
+- `SellActivity` model properties: `cryptoCurrency`, `cryptoAmount`, `fiatAmount` and `serviceFee`
+- `TransferActivity.miningFee` model property
+- `CryptocurrencyMetadata.ConioInfo` model properties: `active` and `maintenance`
+- `AskResult.cryptoCurrency` model property
+
+### Removed
+
+- `Transaction` model properties: `fiatAmount`, `fiatCurrency` and `serviceFee`
+- `TradingSummaryResult.Stats.tradedCryptoAmount` model property
+- unnecessary `PermissionType` enum cases
+
+### Changed
+
+- Made `BuyActivity.transaction` model property optional
+- Made `SellActivity.transaction` model property optional
+- Made `Transaction` model properties required (non-null)
+- Renamed `Transaction.cryptoAmount` property in `netCryptoAmount`
+- Renamed `MempoolStatus` model into `TransactionInclusionInfo`
+- Renamed `BtcSpeedUpFeesResult.transactionMempoolStatus` property into `currentTransactionStatus`
+- Renamed `BtcSpeedUpFeesResult.SpeedUpFee.mempoolStatus` property into `inclusionInfo`
+- Replaced `BtcSpeedUpFeesResult.SpeedUpFee.cryptoAmount` property with `grossCryptoAmount` and `netCryptoAmount`
+- Replaced `BtcTransactionFeesResult.TransactionFee.cryptoAmount` property with `grossCryptoAmount` and `netCryptoAmount`
+- Replaced `CryptocurrencyMetadata.ConioInfo.cryptoType` with `chainType`
+- `TransferResult.grossAmount` and `TransferResult.serviceFee` model property type from `FiatAmount` to `CryptoAmount`
+
 ## [2.1.7](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.1.7/) - 27-02-2025
 ### Fixed
 - Missing `mfa` property to `SendParams`
