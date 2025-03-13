@@ -10,11 +10,25 @@ The `LoginParams` used to initialized and perform `login` API.
 
 - username: the username used to execute the login
 - password: the user password used to execute the login
-- crypto request: the crypto signature used to validate the login
+- crypto request: the crypto signature used to validate the login. The [plain message (`DATA_TO_SIGN`)](../CryptoRequest.md) to be signed in order to generate the crypto proof must adhere to the following format:
+
+```
+<external_user_id>|LOGIN|<proof_expiration>
+```
 
 ## Result
 
-Success or error.
+### Success
+
+No data
+
+### Error
+
+- `Unauthorized`: the credentials provided are wrong.
+- `AcceptTC`: the user need to [accept the new T&C and Privacy Policy](./AcceptNewLegalAcceptances.md).
+    - on Android: `ConioException.Unauthorized` with `forCurrentScope = SessionScope.AcceptTC`
+- `InvalidCryptoProof`: the crypto proof sent is wrong ([check the cause](../CryptoRequest.md#error)).
+- One of [common errors](../Errors.md).
 
 ## Code
 
