@@ -6,9 +6,19 @@
 
 ## Result
 
+### Success
+
 The `BalancesResult` contains the `WalletBalance` list.
 
-- wallets balances: the available wallets balances list
+Each `WalletBalance` contains:
+
+- crypto currency: the crypto currency related to the balance.
+- confirmed balance: the balance amount confirmed by the blockchain or by Conio (in case of Conio2Conio transaction).
+- unconfirmed balance: the balance amount the blockchain still need to confirm.
+
+### Error
+
+- One of [common errors](../Errors.md).
 
 ## Code
 
