@@ -15,18 +15,26 @@ nav:
   - Configuration:
     - iOS: token/Configuration/Ios.md
     - Android: token/Configuration/Android.md
-  - Features:
-    - User Service: token/Features/UserService
-    - Common Errors: token/Features/Errors.md
+  - User Service:
+    - Index: token/Features/UserService/index.md
+    - Login: token/Features/UserService/Login.md
+    - Change password: token/Features/UserService/ChangePassword.md
+  - Common Errors: token/Features/Errors.md
 
 # Plugins
 plugins:
   - search
-  - pdf-export:
+  - print-site:
       enabled: !ENV [PDF_EXPORT, true]
-      verbose: true
-      combined: true
-      combined_output_path: pdf/ConioSDK_Docs.pdf
+      add_table_of_contents: false
+      toc_depth: 1
+      enumerate_headings: false
+      enumerate_figures: false
+  # - pdf-export:
+  #     enabled: !ENV [PDF_EXPORT, true]
+  #     verbose: true
+  #     combined: true
+  #     combined_output_path: pdf/ConioSDK_Docs.pdf
 
 # Theme
 theme:
