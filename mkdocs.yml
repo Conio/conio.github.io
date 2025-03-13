@@ -73,11 +73,12 @@ nav:
 # Plugins
 plugins:
   - search
-  - pdf-export:
+  - print-site:
       enabled: !ENV [PDF_EXPORT, false]
-      verbose: true
-      combined: true
-      combined_output_path: pdf/ConioSDK_Docs.pdf
+      add_table_of_contents: false
+      toc_depth: 1
+      enumerate_headings: false
+      enumerate_figures: false
 
 # Theme
 theme:
