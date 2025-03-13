@@ -6,9 +6,15 @@
 
 ## Result
 
+### Success
+
 The `PermissionsResult` contains the `PermissionType` list. If a service permission is not on the list means that the related service can not be completed without an error.
 
 - types: the available permission types list
+
+### Error
+
+- One of [common errors](../Errors.md).
 
 ## Code
 

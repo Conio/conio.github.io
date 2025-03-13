@@ -13,7 +13,16 @@ The `AcceptNewLegalAcceptancesParams` used to initialized and perform `acceptNew
 
 ## Result
 
-Success or error.
+### Success
+
+No data
+
+### Error
+
+- `Unauthorized`: the credentials provided are wrong or the user is not authorized to execute the service.
+- `ClientSupportAcceptanceNotAccepted`: the required acceptance `ClientSupport` was refused.
+- `AppImprovementAcceptanceNotAccepted`: the required acceptance `AppImprovement` was refused.
+- One of [common errors](../Errors.md).
 
 ## Code
 
