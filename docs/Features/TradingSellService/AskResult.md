@@ -1,11 +1,11 @@
 # Ask Result
 
 ## Overview
----
+
 The `AskResult` selling quotation with updated data used execute a sell operation.
 
 ## Properties
----
+
 - ask id: the ask unique identifier
 - status: the updated ask status
 - sold fiat amount: the ask updated sold net fiat amount

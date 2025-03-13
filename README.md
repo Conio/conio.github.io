@@ -76,7 +76,7 @@ Please refer to official [MkDocs documentation](https://www.mkdocs.org/user-guid
 
 ## Build and test
 [MkDocs](https://www.mkdocs.org/getting-started/#creating-a-new-project) comes with a built-in dev-server that lets you preview your documentation as you work on it.
-Simply run `mkdocs serve` from root folder and go [here](http://127.0.0.1:8000).
+Simply run `mkdocs serve` (or `PDF_EXPORT=false mkdocs serve` to prevent pdf creation and increase build speed) from root folder and go [here](http://127.0.0.1:8000).
 
 The dev-server also supports auto-reloading, and will rebuild your documentation whenever anything in the configuration file, documentation directory, or theme directory changes.
 

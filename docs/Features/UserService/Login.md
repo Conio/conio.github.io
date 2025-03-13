@@ -1,11 +1,11 @@
-# User Login
+# Login
 
 ## Overview
----
+
 `login` API executes the login in Conio services. It allows client to obtain a valid user session with passed username, password and crypto signature request.
 
 ## Parameters
----
+
 The `LoginParams` used to initialized and perform `login` API.
 
 - username: the username used to execute the login
@@ -13,11 +13,11 @@ The `LoginParams` used to initialized and perform `login` API.
 - crypto request: the crypto signature used to validate the login
 
 ## Result
----
+
 Success or error.
 
 ## Code
----
+
 ### iOS
 ```swift
 let username: String = ...
