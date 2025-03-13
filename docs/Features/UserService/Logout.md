@@ -6,7 +6,13 @@
 
 ## Result
 
-Success or error.
+### Success
+
+No data
+
+### Error
+
+- One of [common errors](../Errors.md).
 
 ## Code
 

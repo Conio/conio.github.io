@@ -18,6 +18,8 @@ nav:
     - Android: Configuration/Android.md
   - Services:
     - Categories: Features/index.md
+    - Common errors: Features/Errors.md
+    - Crypto request: Features/CryptoRequest.md
     - User Service:
       - Features/UserService/Login.md
       - Features/UserService/Signup.md

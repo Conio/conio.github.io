@@ -12,11 +12,17 @@ The `FetchLegalAcceptancesParams` used to initialized and perform `fetchLegalAcc
 
 ## Result
 
+### Success
+
 The `LegalAcceptancesResult` acceptances, terms and conditions and privacy policies information.
 
 - terms and conditions url: the T&C url
 - privacy policies url: the privacy policies url
 - acceptances: the acceptances list
+
+### Error
+
+- One of [common errors](../Errors.md).
 
 ## Code
 
