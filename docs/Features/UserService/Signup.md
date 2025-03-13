@@ -10,11 +10,28 @@ The `SignupParams` used to initialize and perform `signup` API.
 
 - credentials: the username and password used to execute the signup
 - acceptances: the legal acceptances list accepted or not by the user during the signup
-- crypto request: the crypto signature used to validate the signup
+- crypto request: the crypto signature used to validate the signup. The [plain message (`DATA_TO_SIGN`)](../CryptoRequest.md) to be signed in order to generate the crypto proof must adhere to the following format:
+
+```
+<proof_id>|SIGNUP|<external_user_id>|<user_level>|<proof_expiration>|<iban>|<email>|<first_name>|<last_name>
+
+or
+
+<proof_id>|SIGNUP|<external_user_id>|<user_level>|<proof_expiration>|<email>|<first_name>|<last_name>
+```
 
 ## Result
 
-Success or error.
+### Success
+
+No data
+
+### Error
+
+- `ClientSupportAcceptanceNotAccepted`: the required acceptance `ClientSupport` was refused.
+- `AppImprovementAcceptanceNotAccepted`: the required acceptance `AppImprovement` was refused.
+- `InvalidCryptoProof`: the crypto proof sent is wrong ([check the cause](../CryptoRequest.md#error)).
+- One of [common errors](../Errors.md).
 
 ## Code
 
