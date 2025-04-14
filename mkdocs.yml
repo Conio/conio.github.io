@@ -74,7 +74,7 @@ nav:
 plugins:
   - search
   - pdf-export:
-      enabled: !ENV [PDF_EXPORT, true]
+      enabled: !ENV [PDF_EXPORT, false]
       verbose: true
       combined: true
       combined_output_path: pdf/ConioSDK_Docs.pdf
