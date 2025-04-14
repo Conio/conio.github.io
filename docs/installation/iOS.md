@@ -1,13 +1,11 @@
 # iOS Installation
 
 ## Prerequisites
----
 
 - iOS 13+
 - Swift 5.9
 
 ## Swift Package Manger
----
 
 ### Via Xcode
 
@@ -35,7 +33,6 @@ dependencies: [
 Note: in order to correctly fetch package you will need to have access to project repository.
 
 ## Troubleshooting
----
 
 If you get the following error:
 

@@ -11,88 +11,84 @@ nav:
   - Home: index.md
   - Changelog: CHANGELOG.md
   - Installation:
-    - iOS: Installation/Ios.md
+    - iOS: Installation/iOS.md
     - Android: Installation/Android.md
   - Configuration:
-    - iOS: Configuration/Ios.md
+    - iOS: Configuration/iOS.md
     - Android: Configuration/Android.md
-  - User Service: Features/UserService.md
-  - Trading Info Service: Features/TradingInfoService.md
-  - Wallet Service: Features/WalletService.md
-  - BTC Transaction Management Service: Features/BtcTransactionManagementService.md
-  - Trading Buy Service: Features/TradingBuyService.md
-  - Trading Sell Service: Features/TradingSellService.md
-  - Trading Price Service: Features/TradingPriceService.md
-  - Swap Service: Features/SwapService.md
-  - Transfer Service: Features/TransferService.md
-  - Activities Service: Features/ActivitiesService.md
+  - Services:
+    - Categories: Features/index.md
+    - User Service:
+      - Features/UserService/Login.md
+      - Features/UserService/Signup.md
+      - Features/UserService/Logout.md
+      - Features/UserService/FetchLegalAcceptances.md
+      - Features/UserService/FetchPermissions.md
+      - Features/UserService/AcceptNewLegalAcceptances.md
+    - Wallet Service:
+      - Features/WalletService/FetchBalances.md
+      - Features/WalletService/FetchMnemonic.md
+    - Activities Service:
+      - Features/ActivitiesService/FetchActivities.md
+      - Features/ActivitiesService/FetchActivity.md
+    - Trading Price Service:
+      - Features/TradingPriceService/FetchPrice.md
+      - Features/TradingPriceService/FetchHistoricalPrice.md
+      - Features/TradingPriceService/FetchAllPrices.md
+      - Features/TradingPriceService/FetchTradableCryptocurrenciesMetadata.md
+    - Trading Info Service:
+      - Features/TradingInfoService/FetchTradingFees.md
+      - Features/TradingInfoService/FetchTradingSummary.md
+      - Features/TradingInfoService/FetchTradingLimits.md
+      - Features/TradingInfoService/FetchTradingReport.md
+    - BTC Transaction Service:
+      - Features/BtcTransactionManagementService/FetchAddress.md
+      - Features/BtcTransactionManagementService/SendBitcoin.md
+      - Features/BtcTransactionManagementService/SpeedUpTransaction.md
+      - Features/BtcTransactionManagementService/FetchTransactionAvailableFees.md
+      - Features/BtcTransactionManagementService/FetchSpeedUpAvailableFees.md
+    - Buy Service:
+      - Features/TradingBuyService/CreateBid.md
+      - Features/TradingBuyService/UpdateBid.md
+      - Features/TradingBuyService/FetchBid.md
+      - Features/TradingBuyService/Buy.md
+    - Sell Service:
+      - Features/TradingSellService/CreateAsk.md
+      - Features/TradingSellService/UpdateAsk.md
+      - Features/TradingSellService/FetchAsk.md
+      - Features/TradingSellService/Sell.md
+    - Swap Service:
+      - Features/SwapService/CreateSwap.md
+      - Features/SwapService/UpdateSwap.md
+      - Features/SwapService/FetchSwap.md
+      - Features/SwapService/Swap.md
+    - Transfer Service:
+      - Features/TransferService/CreateTransfer.md
+      - Features/TransferService/UpdateTransfer.md
+      - Features/TransferService/FetchTransfer.md
+      - Features/TransferService/Transfer.md
     
 # Plugins
 plugins:
   - search
   - pdf-export:
-     verbose: true
-     combined: true
-     combined_output_path: pdf/ConioSDK_Docs.pdf
-     #enabled_if_env: ENABLE_PDF_EXPORT
-  # - i18n:
-  #     languages:
-  #       it: "Italiano"
-  #       en: "English"
-  #     default_language: 'en'
-  #     no_translation:
-  #       en: "This page isn't translated to English."
-  #       it: "Questa pagina non è tradotta in italiano"
-  #     translate_nav:
-  #       en:
-  #         home: "Home"
-  #         installation: "Installation"
-  #         configuration: "Configuration"
-  #         operations: "Operations"
-  #         general: "Overview"
-  #         cryptoRequest: "Crypto Requests"
-  #         user: "User"
-  #         exchangeOperations: "Exchange operations"
-  #       it:
-  #         home: "Home"
-  #         installation: "Installazione"
-  #         configuration: "Configurazione"
-  #         operations: "Operazioni"
-  #         general: "Generale"
-  #         cryptoRequest: "Crypto Request"
-  #         user: "Utente"
-  #         exchangeOperations: "Operazioni sul mercato"
-
-
-# Copyright
-# TBD
+      enabled: !ENV [PDF_EXPORT, true]
+      verbose: true
+      combined: true
+      combined_output_path: pdf/ConioSDK_Docs.pdf
 
 # Theme
 theme:
   name: material
-  locale: it
+  locale: en
   font:
     text: IBM Plex Sans
     code: IBM Plex Mono
-  icon:
-    logo: material/library
+  logo: assets/images/logo.webp
   features:
-    # - navigation.tabs
     - navigation.instant
-    - navigation.expand
+    # - navigation.expand
   palette:
     scheme: default
-    primary: teal
+    primary: blue greys
     accent: teal
-
-# extra:
-#   alternate:
-#     # Switch to English
-#     - name: English
-#       link: index.en/
-#       lang: en
-
-#     # Switch to Italian
-#     - name: Italiano
-#       link: ""
-#       lang: it

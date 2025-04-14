@@ -1,11 +1,11 @@
 # Create Ask 
 
 ## Overview
----
+
 `createAsk` API is used to create an ask for selling a cryptocurrency. It allows client to specify either the amount as crypto amount, fiat amount or max sellable amount it is willing to create the ask.
 
 ## Params
----
+
 ### 
 The `CreateAskParams` used to initialized and perform `createAsk` API.
 
@@ -14,11 +14,11 @@ The `CreateAskParams` used to initialized and perform `createAsk` API.
 - amount: the ask amount intended either as fiat amount, cryptocurrency amount or max sellable amount
 
 ## Result
----
+
 - [AskResult](AskResult.md)
 
 ## Code
----
+
 ### iOS
 ```swift
 let params = CreateAskParams.makeBTC(amount: ...)

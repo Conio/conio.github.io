@@ -1,11 +1,11 @@
 # Bid Result
 
 ## Overview
----
+
 The `BidResult` purchase quotation with updated data used to execute a purchase operation.
 
 ## Properties
----
+
 - bid id: the bid unique identifier
 - status: the updated bid status
 - purchased fiat amount: the bid updated purchased fiat amount

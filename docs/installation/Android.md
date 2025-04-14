@@ -1,12 +1,11 @@
 # Android Installation
 
 ## Prerequisites
----
 
 - Min Android SDK: 23 (Android 6.0 “Marshmallow”)
 
 ## Installation
----
+
 The Conio Android SDK is located in a private Maven repository on *JFrog Artifactory*, so it is necessary to configure the authentication as follow.
 
 - Add the Artifactory credentials provided by Conio to your global `gradle.properties`
