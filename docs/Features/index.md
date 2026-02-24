@@ -49,6 +49,7 @@ The `TradingInfoService` contains all the APIs used to manage a Conio user tradi
 
 The `BtcTransactionService` contains all the APIs responsible for managing Bitcoin transactions, including sending bitcoin, receiving bitcoin and speeding up transactions.
 
+- [FetchSend](./BtcTransactionManagementService/FetchSend.md)
 - [FetchAddress](./BtcTransactionManagementService/FetchAddress.md)
 - [SendBitcoin](./BtcTransactionManagementService/SendBitcoin.md)
 - [SpeedUpTransaction](./BtcTransactionManagementService/SpeedUpTransaction.md)
