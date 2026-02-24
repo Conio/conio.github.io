@@ -54,6 +54,7 @@ The `BtcTransactionService` contains all the APIs responsible for managing Bitco
 - [CreateSend](./BtcTransactionManagementService/CreateSend.md)
 - [CreateSpeedUpSend](./BtcTransactionManagementService/CreateSpeedUpSend.md)
 - [SendBitcoin](./BtcTransactionManagementService/SendBitcoin.md)
+- [UpdateSend](./BtcTransactionManagementService/UpdateSend.md)
 - [SpeedUpTransaction](./BtcTransactionManagementService/SpeedUpTransaction.md)
 - [FetchTransactionAvailableFees](./BtcTransactionManagementService/FetchTransactionAvailableFees.md)
 - [FetchSpeedUpAvailableFees](./BtcTransactionManagementService/FetchSpeedUpAvailableFees.md)
