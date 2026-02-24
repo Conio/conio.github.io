@@ -46,6 +46,7 @@ nav:
     - BTC Transaction Service:
       - Features/BtcTransactionManagementService/FetchSend.md
       - Features/BtcTransactionManagementService/FetchAddress.md
+      - Features/BtcTransactionManagementService/CreateSend.md
       - Features/BtcTransactionManagementService/SendBitcoin.md
       - Features/BtcTransactionManagementService/SpeedUpTransaction.md
       - Features/BtcTransactionManagementService/FetchTransactionAvailableFees.md
