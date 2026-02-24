@@ -49,6 +49,7 @@ nav:
       - Features/BtcTransactionManagementService/CreateSend.md
       - Features/BtcTransactionManagementService/CreateSpeedUpSend.md
       - Features/BtcTransactionManagementService/SendBitcoin.md
+      - Features/BtcTransactionManagementService/UpdateSend.md
       - Features/BtcTransactionManagementService/SpeedUpTransaction.md
       - Features/BtcTransactionManagementService/FetchTransactionAvailableFees.md
       - Features/BtcTransactionManagementService/FetchSpeedUpAvailableFees.md
