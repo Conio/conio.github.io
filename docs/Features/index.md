@@ -99,3 +99,4 @@ The `TransferService` contains all the APIs designed to facilitate the cryptocur
 The `AddressBookService` protocol contains all the API that provides information about address books.
 
 - [GetVaspList](./AddressBookService/GetVaspList.md)
+- [SearchAddressBookEntries](./AddressBookService/SearchAddressBookEntries.md)
