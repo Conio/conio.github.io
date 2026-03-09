@@ -100,3 +100,4 @@ The `AddressBookService` protocol contains all the API that provides information
 
 - [GetVaspList](./AddressBookService/GetVaspList.md)
 - [SearchAddressBookEntries](./AddressBookService/SearchAddressBookEntries.md)
+- [CreateWalletAddress](./AddressBookService/CreateWalletAddress.md)
