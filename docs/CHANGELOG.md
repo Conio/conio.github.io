@@ -25,9 +25,25 @@
 
 # iOS
 
-## [2.2.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.0/) - 06-03-2025
+## [2.2.3](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.3/) - 09-03-26
+
+### Added
+
+- Support to Xcode 26
+
+## [2.2.2](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.2/) - 25-06-25
+
+### Changed
+
+- Applied any to protocols to prevent future build errors
+
+## [2.2.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.1/) - 23-06-25
 
 ### Fixed
+
+- Correct service fee type in activities and trading entities
+
+## [2.2.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.0/) - 06-03-2025
 
 ### Added
 
