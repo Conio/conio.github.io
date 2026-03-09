@@ -2,22 +2,18 @@
 
 ## Overview
 
-`send` API is used to send Bitcoin to a recipient. It allows client to send Bitcoin to a recipient based on the wallet destination address, the BTC amount to send and the fee per byte to be paid for the transaction.
+`send` API is used to send Bitcoin to a recipient. It allows client to send Bitcoin to a recipient based on an already created send operation. Upon success result, the send operation is taken in charge and the progress can be checked through the [fetchSend API](FetchSend.md)
 
 ## Params
 
 The `SendParams` used to initialized and perform `send` API.
 
-- destination address: the recipient BTC wallet address
-- btc amount: the BTC amount to send. It can be a specific amount or the whole wallet spendable balance
-- fee per byte: the fee per byte to be paid for the send transaction
+- send id: the send operation unique identifier
+- mfa: multi-factor authentication info necessary to finalize the sell.
 
 ## Result
 
-The `SendTransactionResult` executed BTC send transaction data.
-
-- hash: the transaction hash identifier
-- activity id: the Conio services transaction activity identifier
+Success or error.
 
 ## Code
 
@@ -39,15 +35,14 @@ btcTransactionManagementService
 
 ### Android
 ```kotlin
-// val amount = AmountParams.Max
-val amount = AmountParams.Crypto(
-    value = CryptoAmount(...)
+val mfaParams = MfaParams(
+    mfaToken = "...",
+    code = "..."
 )
 
 val params = SendParams(
-    destinationAddress = "...",
-    btcAmount = amount,
-    feePerByte = CryptoAmount(...)
+    sendId = "...",
+    mfaParams = mfaParams
 )
 
 conio.btcTransactionService
