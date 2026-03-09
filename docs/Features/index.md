@@ -93,3 +93,9 @@ The `TransferService` contains all the APIs designed to facilitate the cryptocur
 - [UpdateTransfer](./TransferService/UpdateTransfer.md)
 - [FetchTransfer](./TransferService/FetchTransfer.md)
 - [Transfer](./TransferService/Transfer.md)
+
+## Address Book Service
+
+The `AddressBookService` protocol contains all the API that provides information about address books.
+
+- [GetVaspList](./AddressBookService/GetVaspList.md)
