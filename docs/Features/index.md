@@ -103,3 +103,4 @@ The `AddressBookService` protocol contains all the API that provides information
 - [CreateWalletAddress](./AddressBookService/CreateWalletAddress.md)
 - [GetProofOfOwnershipChallenge](./AddressBookService/GetProofOfOwnershipChallenge.md)
 - [ValidateProofOfOwnership](./AddressBookService/ValidateProofOfOwnership.md)
+- [UpdateAddressBookEntry](./AddressBookService/UpdateAddressBookEntry.md)
