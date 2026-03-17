@@ -18,6 +18,26 @@ The `CreateSendParams` used to initialize and perform `createSend` API.
 
 The newly created [SendResult](SendResult.md). 
 
+## Code
+
+### iOS
+```swift
+let params = CreateSendParams.make(
+    destinationAddress: ...,
+    amount: ...,
+    feePerByte: ...,
+    addressBookId: ...,
+    walletAddressId: ...
+)
+
+btcTransactionManagementService
+    .createSend(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
+```
+
 ### Android
 ```kotlin
 

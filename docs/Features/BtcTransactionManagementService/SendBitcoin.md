@@ -19,12 +19,11 @@ Success or error.
 
 ### iOS
 ```swift
-let params = SendParams
-    .makeSendingExactAmount(
-        cryptoAmountValue: ...,
-        destinationAddress: ...,
-        feePerByte: ...
-    )
+let params = SendParams.make(
+    sendId: ...,
+    mfaParams: ...
+)
+
 btcTransactionManagementService
     .send(with: params)
     .asPublisher()
