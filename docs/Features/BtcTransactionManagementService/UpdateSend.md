@@ -16,7 +16,23 @@ The `RefreshSendParams` used to initialize and perform `refreshSend` API.
 
 The [SendResult](SendResult.md).
 
-## Code 
+## Code
+
+### iOS
+```swift
+let params = UpdateSendParams.make(
+    sendId: ...,
+    amount: ...,
+    feePerByte: ...
+)
+
+btcTransactionManagementService
+    .updateSend(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
+```
 
 ### Android
 ```
