@@ -5,3 +5,6 @@ site/
 # Filesystem
 #
 .DS_Store
+
+# IntelliJ IDE
+.idea
