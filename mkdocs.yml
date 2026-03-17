@@ -72,6 +72,13 @@ nav:
       - Features/TransferService/UpdateTransfer.md
       - Features/TransferService/FetchTransfer.md
       - Features/TransferService/Transfer.md
+    - Address Book Service:
+      - Features/AddressBookService/GetVaspList.md
+      - Features/AddressBookService/SearchAddressBookEntries.md
+      - Features/AddressBookService/CreateWalletAddress.md
+      - Features/AddressBookService/GetProofOfOwnershipChallenge.md
+      - Features/AddressBookService/ValidateProofOfOwnership.md
+      - Features/AddressBookService/UpdateAddressBookEntry.md
     
 # Plugins
 plugins:
