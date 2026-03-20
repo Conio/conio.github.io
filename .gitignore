@@ -1,7 +1,11 @@
 # Generated
 #
 site/
+.venv
 
 # Filesystem
 #
 .DS_Store
+
+# IntelliJ IDE
+.idea

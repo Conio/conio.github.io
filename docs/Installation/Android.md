@@ -34,3 +34,18 @@ dependencies {
     implementation 'com.conio:sdk-b2b:[VERSION]'
 }
 ```
+
+## Troubleshooting
+
+If encountering packaging issues due to duplicated `META-INF/NOTICE.md` and/or `META-INF/LICENSE.md`, 
+please exclude them from `build.gradle`
+
+```
+android {
+    // ...
+    packagingOptions {
+        exclude "META-INF/NOTICE.md"
+        exclude "META-INF/LICENSE.md"
+    }
+}
+```
