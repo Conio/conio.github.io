@@ -29,3 +29,17 @@ addressBookService
         // ...
     }
 ```
+
+### Android
+```kotlin
+val params = SearchAddressBookEntriesParams(
+    searchText= "..."
+)
+
+conio.addressBookService
+    .searchAddressBookEntries(params)
+    .asFlow()
+    .collect { result -> 
+        //...
+    }
+```
