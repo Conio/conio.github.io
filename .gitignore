@@ -1,6 +1,7 @@
 # Generated
 #
 site/
+.venv
 
 # Filesystem
 #
