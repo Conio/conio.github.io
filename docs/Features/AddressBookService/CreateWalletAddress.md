@@ -41,3 +41,43 @@ addressBookService
         // ...
     }
 ```
+
+### Android
+```kotlin
+val vasp = Vasp(
+    name = "...",
+    did = "...",
+    websiteUrl = "..."
+)
+
+val proofOfOwnership = ProofOfOwnership(
+    message = ProofOfOwnershipMessage(
+        value = "..."
+    ),
+    signature = ProofOfOwnershipSignature(
+        value = "..."
+    )
+)
+
+val walletAddress = CreateAddressBookWalletAddress(
+    walletAddress = "...",
+    isForeign = "...",
+    isUnhostedWallet = "...",
+    vasp = vasp,
+    proofOfOwnership = proofOfOwnership,
+    label = "...",
+    threshold = FiatAmount()
+)
+
+val params = CreateAddressBookWalletAddressParams(
+    addressBookId = "...",
+    walletAddress = walletAddress
+)
+
+conio.addressBookService
+    .createWalletAddress(params)
+    .asFlow()
+    .collect { result -> 
+        //...
+    }
+```

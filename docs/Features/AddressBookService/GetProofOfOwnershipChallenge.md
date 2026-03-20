@@ -29,3 +29,17 @@ addressBookService
         // ...
     }
 ```
+
+### Android
+```kotlin
+val params = ProofOfOwnershipChallengeParams(
+    walletAddress = "..."
+)
+
+conio.addressBookService
+    .getProofOfOwnershipChallenge(params)
+    .asFlow()
+    .collect { result -> 
+        //...
+    }
+```

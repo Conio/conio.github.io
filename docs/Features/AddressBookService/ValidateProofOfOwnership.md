@@ -36,3 +36,19 @@ addressBookService
         // ...
     }
 ```
+
+### Android
+```kotlin
+val params = ValidateProofOfOwnershipParams(
+    walletAddress = "...",
+    message = ProofOfOwnershipMessage("..."),
+    signatureToValidate = "..."
+)
+
+conio.addressBookService
+    .validateProofOfOwnership(params)
+    .asFlow()
+    .collect { result -> 
+        //...
+    }
+```

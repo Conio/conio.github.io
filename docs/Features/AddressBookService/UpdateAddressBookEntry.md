@@ -39,3 +39,26 @@ addressBookService
         // ...
     }
 ```
+
+### Android
+```kotlin
+val personInfo = AddressBookPersonInfo(
+    dateOfBirth = "...",
+    taxId = "..."
+)
+
+val params = UpdateAddressBookEntryParams(
+    addressBookId = "...",
+    label = "...",
+    residenceAddress = "...",
+    companyInfo = "...",
+    personInfo = personInfo
+)
+
+conio.addressBookService
+    .updateAddressBookEntry(params)
+    .asFlow()
+    .collect { result -> 
+        //...
+    }
+```
