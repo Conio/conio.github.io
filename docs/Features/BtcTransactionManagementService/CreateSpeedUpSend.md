@@ -13,7 +13,22 @@ The `CreateSpeedUpSendParams` used to initialize and perform `createSpeedUpSend`
 
 The newly created [SendResult](SendResult.md). 
 
-## Code 
+## Code
+
+### iOS
+```swift
+let params = CreateSpeedUpSendParams.make(
+    txHash: ...,
+    feePerByte: ...
+)
+
+btcTransactionManagementService
+    .createSpeedUpSend(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
+```
 
 ### Android
 ```

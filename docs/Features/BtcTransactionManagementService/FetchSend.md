@@ -16,6 +16,20 @@ The [SendResult](SendResult.md) with the updated `status`.
 
 ## Code
 
+### iOS
+```swift
+let params = FetchSendParams.make(
+    sendId: ...
+)
+
+btcTransactionManagementService
+    .fetchSend(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
+```
+
 ### Android
 ```kotlin
 
