@@ -21,3 +21,13 @@ addressBookService
         // ...
     }
 ```
+
+### Android
+```kotlin
+conio.addressBookService
+    .getVaspList()
+    .asFlow()
+    .collect { result -> 
+        //...
+    }
+```

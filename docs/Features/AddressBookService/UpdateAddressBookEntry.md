@@ -6,10 +6,10 @@
 
 ## Params
 
-The `UpdateAddressBookEntryParams` containing the entry identifier and the fields to update. Only the provided optional fields will be updated. Fields that already contain a value cannot be modified or removed. Any parameter set to `nil` will be ignored and the corresponding value in the existing entry will remain unchanged.
+The `UpdateAddressBookEntryParams` containing the entry identifier and the fields to update. Only the provided optional fields will be updated. Fields that already contain a value cannot be modified or removed, exept for `label` param. Any parameter set to `nil` will be ignored and the corresponding value in the existing entry will remain unchanged.
  
 - address book id: the unique identifier of the address book entry to update.
-- label: the new label for the address book entry.
+- label: the new label for the address book entry. It can be modified if it needs to be updated, even if it's already present in the address book.
 - residence address: the updated residence (geographical) address information.
 - company info: the updated company information associated with the entry.
 - person info: the updated personal information associated with the entry.
@@ -37,5 +37,28 @@ addressBookService
     .asPublisher()
     .sink { result in
         // ...
+    }
+```
+
+### Android
+```kotlin
+val personInfo = AddressBookPersonInfo(
+    dateOfBirth = "...",
+    taxId = "..."
+)
+
+val params = UpdateAddressBookEntryParams(
+    addressBookId = "...",
+    label = "...",
+    residenceAddress = "...",
+    companyInfo = null,
+    personInfo = personInfo
+)
+
+conio.addressBookService
+    .updateAddressBookEntry(params)
+    .asFlow()
+    .collect { result -> 
+        //...
     }
 ```
