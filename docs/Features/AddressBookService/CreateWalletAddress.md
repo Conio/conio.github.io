@@ -49,9 +49,9 @@ addressBookService
 //      did = "..."
 //  )
 val vasp = Vasp.buildWithWebsite(
-        name = "...",
-        websiteUrl = "..."
-    )
+    name = "...",
+    websiteUrl = "..."
+)
 
 val proofOfOwnership = ProofOfOwnership(
     message = ProofOfOwnershipMessage(
