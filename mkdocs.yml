@@ -75,6 +75,7 @@ nav:
     - Address Book Service:
       - Features/AddressBookService/GetVaspList.md
       - Features/AddressBookService/SearchAddressBookEntries.md
+      - Features/AddressBookService/CreateAddressBookEntryWithWalletAddress.md
       - Features/AddressBookService/CreateWalletAddress.md
       - Features/AddressBookService/GetProofOfOwnershipChallenge.md
       - Features/AddressBookService/ValidateProofOfOwnership.md

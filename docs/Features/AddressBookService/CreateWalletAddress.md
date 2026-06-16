@@ -9,7 +9,7 @@
 The `CreateAddressBookWalletAddressParams` used to initialize and perform `createWalletAddress` API.
 
 - address book id: id referencing the parent `AddressBookEntry`.
-- wallet address: wallet address details to create.
+- wallet address: wallet address details to create. For more informations check [`CreateAddressBookWalletAddress` definition](./CreateAddressBookEntryWithWalletAddress.md#createaddressbookwalletaddress).
 
 ## Result
 
