@@ -45,9 +45,12 @@ nav:
       - Features/TradingInfoService/FetchTradingReport.md
     - BTC Transaction Service:
       - Features/BtcTransactionManagementService/FetchAddress.md
-      - Features/BtcTransactionManagementService/SendBitcoin.md
-      - Features/BtcTransactionManagementService/SpeedUpTransaction.md
+      - Features/BtcTransactionManagementService/CreateSend.md
+      - Features/BtcTransactionManagementService/UpdateSend.md
+      - Features/BtcTransactionManagementService/FetchSend.md
       - Features/BtcTransactionManagementService/FetchTransactionAvailableFees.md
+      - Features/BtcTransactionManagementService/SendBitcoin.md
+      - Features/BtcTransactionManagementService/CreateSpeedUpSend.md
       - Features/BtcTransactionManagementService/FetchSpeedUpAvailableFees.md
     - Buy Service:
       - Features/TradingBuyService/CreateBid.md
@@ -69,6 +72,14 @@ nav:
       - Features/TransferService/UpdateTransfer.md
       - Features/TransferService/FetchTransfer.md
       - Features/TransferService/Transfer.md
+    - Address Book Service:
+      - Features/AddressBookService/GetVaspList.md
+      - Features/AddressBookService/SearchAddressBookEntries.md
+      - Features/AddressBookService/CreateAddressBookEntryWithWalletAddress.md
+      - Features/AddressBookService/CreateWalletAddress.md
+      - Features/AddressBookService/GetProofOfOwnershipChallenge.md
+      - Features/AddressBookService/ValidateProofOfOwnership.md
+      - Features/AddressBookService/UpdateAddressBookEntry.md
     
 # Plugins
 plugins:

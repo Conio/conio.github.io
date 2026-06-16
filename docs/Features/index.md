@@ -50,9 +50,12 @@ The `TradingInfoService` contains all the APIs used to manage a Conio user tradi
 The `BtcTransactionService` contains all the APIs responsible for managing Bitcoin transactions, including sending bitcoin, receiving bitcoin and speeding up transactions.
 
 - [FetchAddress](./BtcTransactionManagementService/FetchAddress.md)
-- [SendBitcoin](./BtcTransactionManagementService/SendBitcoin.md)
-- [SpeedUpTransaction](./BtcTransactionManagementService/SpeedUpTransaction.md)
+- [CreateSend](./BtcTransactionManagementService/CreateSend.md)
+- [UpdateSend](./BtcTransactionManagementService/UpdateSend.md)
+- [FetchSend](./BtcTransactionManagementService/FetchSend.md)
 - [FetchTransactionAvailableFees](./BtcTransactionManagementService/FetchTransactionAvailableFees.md)
+- [SendBitcoin](./BtcTransactionManagementService/SendBitcoin.md)
+- [CreateSpeedUpSend](./BtcTransactionManagementService/CreateSpeedUpSend.md)
 - [FetchSpeedUpAvailableFees](./BtcTransactionManagementService/FetchSpeedUpAvailableFees.md)
 
 ## Buy Service
@@ -90,3 +93,15 @@ The `TransferService` contains all the APIs designed to facilitate the cryptocur
 - [UpdateTransfer](./TransferService/UpdateTransfer.md)
 - [FetchTransfer](./TransferService/FetchTransfer.md)
 - [Transfer](./TransferService/Transfer.md)
+
+## Address Book Service
+
+The `AddressBookService` protocol contains all the API that provides information about address books.
+
+- [GetVaspList](./AddressBookService/GetVaspList.md)
+- [SearchAddressBookEntries](./AddressBookService/SearchAddressBookEntries.md)
+- [CreateAddressBookEntryWithWalletAddress](./AddressBookService/CreateAddressBookEntryWithWalletAddress.md)
+- [CreateWalletAddress](./AddressBookService/CreateWalletAddress.md)
+- [GetProofOfOwnershipChallenge](./AddressBookService/GetProofOfOwnershipChallenge.md)
+- [ValidateProofOfOwnership](./AddressBookService/ValidateProofOfOwnership.md)
+- [UpdateAddressBookEntry](./AddressBookService/UpdateAddressBookEntry.md)
