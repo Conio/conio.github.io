@@ -25,9 +25,20 @@
 
 # iOS
 
-## [2.2.3](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.3/) - 09-03-26
+## [2.3.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.3.0/) - 15-06-26
+
+### Changed
+
+- `BtcTransactionService.send` service to meet *Travel Rule* and *Agenzia delle Entrate* requirements: now it requires the identifier of a specifc *send operation* (that can be created with the new services) and it answers with the *send operation* model with the updated status
 
 ### Added
+
+- `BtcTransactionService` services to create, update and fetch a new *send operation*
+- `AddressBookService` services to manage the user *address book* entries that can be used in *send* and *receive operations* and which will contains all the informations required bt the *Travel Rule* and *Agenzia delle Entrate*.
+
+## [2.2.3](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.3/) - 09-03-26
+
+### Added   
 
 - Support to Xcode 26
 
@@ -241,6 +252,17 @@
 - Rilascio versione 0.1.0
 
 # Android
+
+## [2.3.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.3.0/) - 16-06-26
+
+### Changed
+
+- `BtcTransactionService.send` service to meet *Travel Rule* and *Agenzia delle Entrate* requirements: now it requires the identifier of a specifc *send operation* (that can be created with the new services) and it answers with the *send operation* model with the updated status
+
+### Added
+
+- `BtcTransactionService` services to create, update and fetch a new *send operation*
+- `AddressBookService` services to manage the user *address book* entries that can be used in *send* and *receive operations* and which will contains all the informations required bt the *Travel Rule* and *Agenzia delle Entrate*.
 
 ## [2.1.2](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.1.2) - 27-02-2025
 
