@@ -105,3 +105,7 @@ The `AddressBookService` protocol contains all the API that provides information
 - [GetProofOfOwnershipChallenge](./AddressBookService/GetProofOfOwnershipChallenge.md)
 - [ValidateProofOfOwnership](./AddressBookService/ValidateProofOfOwnership.md)
 - [UpdateAddressBookEntry](./AddressBookService/UpdateAddressBookEntry.md)
+- [UpdateWalletAddress](./AddressBookService/UpdateWalletAddress.md)
+- [DeleteWalletAddress](./AddressBookService/DeleteWalletAddress.md)
+- [DeleteAddressBookEntry](./AddressBookService/DeleteAddressBookEntry.md)
+- [AssociateSenderInfoToReceive](./AddressBookService/AssociateSenderInfoToReceive.md)

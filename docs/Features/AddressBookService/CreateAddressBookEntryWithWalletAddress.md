@@ -22,6 +22,7 @@ The `CreateAddressBookEntry` contact creation data.
 - residence address: the optional residential or primary address information
 - company info: the optional company information, if the contact represents a business entity
 - person info: the optional personal information, if the contact represents an individual
+- is visible: optionally indicates whether the entry should be shown in the address book list. If not provided, the entry will be visible by default. Creating a hidden entry is useful when a contact is created on the fly as part of another flow — for example the sender of a receive (see [Associate Sender Info To Receive](./AssociateSenderInfoToReceive.md)). Note that the visibility flag is currently write-only: the address book entry model returned by the read APIs does not include it
 
 ### CreateAddressBookWalletAddress
 
@@ -53,7 +54,8 @@ let entry = CreateAddressBookEntry
         isWalletOwner: false,
         residenceAddress: ...,
         companyInfo: nil,
-        personInfo: ...
+        personInfo: ...,
+        isVisible: false // hidden from the address book list
     )
 
 let walletAddress = CreateAddressBookWalletAddress
@@ -95,7 +97,8 @@ val addressBook = CreateAddressBookEntry(
     isWalletOwner = true,
     residenceAddress = null,
     companyInfo = null,
-    personInfo = personInfo
+    personInfo = personInfo,
+    isVisible = false // hidden from the address book list
 )
 
 val vasp = Vasp.buildWithWebsite(
