@@ -26,6 +26,8 @@ The `ActivitiesService` contains all the API that provides information about wal
 
 - [FetchActivities](./ActivitiesService/FetchActivities.md)
 - [FetchActivity](./ActivitiesService/FetchActivity.md)
+- [SendActivitiesReport](./ActivitiesService/SendActivitiesReport.md)
+- [FetchActivitiesReport](./ActivitiesService/FetchActivitiesReport.md)
 
 ## Trading Price Service
 
@@ -44,6 +46,8 @@ The `TradingInfoService` contains all the APIs used to manage a Conio user tradi
 - [FetchTradingSummary](./TradingInfoService/FetchTradingSummary.md)
 - [FetchTradingLimits](./TradingInfoService/FetchTradingLimits.md)
 - [FetchTradingReport](./TradingInfoService/FetchTradingReport.md)
+- [GetAvailableTradingReports](./TradingInfoService/GetAvailableTradingReports.md)
+- [SendTradingReport](./TradingInfoService/SendTradingReport.md)
 
 ## BTC Transaction Service
 

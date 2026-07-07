@@ -33,6 +33,8 @@ nav:
     - Activities Service:
       - Features/ActivitiesService/FetchActivities.md
       - Features/ActivitiesService/FetchActivity.md
+      - Features/ActivitiesService/FetchActivitiesReport.md
+      - Features/ActivitiesService/SendActivitiesReport.md
     - Trading Price Service:
       - Features/TradingPriceService/FetchPrice.md
       - Features/TradingPriceService/FetchHistoricalPrice.md
@@ -43,6 +45,8 @@ nav:
       - Features/TradingInfoService/FetchTradingSummary.md
       - Features/TradingInfoService/FetchTradingLimits.md
       - Features/TradingInfoService/FetchTradingReport.md
+      - Features/TradingInfoService/GetAvailableTradingReports.md
+      - Features/TradingInfoService/SendTradingReport.md
     - BTC Transaction Service:
       - Features/BtcTransactionManagementService/FetchAddress.md
       - Features/BtcTransactionManagementService/CreateSend.md
