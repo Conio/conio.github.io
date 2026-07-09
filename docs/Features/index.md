@@ -10,6 +10,7 @@ The `UserService` contains all the APIs used to manage a Conio user.
 - [Signup](./UserService/Signup.md)
 - [Logout](./UserService/Logout.md)
 - [FetchLegalAcceptances](./UserService/FetchLegalAcceptances.md)
+- [GetUserTc](./UserService/GetUserTc.md)
 - [FetchPermissions](./UserService/FetchPermissions.md)
 - [AcceptNewLegalAcceptances](./UserService/AcceptNewLegalAcceptances.md)
 

@@ -2,14 +2,28 @@
 
 ## Overview
 
-`acceptNewLegalAcceptances` API is used to mark as accepted the new legal acceptances. It allows client to mark as accepted possible new legal acceptances and let user continue operate on Conio services.
+`acceptNewLegalAcceptances` API submits the user choices (accept or reject) for the legal acceptances. Each choice references the acceptance `id` obtained from [Fetch Legal Acceptances](./FetchLegalAcceptances.md). It allows client to mark new legal acceptances as accepted (or rejected) and let user continue operate on Conio services.
 
 ## Parameters
 
-The `AcceptNewLegalAcceptancesParams` used to initialized and perform `acceptNewLegalAcceptances` API.
+The `AcceptNewLegalAcceptancesParams` used to initialize and perform `acceptNewLegalAcceptances` API.
 
-- credentials: the username and password used to execute the signup
-- acceptances: the new legal acceptances user preferences
+- username: the user username
+- password: the user password
+- legal acceptances: the `LegalAcceptancesParams` user choices for the legal acceptances
+
+### LegalAcceptancesParams
+
+The `LegalAcceptancesParams` containing the user choices. It can be built with the `make(userChoices:)` factory, or with the `makeAllAccepted(from:)` convenience factory that marks as accepted all the acceptances contained in a `LegalAcceptancesResult` fetched via `fetchLegalAcceptances`.
+
+- user choices: the list of `LegalAcceptance` user choices
+
+### LegalAcceptance
+
+The `LegalAcceptance` single user choice. It can be built with the `makeAccepted(id:)` and `makeNotAccepted(id:)` factories.
+
+- id: the acceptance identifier, provided by the backend
+- is accepted: the user choice, accepted (`true`) or rejected (`false`)
 
 ## Result
 
@@ -19,36 +33,34 @@ Success or error.
 
 ### iOS
 ```swift
-let acceptences = LegalAcceptancesParams.makeAllAccepted()
-let params = AcceptNewLegalAcceptancesParams
-    .make(
-        username: ...,
-        password: ...,
-        legalAcceptances: acceptances
-    )
+let params = AcceptNewLegalAcceptancesParams.make(
+    username: "...",
+    password: "...",
+    legalAcceptances: LegalAcceptancesParams.make(userChoices: [
+        .makeAccepted(id: "..."),
+        .makeNotAccepted(id: "...")
+    ])
+)
+
 userService
-	.acceptNewLegalAcceptances(with: params)
-	.asPublisher()
-	.sink { result in 
-		...
-	}
+    .acceptNewLegalAcceptances(with: params)
+    .asPublisher()
+    .sink { result in
+        // ...
+    }
 ```
 
 ### Android
 ```kotlin
-val acceptances = listOf(
-    Acceptance(AcceptanceType.AppImprovement, isAccepted = true),
-    Acceptance(AcceptanceType.ClientSupport, isAccepted = true),
-)
-
-val credentials = Credentials(
-    username = "..." // user unique identifier,
-    password = "..."
-)
-
 val params = AcceptNewLegalAcceptancesParams(
-    acceptances = B2BModelAcceptances.acceptedAcceptances,
-    credentials = credentials
+    username = "...",
+    password = "...",
+    legalAcceptances = LegalAcceptancesParams(
+        userChoices = listOf(
+            LegalAcceptance.makeAccepted(id = "..."),
+            LegalAcceptance.makeNotAccepted(id = "..."),
+        )
+    ),
 )
 
 conio.userService

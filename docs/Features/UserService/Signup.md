@@ -9,7 +9,7 @@
 The `SignupParams` used to initialize and perform `signup` API.
 
 - credentials: the username and password used to execute the signup
-- acceptances: the legal acceptances list accepted or not by the user during the signup
+- acceptances: the legal acceptances list accepted or not by the user during the signup. Each choice references the acceptance `id` obtained from [Fetch Legal Acceptances](./FetchLegalAcceptances.md)
 - crypto request: the crypto signature used to validate the signup
 
 ## Result
@@ -35,9 +35,9 @@ let cryptoRequest = SignupParams
 	    firstName: ...,
 	    lastName: ...
     )
-let acceptences = [
-    LegalAcceptance.makeAccepted(type: .clientSupport),
-    LegalAcceptance.makeAccepted(type: .appImprovement)
+let acceptances = [
+    LegalAcceptance.makeAccepted(id: "..."),
+    LegalAcceptance.makeNotAccepted(id: "...")
 ]
 let params = SignupParams
     .make(
@@ -77,8 +77,8 @@ val signupCryptoRequest = SignupCryptoRequest(
 )
 
 val acceptances = listOf(
-	Acceptance(AcceptanceType.AppImprovement, isAccepted = true),
-	Acceptance(AcceptanceType.ClientSupport, isAccepted = true),
+	LegalAcceptance(id = "...", isAccepted = true),
+	LegalAcceptance(id = "...", isAccepted = false)
 )
 
 val signupParams = SignupParams(

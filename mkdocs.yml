@@ -25,6 +25,7 @@ nav:
       - Features/UserService/Signup.md
       - Features/UserService/Logout.md
       - Features/UserService/FetchLegalAcceptances.md
+      - Features/UserService/GetUserTc.md
       - Features/UserService/FetchPermissions.md
       - Features/UserService/AcceptNewLegalAcceptances.md
     - Wallet Service:
