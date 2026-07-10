@@ -8,7 +8,7 @@
 
 The `FetchActivitiesReportParams` used to initialize and perform `fetchActivitiesReport` API.
 
-- time frame: the `TimeFrameParams` time window of the activities to export. Timestamps are Unix time in milliseconds. // iOS: Int64, Android: Long
+- time frame: the time window of the activities to export. Timestamps are Unix time in milliseconds.
 
 ## Result
 
@@ -43,6 +43,6 @@ conio.activityService
     .fetchActivitiesReport(params)
     .asFlow()
     .collect { result ->
-        // use result.fileData to present / store the PDF
+        // ...
     }
 ```

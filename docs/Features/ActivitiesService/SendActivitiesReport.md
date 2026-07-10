@@ -8,7 +8,7 @@
 
 The `SendActivitiesReportParams` used to initialize and perform `sendActivitiesReport` API.
 
-- time frame: the `TimeFrameParams` time window of the activities to export. Timestamps are Unix time in milliseconds. // iOS: Int64, Android: Long
+- time frame: the time window of the activities to export. Timestamps are Unix time in milliseconds.
 
 ## Result
 
@@ -18,7 +18,7 @@ Success or error.
 
 ### iOS
 ```swift
-let params = FetchActivitiesReportParams.make(from: ..., to: ...)
+let params = SendActivitiesReportParams.make(from: ..., to: ...)
 
 activitiesService
     .sendActivitiesReport(with: params)
@@ -37,7 +37,7 @@ activitiesService
 
 ### Android
 ```kotlin
-val params = FetchActivitiesReportParams(
+val params = SendActivitiesReportParams(
     timeFrame = TimeFrame(fromTimeInMillis: ..., toTimeInMillis: ...)
 )
 
@@ -45,6 +45,6 @@ conio.activityService
     .sendActivitiesReport(params)
     .asFlow()
     .collect { result ->
-        // the export has been sent via email
+        // check the result: success or error
     }
 ```

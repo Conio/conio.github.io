@@ -48,6 +48,6 @@ conio.userService
     .getUserTc()
     .asFlow()
     .collect { result ->
-        // use result.acceptances
+        // ...
     }
 ```

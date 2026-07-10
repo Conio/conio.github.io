@@ -40,13 +40,13 @@ tradingInfoService
 ### Android
 ```kotlin
 val params = SendTradingReportParams(
-    period = TradingReportPeriod(year = "2025")
+    period = TradingReportPeriod(year = "2025", quarter = null)
 )
 
 conio.tradingInfoService
     .sendTradingReport(params)
     .asFlow()
     .collect { result ->
-        // the report has been sent via email
+        // check the result: success or error
     }
 ```

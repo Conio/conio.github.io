@@ -7,9 +7,9 @@
 The typical flow is:
 
 1. **Detect a receive waiting for sender data.** Fetch the activities: a `ReceiveActivity` whose `validationStatus` is `waitingForValidationData` requires the sender information. Keep its `receiveId`.
-2. **Select or create the sender contact.** Pick an existing address book entry (with the sender's wallet address) or create a new one — optionally with `isVisible: false` if it should not appear in the user's address book list (see [Create Address Book Entry With Wallet Address](./CreateAddressBookEntryWithWalletAddress.md)).
+2. **Create the sender contact.** Create a new address book entry with the sender's wallet address (see [Create Address Book Entry With Wallet Address](./CreateAddressBookEntryWithWalletAddress.md)), with `isVisible: false` so it does not appear in the user's address book list.
 3. **Associate the sender to the receive.** Call `associateSenderInfoToReceive` with the `receiveId`, the `addressBookId` and the `walletAddressId`.
-4. **Refresh.** Fetch the activity again: the sender address book entry is now populated and the `validationStatus` progresses (`waitingForValidation` → `confirmed`, or `validationFailed`).
+4. **Track the validation.** After the association the receive goes through the Conio validation process (`waitingForValidation`), which can end with the received amount being credited (`confirmed`) or with the sender data being rejected (`validationFailed`). The updated status may not be visible immediately when re-fetching the activity.
 
 ## Params
 

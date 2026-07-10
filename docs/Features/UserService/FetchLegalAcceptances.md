@@ -8,7 +8,7 @@ Acceptances are id-based: each acceptance is identified by an opaque `id` provid
 
 ## Parameters
 
-The `FetchLegalAcceptancesParams` used to initialize and perform `fetchLegalAcceptances` API. It can be built with the `makeItalian()` and `makeEnglish()` factories.
+The `FetchLegalAcceptancesParams` used to initialize and perform `fetchLegalAcceptances` API.
 
 - language: the legal acceptances language translation
 
@@ -52,6 +52,6 @@ conio.userService
     .fetchLegalAcceptances(params)
     .asFlow()
     .collect { result ->
-        // use result.acceptances
+        // ...
     }
 ```

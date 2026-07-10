@@ -39,6 +39,6 @@ conio.tradingInfoService
     .getAvailableTradingReports()
     .asFlow()
     .collect { result ->
-        // use result.reportPeriods
+        // ...
     }
 ```

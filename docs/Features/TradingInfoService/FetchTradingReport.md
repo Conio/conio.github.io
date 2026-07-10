@@ -35,20 +35,6 @@ tradingInfoService
     }
 ```
 
-The previous `FetchTradingReportParams.Period` enum (and the factory based on it) is **deprecated** in favor of `TradingReportPeriod`. It still works for backward compatibility but should be migrated:
-
-```swift
-// Deprecated
-FetchTradingReportParams.make(period: .lastYear)
-FetchTradingReportParams.make(period: .specificYear("2025"))
-
-// New
-FetchTradingReportParams.make(period: TradingReportPeriod.make(year: nil))     // previous fiscal year
-FetchTradingReportParams.make(period: TradingReportPeriod.make(year: "2025"))  // specific year
-```
-
-The new API additionally supports requesting a specific quarter via `TradingReportPeriod.quarter`.
-
 ### Android
 ```kotlin
 val params = FetchTradingReportParams(
@@ -59,17 +45,6 @@ conio.tradingInfoService
     .fetchTradingReport(params)
     .asFlow()
     .collect { result ->
-        // use result.pdf to present / store the PDF
+        // ...
     }
-```
-
-The previous `FetchTradingReportParams.ReportPeriod` is **deprecated** in favor of `TradingReportPeriod`. It still works for backward compatibility but should be migrated:
-
-```kotlin
-// Deprecated
-FetchTradingReportParams(period = FetchTradingReportParams.ReportPeriod.LastYear)
-FetchTradingReportParams(period = FetchTradingReportParams.ReportPeriod("2025"))
-
-// New
-FetchTradingReportParams(period = TradingReportPeriod(year = "2025"))  // specific year
 ```

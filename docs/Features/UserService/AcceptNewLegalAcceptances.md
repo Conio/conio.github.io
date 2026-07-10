@@ -8,21 +8,14 @@
 
 The `AcceptNewLegalAcceptancesParams` used to initialize and perform `acceptNewLegalAcceptances` API.
 
-- username: the user username
-- password: the user password
-- legal acceptances: the `LegalAcceptancesParams` user choices for the legal acceptances
-
-### LegalAcceptancesParams
-
-The `LegalAcceptancesParams` containing the user choices. It can be built with the `make(userChoices:)` factory, or with the `makeAllAccepted(from:)` convenience factory that marks as accepted all the acceptances contained in a `LegalAcceptancesResult` fetched via `fetchLegalAcceptances`.
-
-- user choices: the list of `LegalAcceptance` user choices
+- credentials: the user username and password
+- acceptances: the user choices for the legal acceptances
 
 ### LegalAcceptance
 
-The `LegalAcceptance` single user choice. It can be built with the `makeAccepted(id:)` and `makeNotAccepted(id:)` factories.
+The `LegalAcceptance` single user choice.
 
-- id: the acceptance identifier, provided by the backend
+- id: the acceptance identifier, obtained from [Fetch Legal Acceptances](./FetchLegalAcceptances.md)
 - is accepted: the user choice, accepted (`true`) or rejected (`false`)
 
 ## Result
@@ -53,13 +46,13 @@ userService
 ### Android
 ```kotlin
 val params = AcceptNewLegalAcceptancesParams(
-    username = "...",
-    password = "...",
-    legalAcceptances = LegalAcceptancesParams(
-        userChoices = listOf(
-            LegalAcceptance.makeAccepted(id = "..."),
-            LegalAcceptance.makeNotAccepted(id = "..."),
-        )
+    acceptances = listOf(
+        LegalAcceptance(id = "...", isAccepted = true),
+        LegalAcceptance(id = "...", isAccepted = false),
+    ),
+    credentials = Credentials(
+        username = "...",
+        password = "..."
     ),
 )
 

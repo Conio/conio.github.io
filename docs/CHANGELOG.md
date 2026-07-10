@@ -282,6 +282,35 @@
 
 # Android
 
+## [2.5.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.5.0/) - 09-07-26
+
+### Added
+
+- `UserService.getUserTc` service to fetch the current acceptance state of the user's legal acceptances (status and acceptance timestamp per acceptance `id`)
+
+### Changed
+
+- `UserService.fetchLegalAcceptances` service migrated to the id-based acceptances model: each acceptance carries its `id`, the localized `title`, `body` and `url` and the mandatory flag; the result-level *T&C* and *privacy policies* urls and the acceptance type enum are removed
+- `UserService.acceptNewLegalAcceptances` and `UserService.signup` services now take id-based acceptance choices: each `LegalAcceptance` carries the acceptance `id` and the user choice
+
+## [2.4.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.4.0/) - 07-07-26
+
+### Added
+
+- *Travel Rule* info on send and receive activities: `SendActivity` and `ReceiveActivity` now expose the transaction validation status, the amounts and the counterparty information (sender on receives, recipient on sends)
+- `AddressBookService.associateSenderInfoToReceive` service to associate the sender of a receive to an address book wallet address, as required by the *Travel Rule* validation process
+- `AddressBookService.updateWalletAddress` service to update the label of a wallet address
+- `AddressBookService.deleteWalletAddress` service to delete a wallet address from an address book entry
+- `AddressBookService.deleteAddressBookEntry` service to delete an address book entry
+- `isVisible` on address book creation params to create entries hidden from the address book list
+- Fiscal documents: `TradingInfoService.getAvailableTradingReports` and `TradingInfoService.sendTradingReport` services
+- Fiscal documents: `ActivitiesService.fetchActivitiesReport` and `ActivitiesService.sendActivitiesReport` services
+
+### Changed
+
+- `SendActivity` and `ReceiveActivity` are reshaped around the send/receive info: `SendActivity.transaction` is now optional (missing until the send is broadcast) and send/receive activities without their info block are no longer returned
+- `TradingInfoService.fetchTradingReport` service now accepts a `TradingReportPeriod` (fiscal year and quarter)
+
 ## [2.3.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.3.0/) - 16-06-26
 
 ### Changed
