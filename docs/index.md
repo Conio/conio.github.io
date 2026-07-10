@@ -14,7 +14,3 @@ Conio SDK provides a set of Android and iOS native APIs for Conio services to le
     *   [iOS](./Configuration/iOS.md)    
     *   [Android](./Configuration/Android.md)
 *  [Services](./Features/index.md)
-
-## Old
-
-Old [docs](Old/index.md)
