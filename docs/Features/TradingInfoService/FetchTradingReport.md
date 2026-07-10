@@ -2,13 +2,13 @@
 
 ## Overview
 
-`fetchTradingReport` API is used to retrieve the trading financial report linked to Conio user. It allows client to either specify the exact year or the last year trading effective time to fetch the trading report involved in the Conio user trading operations.
+`fetchTradingReport` API is used to retrieve the trading financial report linked to Conio user as a PDF document. It allows client to specify the trading report period as a fiscal year and, optionally, a quarter. The available periods can be retrieved with [Get Available Trading Reports](./GetAvailableTradingReports.md).
 
 ## Parameters
 
-The `FetchTradingReportParams` used to initialized and perform `fetchTradingReport` API.
+The `FetchTradingReportParams` used to initialize and perform `fetchTradingReport` API.
 
-- period: the trading report period of time either as exact year or last year
+- period: the `TradingReportPeriod` identifying the trading report by fiscal year and, optionally, a quarter (see [Get Available Trading Reports](./GetAvailableTradingReports.md))
 
 ## Result
 
@@ -20,29 +20,31 @@ The `TradingReportResult` trading report info involved in the Conio user trading
 
 ### iOS
 ```swift
-let params = FetchTradingReportParams.make(period: .lastYear)
+let params = FetchTradingReportParams.make(
+    period: TradingReportPeriod.make(year: "2025", quarter: .q1)
+)
 
 tradingInfoService
-	.fetchTradingReport(with: params)
-	.asPublisher()
-	.sink { result in 
-		...
-	}
+    .fetchTradingReport(with: params)
+    .asPublisher()
+    .sink { result in
+        if let report = try? result.get() {
+            let pdf: Data = report.pdf
+            // present / store the PDF
+        }
+    }
 ```
 
 ### Android
 ```kotlin
-// val reportPeriod = FetchTradingReportParams.ReportPeriod.LastYear
-val reportPeriod = FetchTradingReportParams.ReportPeriod("2023")
-
 val params = FetchTradingReportParams(
-	period = reportPeriod
+    period = TradingReportPeriod(year = "2025", quarter = TradingReportPeriod.Quarter.Q1)
 )
 
 conio.tradingInfoService
-	.fetchTradingReport(params)
-	.asFlow()
-	.collect { result ->
-		// ...
-	}
+    .fetchTradingReport(params)
+    .asFlow()
+    .collect { result ->
+        // ...
+    }
 ```

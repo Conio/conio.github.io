@@ -25,6 +25,7 @@ nav:
       - Features/UserService/Signup.md
       - Features/UserService/Logout.md
       - Features/UserService/FetchLegalAcceptances.md
+      - Features/UserService/GetUserTc.md
       - Features/UserService/FetchPermissions.md
       - Features/UserService/AcceptNewLegalAcceptances.md
     - Wallet Service:
@@ -33,6 +34,8 @@ nav:
     - Activities Service:
       - Features/ActivitiesService/FetchActivities.md
       - Features/ActivitiesService/FetchActivity.md
+      - Features/ActivitiesService/FetchActivitiesReport.md
+      - Features/ActivitiesService/SendActivitiesReport.md
     - Trading Price Service:
       - Features/TradingPriceService/FetchPrice.md
       - Features/TradingPriceService/FetchHistoricalPrice.md
@@ -43,6 +46,8 @@ nav:
       - Features/TradingInfoService/FetchTradingSummary.md
       - Features/TradingInfoService/FetchTradingLimits.md
       - Features/TradingInfoService/FetchTradingReport.md
+      - Features/TradingInfoService/GetAvailableTradingReports.md
+      - Features/TradingInfoService/SendTradingReport.md
     - BTC Transaction Service:
       - Features/BtcTransactionManagementService/FetchAddress.md
       - Features/BtcTransactionManagementService/CreateSend.md
@@ -80,6 +85,10 @@ nav:
       - Features/AddressBookService/GetProofOfOwnershipChallenge.md
       - Features/AddressBookService/ValidateProofOfOwnership.md
       - Features/AddressBookService/UpdateAddressBookEntry.md
+      - Features/AddressBookService/UpdateWalletAddress.md
+      - Features/AddressBookService/DeleteWalletAddress.md
+      - Features/AddressBookService/DeleteAddressBookEntry.md
+      - Features/AddressBookService/AssociateSenderInfoToReceive.md
     
 # Plugins
 plugins:

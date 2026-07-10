@@ -10,6 +10,7 @@ The `UserService` contains all the APIs used to manage a Conio user.
 - [Signup](./UserService/Signup.md)
 - [Logout](./UserService/Logout.md)
 - [FetchLegalAcceptances](./UserService/FetchLegalAcceptances.md)
+- [GetUserTc](./UserService/GetUserTc.md)
 - [FetchPermissions](./UserService/FetchPermissions.md)
 - [AcceptNewLegalAcceptances](./UserService/AcceptNewLegalAcceptances.md)
 
@@ -26,6 +27,8 @@ The `ActivitiesService` contains all the API that provides information about wal
 
 - [FetchActivities](./ActivitiesService/FetchActivities.md)
 - [FetchActivity](./ActivitiesService/FetchActivity.md)
+- [SendActivitiesReport](./ActivitiesService/SendActivitiesReport.md)
+- [FetchActivitiesReport](./ActivitiesService/FetchActivitiesReport.md)
 
 ## Trading Price Service
 
@@ -44,6 +47,8 @@ The `TradingInfoService` contains all the APIs used to manage a Conio user tradi
 - [FetchTradingSummary](./TradingInfoService/FetchTradingSummary.md)
 - [FetchTradingLimits](./TradingInfoService/FetchTradingLimits.md)
 - [FetchTradingReport](./TradingInfoService/FetchTradingReport.md)
+- [GetAvailableTradingReports](./TradingInfoService/GetAvailableTradingReports.md)
+- [SendTradingReport](./TradingInfoService/SendTradingReport.md)
 
 ## BTC Transaction Service
 
@@ -105,3 +110,7 @@ The `AddressBookService` protocol contains all the API that provides information
 - [GetProofOfOwnershipChallenge](./AddressBookService/GetProofOfOwnershipChallenge.md)
 - [ValidateProofOfOwnership](./AddressBookService/ValidateProofOfOwnership.md)
 - [UpdateAddressBookEntry](./AddressBookService/UpdateAddressBookEntry.md)
+- [UpdateWalletAddress](./AddressBookService/UpdateWalletAddress.md)
+- [DeleteWalletAddress](./AddressBookService/DeleteWalletAddress.md)
+- [DeleteAddressBookEntry](./AddressBookService/DeleteAddressBookEntry.md)
+- [AssociateSenderInfoToReceive](./AddressBookService/AssociateSenderInfoToReceive.md)
