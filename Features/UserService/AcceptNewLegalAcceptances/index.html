@@ -669,6 +669,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../GetUserTc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get User Tc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../FetchPermissions/" class="md-nav__link">
         
   
@@ -753,6 +775,21 @@
       Parameters
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legalacceptance" class="md-nav__link">
+    <span class="md-ellipsis">
+      LegalAcceptance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -973,6 +1010,50 @@
   
   <span class="md-ellipsis">
     Fetch Activity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ActivitiesService/FetchActivitiesReport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Activities Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ActivitiesService/SendActivitiesReport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Send Activities Report
     
   </span>
   
@@ -1237,6 +1318,50 @@
   
   <span class="md-ellipsis">
     Fetch Trading Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TradingInfoService/GetAvailableTradingReports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Available Trading Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TradingInfoService/SendTradingReport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Send Trading Report
     
   </span>
   
@@ -2193,6 +2318,94 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/UpdateWalletAddress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update Wallet Address
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/DeleteWalletAddress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete Wallet Address
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/DeleteAddressBookEntry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete Address Book Entry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/AssociateSenderInfoToReceive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Associate Sender Info To Receive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2249,6 +2462,21 @@
       Parameters
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legalacceptance" class="md-nav__link">
+    <span class="md-ellipsis">
+      LegalAcceptance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2315,45 +2543,49 @@
 
 <h1 id="accept-new-legal-acceptances">Accept New Legal Acceptances</h1>
 <h2 id="overview">Overview</h2>
-<p><code>acceptNewLegalAcceptances</code> API is used to mark as accepted the new legal acceptances. It allows client to mark as accepted possible new legal acceptances and let user continue operate on Conio services.</p>
+<p><code>acceptNewLegalAcceptances</code> API submits the user choices (accept or reject) for the legal acceptances. Each choice references the acceptance <code>id</code> obtained from <a href="../FetchLegalAcceptances/">Fetch Legal Acceptances</a>. It allows client to mark new legal acceptances as accepted (or rejected) and let user continue operate on Conio services.</p>
 <h2 id="parameters">Parameters</h2>
-<p>The <code>AcceptNewLegalAcceptancesParams</code> used to initialized and perform <code>acceptNewLegalAcceptances</code> API.</p>
+<p>The <code>AcceptNewLegalAcceptancesParams</code> used to initialize and perform <code>acceptNewLegalAcceptances</code> API.</p>
 <ul>
-<li>credentials: the username and password used to execute the signup</li>
-<li>acceptances: the new legal acceptances user preferences</li>
+<li>credentials: the user username and password</li>
+<li>acceptances: the user choices for the legal acceptances</li>
+</ul>
+<h3 id="legalacceptance">LegalAcceptance</h3>
+<p>The <code>LegalAcceptance</code> single user choice.</p>
+<ul>
+<li>id: the acceptance identifier, obtained from <a href="../FetchLegalAcceptances/">Fetch Legal Acceptances</a></li>
+<li>is accepted: the user choice, accepted (<code>true</code>) or rejected (<code>false</code>)</li>
 </ul>
 <h2 id="result">Result</h2>
 <p>Success or error.</p>
 <h2 id="code">Code</h2>
 <h3 id="ios">iOS</h3>
-<pre><code class="language-swift">let acceptences = LegalAcceptancesParams.makeAllAccepted()
-let params = AcceptNewLegalAcceptancesParams
-    .make(
-        username: ...,
-        password: ...,
-        legalAcceptances: acceptances
-    )
+<pre><code class="language-swift">let params = AcceptNewLegalAcceptancesParams.make(
+    username: &quot;...&quot;,
+    password: &quot;...&quot;,
+    legalAcceptances: LegalAcceptancesParams.make(userChoices: [
+        .makeAccepted(id: &quot;...&quot;),
+        .makeNotAccepted(id: &quot;...&quot;)
+    ])
+)
+
 userService
     .acceptNewLegalAcceptances(with: params)
     .asPublisher()
-    .sink { result in 
-        ...
+    .sink { result in
+        // ...
     }
 </code></pre>
 <h3 id="android">Android</h3>
-<pre><code class="language-kotlin">val acceptances = listOf(
-    Acceptance(AcceptanceType.AppImprovement, isAccepted = true),
-    Acceptance(AcceptanceType.ClientSupport, isAccepted = true),
-)
-
-val credentials = Credentials(
-    username = &quot;...&quot; // user unique identifier,
-    password = &quot;...&quot;
-)
-
-val params = AcceptNewLegalAcceptancesParams(
-    acceptances = B2BModelAcceptances.acceptedAcceptances,
-    credentials = credentials
+<pre><code class="language-kotlin">val params = AcceptNewLegalAcceptancesParams(
+    acceptances = listOf(
+        LegalAcceptance(id = &quot;...&quot;, isAccepted = true),
+        LegalAcceptance(id = &quot;...&quot;, isAccepted = false),
+    ),
+    credentials = Credentials(
+        username = &quot;...&quot;,
+        password = &quot;...&quot;
+    ),
 )
 
 conio.userService

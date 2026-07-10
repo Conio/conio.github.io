@@ -14,7 +14,7 @@
         <link rel="prev" href="../Logout/">
       
       
-        <link rel="next" href="../FetchPermissions/">
+        <link rel="next" href="../GetUserTc/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -719,6 +719,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceptance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -758,6 +773,28 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GetUserTc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get User Tc
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -973,6 +1010,50 @@
   
   <span class="md-ellipsis">
     Fetch Activity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ActivitiesService/FetchActivitiesReport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Activities Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ActivitiesService/SendActivitiesReport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Send Activities Report
     
   </span>
   
@@ -1237,6 +1318,50 @@
   
   <span class="md-ellipsis">
     Fetch Trading Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TradingInfoService/GetAvailableTradingReports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Available Trading Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TradingInfoService/SendTradingReport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Send Trading Report
     
   </span>
   
@@ -2193,6 +2318,94 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/UpdateWalletAddress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update Wallet Address
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/DeleteWalletAddress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete Wallet Address
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/DeleteAddressBookEntry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete Address Book Entry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AddressBookService/AssociateSenderInfoToReceive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Associate Sender Info To Receive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2259,6 +2472,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceptance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2315,18 +2543,26 @@
 
 <h1 id="fetch-legal-acceptances">Fetch Legal Acceptances</h1>
 <h2 id="overview">Overview</h2>
-<p><code>fetchLegalAcceptances</code> API fetches the acceptances, terms and conditions and privacy policies information.</p>
+<p><code>fetchLegalAcceptances</code> API fetches the list of legal acceptances (terms &amp; conditions, privacy policy and other informative) to present to the user. The content is returned already localized for the requested language.</p>
+<p>Acceptances are id-based: each acceptance is identified by an opaque <code>id</code> provided by the backend. The same <code>id</code> is the key that correlates the document details with the user acceptance state (<a href="../GetUserTc/">Get User Tc</a>) and with the user choices (<a href="../AcceptNewLegalAcceptances/">Accept New Legal Acceptances</a>).</p>
 <h2 id="parameters">Parameters</h2>
-<p>The <code>FetchLegalAcceptancesParams</code> used to initialized and perform <code>fetchLegalAcceptances</code> API.</p>
+<p>The <code>FetchLegalAcceptancesParams</code> used to initialize and perform <code>fetchLegalAcceptances</code> API.</p>
 <ul>
 <li>language: the legal acceptances language translation</li>
 </ul>
 <h2 id="result">Result</h2>
-<p>The <code>LegalAcceptancesResult</code> acceptances, terms and conditions and privacy policies information.</p>
+<p>The <code>LegalAcceptancesResult</code> containing the legal acceptances to present.</p>
 <ul>
-<li>terms and conditions url: the T&amp;C url</li>
-<li>privacy policies url: the privacy policies url</li>
 <li>acceptances: the acceptances list</li>
+</ul>
+<h3 id="acceptance">Acceptance</h3>
+<p>The <code>LegalAcceptancesResult.Acceptance</code> legal acceptance details.</p>
+<ul>
+<li>id: the acceptance identifier, provided by the backend</li>
+<li>title: the acceptance title</li>
+<li>body: the acceptance body text, when available</li>
+<li>url: the acceptance document url, when available</li>
+<li>is mandatory: indicates whether the acceptance is mandatory</li>
 </ul>
 <h2 id="code">Code</h2>
 <h3 id="ios">iOS</h3>
@@ -2335,13 +2571,13 @@
 userService
     .fetchLegalAcceptances(with: params)
     .asPublisher()
-    .sink { result in 
-        ...
+    .sink { result in
+        // use result.get().acceptances
     }
 </code></pre>
 <h3 id="android">Android</h3>
 <pre><code class="language-kotlin">val params = FetchLegalAcceptancesParams(
-    language = Language.English,
+    language = Language.Italian,
 )
 
 conio.userService
