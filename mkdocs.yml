@@ -31,11 +31,9 @@ nav:
 # Plugins
 plugins:
   - search
-  # - pdf-export:
-  #    verbose: true
-  #    combined: true
-  #    combined_output_path: pdf/ConioSDK_Docs.pdf
-  #    #enabled_if_env: ENABLE_PDF_EXPORT
+  - mike:
+      alias_type: redirect
+      canonical_version: latest
   - i18n:
       languages:
         it: "Italiano"
@@ -87,6 +85,8 @@ theme:
     accent: blue
 
 extra:
+  version:
+    provider: mike
   alternate:
     # Switch to English
     - name: English
