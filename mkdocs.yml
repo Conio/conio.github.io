@@ -89,10 +89,13 @@ nav:
       - Features/AddressBookService/DeleteWalletAddress.md
       - Features/AddressBookService/DeleteAddressBookEntry.md
       - Features/AddressBookService/AssociateSenderInfoToReceive.md
-    
+
 # Plugins
 plugins:
   - search
+  - mike:
+      alias_type: redirect
+      canonical_version: latest
   - print-site:
       enabled: !ENV [PDF_EXPORT, false]
       add_table_of_contents: false
@@ -110,8 +113,12 @@ theme:
   logo: assets/images/logo.webp
   features:
     - navigation.instant
-    # - navigation.expand
+    # - navigation.expand
   palette:
     scheme: default
     primary: blue greys
     accent: teal
+
+extra:
+  version:
+    provider: mike
