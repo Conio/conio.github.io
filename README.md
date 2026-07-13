@@ -56,6 +56,12 @@ The dev-server also supports auto-reloading, and will rebuild your documentation
 
 If you add new `*.md` files, you will need to execute `mkdocs build`¹ in order to generate new pages, check [here](https://squidfunk.github.io/mkdocs-material/) for more info.
 
+To preview the full versioned site (all published versions with the version selector) run:
+
+```sh
+mike serve
+```
+
 ### PDF Generation
 
 To export the documentation in PDF, follow these steps:
@@ -68,9 +74,7 @@ To export the documentation in PDF, follow these steps:
 
 ## Deploy
 
-Once docs are updated and pushed to repository, you will need to deploy the new site with `mkdocs gh-deploy --force`¹ command.
-
-Check your changes visiting https://sdk-docs.conio.com/
+For versioning rules and all publish commands see [PUBLISH.md](PUBLISH.md).
 
 ## Notes
 
