@@ -2197,6 +2197,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2461,6 +2476,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2528,6 +2558,14 @@
 <p>The <code>CreateAddressBookWalletAddressResult</code> contains the complete <code>AddressBookWalletAddress</code> with id's.</p>
 <ul>
 <li>wallet address: the newly created wallet address with full details.</li>
+</ul>
+<h3 id="errors">Errors</h3>
+<p>List of the possible errors that can be returned by this API:</p>
+<ul>
+<li><code>AddressBookNotFound</code>: Address Book entry specified wasn't found</li>
+<li><code>AddressAlreadyUsed</code>: Wallet Address already present in one Address Book entry</li>
+<li><code>WalletAddressInvalidParameters</code>: invalid parameters provided to create an Address Book Wallet Address entry</li>
+<li><code>WalletAddressValidationError</code>: unable to create/update an Address Book Wallet Address because the provided parameters are not conformed to the Travel Rule / Agenzia delle Entrate requirements</li>
 </ul>
 <h2 id="code">Code</h2>
 <h3 id="ios">iOS</h3>
