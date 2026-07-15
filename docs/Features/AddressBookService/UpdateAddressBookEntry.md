@@ -20,6 +20,14 @@ The `UpdateAddressBookEntryResult` containing the updated address book entry.
 
 - updated entry: the updated address book entry.
 
+### Errors
+
+List of the possible errors that can be returned by this API:
+
+- `DuplicatedNickname`: unable to create/update an Address Book entry because the provided label is already used for another entry
+- `AddressBookNotFound`: Address Book entry specified wasn't found
+- `AddressBookInvalidParameters`: invalid parameters provided to update the Address Book entry
+
 ## Code
 
 ### iOS

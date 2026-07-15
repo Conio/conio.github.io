@@ -17,6 +17,15 @@ The `CreateAddressBookWalletAddressResult` contains the complete `AddressBookWal
 
 - wallet address: the newly created wallet address with full details.
 
+### Errors
+
+List of the possible errors that can be returned by this API:
+
+- `AddressBookNotFound`: Address Book entry specified wasn't found
+- `AddressAlreadyUsed`: Wallet Address already present in one Address Book entry
+- `WalletAddressInvalidParameters`: invalid parameters provided to create an Address Book Wallet Address entry
+- `WalletAddressValidationError`: unable to create/update an Address Book Wallet Address because the provided parameters are not conformed to the Travel Rule / Agenzia delle Entrate requirements
+
 ## Code
 
 ### iOS

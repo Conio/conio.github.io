@@ -17,6 +17,13 @@ The `DeleteWalletAddressResult` containing the deleted wallet address.
 
 - deleted wallet address: the deleted wallet address
 
+### Errors
+
+List of the possible errors that can be returned by this API:
+
+- `AddressBookNotFound`: Address Book entry specified wasn't found
+- `WalletAddressNotFound`: Address Book Wallet Address entry specified wasn't found
+
 ## Code
 
 ### iOS

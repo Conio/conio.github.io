@@ -16,6 +16,12 @@ The `DeleteAddressBookEntryResult` containing the deleted address book entry.
 
 - deleted entry: the deleted address book entry
 
+### Errors
+
+List of the possible errors that can be returned by this API:
+
+- `AddressBookNotFound`: Address Book entry specified wasn't found
+
 ## Code
 
 ### iOS

@@ -23,6 +23,13 @@ The `AssociateSenderInfoToReceiveParams` used to initialize and perform `associa
 
 Success or error.
 
+### Errors
+
+List of the possible errors that can be returned by this API:
+
+- `AddressBookNotFound`: Address Book entry specified wasn't found
+- `WalletAddressNotFound`: Address Book Wallet Address entry specified wasn't found
+
 ## Code
 
 ### iOS

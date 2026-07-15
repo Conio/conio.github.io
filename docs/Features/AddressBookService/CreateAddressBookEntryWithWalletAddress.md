@@ -42,6 +42,16 @@ The `CreateAddressBookEntryWithWalletAddressResult` created address book data.
 
 - entry: the complete `FullAddressBookEntry` with the generated identifiers and the associated wallet addresses
 
+### Errors
+
+List of the possible errors that can be returned by this API:
+
+- `DuplicatedNickname`: unable to create/update an Address Book entry because the provided label is already used for another entry
+- `AddressAlreadyUsed`: Wallet Address already present in one Address Book entry
+- `AddressBookInvalidParameters`: invalid parameters provided to create an Address Book entry
+- `WalletAddressInvalidParameters`: invalid parameters provided to create an Address Book Wallet Address entry
+- `WalletAddressValidationError`: unable to create/update an Address Book Wallet Address because the provided parameters are not conformed to the Travel Rule / Agenzia delle Entrate requirements
+
 ## Code
 
 ### iOS
