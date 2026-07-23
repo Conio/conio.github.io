@@ -25,6 +25,11 @@
 
 # iOS
 
+## [2.5.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.5.1/) - 23-07-26
+
+### Fixed
+- `CreateAddressBookWalletAddress.make` now takes `threshold` as `FiatAmountValue` instead of `FiatAmount`, which had no public initializer and made the factory unusable by integrators
+
 ## [2.5.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.5.0/) - 09-07-26
 
 ### Added
