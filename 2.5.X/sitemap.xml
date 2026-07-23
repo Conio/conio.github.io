@@ -2,290 +2,290 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sdk-docs.conio.com/latest/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/CHANGELOG/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Configuration/Android/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Configuration/iOS/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/CryptoRequest/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/Errors/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/ActivitiesService/FetchActivities/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/ActivitiesService/FetchActivitiesReport/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/ActivitiesService/FetchActivity/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/ActivitiesService/SendActivitiesReport/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/AssociateSenderInfoToReceive/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/CreateAddressBookEntryWithWalletAddress/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/CreateWalletAddress/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/DeleteAddressBookEntry/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/DeleteWalletAddress/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/GetProofOfOwnershipChallenge/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/GetVaspList/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/SearchAddressBookEntries/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/UpdateAddressBookEntry/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/UpdateWalletAddress/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/AddressBookService/ValidateProofOfOwnership/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/CreateSend/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/CreateSpeedUpSend/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/FetchAddress/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/FetchSend/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/FetchSpeedUpAvailableFees/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/FetchTransactionAvailableFees/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/SendBitcoin/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/SendResult/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/BtcTransactionManagementService/UpdateSend/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/SwapService/CreateSwap/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/SwapService/FetchSwap/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/SwapService/Swap/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/SwapService/SwapResult/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/SwapService/UpdateSwap/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingBuyService/BidResult/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingBuyService/Buy/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingBuyService/CreateBid/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingBuyService/FetchBid/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingBuyService/UpdateBid/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingInfoService/FetchTradingFees/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingInfoService/FetchTradingLimits/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingInfoService/FetchTradingReport/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingInfoService/FetchTradingSummary/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingInfoService/GetAvailableTradingReports/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingInfoService/SendTradingReport/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingPriceService/FetchAllPrices/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingPriceService/FetchHistoricalPrice/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingPriceService/FetchPrice/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingPriceService/FetchTradableCryptocurrenciesMetadata/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingSellService/AskResult/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingSellService/CreateAsk/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingSellService/FetchAsk/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingSellService/Sell/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TradingSellService/UpdateAsk/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TransferService/CreateTransfer/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TransferService/FetchTransfer/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TransferService/Transfer/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TransferService/TransferResult/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/TransferService/UpdateTransfer/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/UserService/AcceptNewLegalAcceptances/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/UserService/FetchLegalAcceptances/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/UserService/FetchPermissions/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/UserService/GetUserTc/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/UserService/Login/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/UserService/Logout/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/UserService/Signup/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/WalletService/FetchBalances/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Features/WalletService/FetchMnemonic/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Installation/Android/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://sdk-docs.conio.com/latest/Installation/iOS/</loc>
-         <lastmod>2026-07-15</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
 </urlset>
