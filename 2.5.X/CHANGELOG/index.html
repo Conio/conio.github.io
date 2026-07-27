@@ -2358,13 +2358,8 @@
 <li><a href="#android">Android</a></li>
 </ul>
 <h1 id="ios">iOS</h1>
-<h2 id="241-27-07-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.1/">2.4.1</a> - 27-07-26</h2>
-<h3 id="fixed">Fixed</h3>
-<ul>
-<li><code>CreateAddressBookWalletAddress.make</code> now takes <code>threshold</code> as <code>FiatAmountValue</code> instead of <code>FiatAmount</code>, which had no public initializer and made the factory unusable by integrators</li>
-</ul>
 <h2 id="251-23-07-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.5.1/">2.5.1</a> - 23-07-26</h2>
-<h3 id="fixed_1">Fixed</h3>
+<h3 id="fixed">Fixed</h3>
 <ul>
 <li><code>CreateAddressBookWalletAddress.make</code> now takes <code>threshold</code> as <code>FiatAmountValue</code> instead of <code>FiatAmount</code>, which had no public initializer and made the factory unusable by integrators</li>
 </ul>
@@ -2377,6 +2372,11 @@
 <ul>
 <li><code>UserService.fetchLegalAcceptances</code> service migrated to the id-based acceptances model: each acceptance carries its <code>id</code>, the localized <code>title</code>, <code>body</code> and <code>url</code> and the mandatory flag; the result-level <em>T&amp;C</em> and <em>privacy policies</em> urls and the acceptance type enum are removed</li>
 <li><code>UserService.acceptNewLegalAcceptances</code> and <code>UserService.signup</code> services now take id-based acceptance choices: <code>LegalAcceptance</code> is built with <code>makeAccepted(id:)</code> / <code>makeNotAccepted(id:)</code> and <code>LegalAcceptancesParams.makeAllAccepted(from:)</code> marks as accepted all the fetched acceptances</li>
+</ul>
+<h2 id="241-27-07-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.1/">2.4.1</a> - 27-07-26</h2>
+<h3 id="fixed_1">Fixed</h3>
+<ul>
+<li><code>CreateAddressBookWalletAddress.make</code> now takes <code>threshold</code> as <code>FiatAmountValue</code> instead of <code>FiatAmount</code>, which had no public initializer and made the factory unusable by integrators (same fix released in <strong>2.5.1</strong>)</li>
 </ul>
 <h2 id="240-07-07-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.0/">2.4.0</a> - 07-07-26</h2>
 <h3 id="added_1">Added</h3>
