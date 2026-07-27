@@ -25,11 +25,6 @@
 
 # iOS
 
-## [2.4.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.1/) - 27-07-26
-
-### Fixed
-- `CreateAddressBookWalletAddress.make` now takes `threshold` as `FiatAmountValue` instead of `FiatAmount`, which had no public initializer and made the factory unusable by integrators
-
 ## [2.5.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.5.1/) - 23-07-26
 
 ### Fixed
@@ -45,6 +40,11 @@
 
 - `UserService.fetchLegalAcceptances` service migrated to the id-based acceptances model: each acceptance carries its `id`, the localized `title`, `body` and `url` and the mandatory flag; the result-level *T&C* and *privacy policies* urls and the acceptance type enum are removed
 - `UserService.acceptNewLegalAcceptances` and `UserService.signup` services now take id-based acceptance choices: `LegalAcceptance` is built with `makeAccepted(id:)` / `makeNotAccepted(id:)` and `LegalAcceptancesParams.makeAllAccepted(from:)` marks as accepted all the fetched acceptances
+
+## [2.4.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.1/) - 27-07-26
+
+### Fixed
+- `CreateAddressBookWalletAddress.make` now takes `threshold` as `FiatAmountValue` instead of `FiatAmount`, which had no public initializer and made the factory unusable by integrators (same fix released in **2.5.1**)
 
 ## [2.4.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.0/) - 07-07-26
 
