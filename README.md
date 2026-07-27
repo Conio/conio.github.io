@@ -19,12 +19,11 @@
 This is the official Conio SDK documentation repository for both platforms Android and iOS.
 
 The whole documentation is written in [Markdown](https://it.wikipedia.org/wiki/Markdown) and the [documentation site](https://sdk-docs.conio.com/) is generated
-through [MkDocs](https://www.mkdocs.org/).
-
-In order to correctly maintain and update the documentation, you need to install and setup `MkDocs`.
-
+through [MkDocs](https://www.mkdocs.org/) and deployed with [Mike](https://github.com/jimporter/mike).
 
 ## Prerequisites
+
+In order to correctly maintain and update the documentation, you need to install and setup `MkDocs`, `Mike` and all the other dependencies.
 
 1. Create a new Virtual Enviroment (venv) for this project
 
