@@ -29,6 +29,7 @@ List of the possible errors that can be returned by this API:
 
 - `AddressBookNotFound`: Address Book entry specified wasn't found
 - `WalletAddressNotFound`: Address Book Wallet Address entry specified wasn't found
+- `WalletAddressInvalidParameters`: `Vasp.country` is requested, but is not present in the specified Address Book Wallet Address entry.
 
 ## Code
 
