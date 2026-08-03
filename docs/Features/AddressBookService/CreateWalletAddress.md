@@ -25,6 +25,7 @@ List of the possible errors that can be returned by this API:
 - `AddressAlreadyUsed`: Wallet Address already present in one Address Book entry
 - `WalletAddressInvalidParameters`: invalid parameters provided to create an Address Book Wallet Address entry
 - `WalletAddressValidationError`: unable to create/update an Address Book Wallet Address because the provided parameters are not conformed to the Travel Rule / Agenzia delle Entrate requirements
+- `InvalidCountry`: the `Vasp.country` provided does not match the *ISO 3166-1 alpha-2* standard.
 
 ## Code
 
@@ -36,7 +37,7 @@ let params = CreateAddressBookWalletAddressParams.make(
         walletAddress: ...,
         isForeign: ...,
         isUnhostedWallet: ...,
-        vase: ...,
+        vasp: ...,
         proofOfOwnership: ...,
         label: ...,
         threshold: ...

@@ -51,6 +51,7 @@ List of the possible errors that can be returned by this API:
 - `AddressBookInvalidParameters`: invalid parameters provided to create an Address Book entry
 - `WalletAddressInvalidParameters`: invalid parameters provided to create an Address Book Wallet Address entry
 - `WalletAddressValidationError`: unable to create/update an Address Book Wallet Address because the provided parameters are not conformed to the Travel Rule / Agenzia delle Entrate requirements
+- `InvalidCountry`: one of the specified countries do not match the *ISO 3166-1 alpha-2* standard.
 
 ## Code
 
