@@ -52,7 +52,7 @@
 ## [2.4.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.1/) - 27-07-26
 
 ### Fixed
-- `CreateAddressBookWalletAddress.make` now takes `threshold` as `FiatAmountValue` instead of `FiatAmount`, which had no public initializer and made the factory unusable by integrators (same fix released in **2.5.1**)
+- **[originally applied in 2.5.1]** `CreateAddressBookWalletAddress.make` now takes `threshold` as `FiatAmountValue` instead of `FiatAmount`, which had no public initializer and made the factory unusable by integrators
 
 ## [2.4.0](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.0/) - 07-07-26
 
@@ -300,6 +300,12 @@
 
 # Android
 
+## [2.6.1](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.6.1/) - 10-09-26
+
+### Fixed
+
+- `SendActivity.validationStatus` always null due to mapping error
+
 ## [2.6.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.6.0/) - 03-08-26
 
 ### Added
@@ -318,6 +324,18 @@
 
 - `UserService.fetchLegalAcceptances` service migrated to the id-based acceptances model: each acceptance carries its `id`, the localized `title`, `body` and `url` and the mandatory flag; the result-level *T&C* and *privacy policies* urls and the acceptance type enum are removed
 - `UserService.acceptNewLegalAcceptances` and `UserService.signup` services now take id-based acceptance choices: each `LegalAcceptance` carries the acceptance `id` and the user choice
+
+## [2.4.2](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.4.2/) - 10-09-26
+
+### Fixed
+
+- **[originally applied in 2.6.1]** `SendActivity.validationStatus` always null due to mapping error
+
+## [2.4.1](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.4.1/) - 10-09-26
+
+### Added
+
+- **[originally applied in 2.6.0]** `Vasp.country` (ISO 3166-1 alpha-2): the sender's Vasp country, which can be specified when creating the wallet address in the address book and made available when retrieving the same wallet address. It must be provided in the receiving flow when the sender is a CASP/hosted platform and the received counter value is ≥ €4,999.50 (Travel Rule).
 
 ## [2.4.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.4.0/) - 07-07-26
 
