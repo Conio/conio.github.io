@@ -2380,13 +2380,20 @@
 <li><code>UserService.fetchLegalAcceptances</code> service migrated to the id-based acceptances model: each acceptance carries its <code>id</code>, the localized <code>title</code>, <code>body</code> and <code>url</code> and the mandatory flag; the result-level <em>T&amp;C</em> and <em>privacy policies</em> urls and the acceptance type enum are removed</li>
 <li><code>UserService.acceptNewLegalAcceptances</code> and <code>UserService.signup</code> services now take id-based acceptance choices: <code>LegalAcceptance</code> is built with <code>makeAccepted(id:)</code> / <code>makeNotAccepted(id:)</code> and <code>LegalAcceptancesParams.makeAllAccepted(from:)</code> marks as accepted all the fetched acceptances</li>
 </ul>
+<h2 id="242-06-08-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.2/">2.4.2</a> - 06-08-26</h2>
+<h3 id="added_2">Added</h3>
+<ul>
+<li><strong>[originally applied in 2.6.0]</strong> <code>Vasp.country</code> (ISO 3166-1 alpha-2): the sender's Vasp country, which can be specified when creating the wallet address in the address book and made available when retrieving the same wallet address. It must be provided in the receiving flow when the sender is a CASP/hosted platform and the received counter value is ≥ €4,999.50 (Travel Rule).</li>
+<li><strong>[originally applied in 2.6.0]</strong> <code>ConioError.invalidCountry</code>: error returned when creating the wallet address if the country does not match the <em>ISO 3166-1 alpha-2</em> standard.</li>
+<li><strong>[originally applied in 2.6.0]</strong> <code>ConioError.walletAddressInvalidParameters</code>: error returned on receive-to-address-book association if <code>Vasp.country</code> is requested, but is not present in the specified wallet-address.</li>
+</ul>
 <h2 id="241-27-07-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.1/">2.4.1</a> - 27-07-26</h2>
 <h3 id="fixed_1">Fixed</h3>
 <ul>
 <li><strong>[originally applied in 2.5.1]</strong> <code>CreateAddressBookWalletAddress.make</code> now takes <code>threshold</code> as <code>FiatAmountValue</code> instead of <code>FiatAmount</code>, which had no public initializer and made the factory unusable by integrators</li>
 </ul>
 <h2 id="240-07-07-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.0/">2.4.0</a> - 07-07-26</h2>
-<h3 id="added_2">Added</h3>
+<h3 id="added_3">Added</h3>
 <ul>
 <li><em>Travel Rule</em> info on send and receive activities: <code>SendActivity</code> and <code>ReceiveActivity</code> now expose the transaction validation status, the amounts and the counterparty information (sender on receives, recipient on sends)</li>
 <li><code>AddressBookService.associateSenderInfoToReceive</code> service to associate the sender of a receive to an address book wallet address, as required by the <em>Travel Rule</em> validation process</li>
@@ -2407,13 +2414,13 @@
 <ul>
 <li><code>BtcTransactionService.send</code> service to meet <em>Travel Rule</em> and <em>Agenzia delle Entrate</em> requirements: now it requires the identifier of a specifc <em>send operation</em> (that can be created with the new services) and it answers with the <em>send operation</em> model with the updated status</li>
 </ul>
-<h3 id="added_3">Added</h3>
+<h3 id="added_4">Added</h3>
 <ul>
 <li><code>BtcTransactionService</code> services to create, update and fetch a new <em>send operation</em></li>
 <li><code>AddressBookService</code> services to manage the user <em>address book</em> entries that can be used in <em>send</em> and <em>receive operations</em> and which will contains all the informations required bt the <em>Travel Rule</em> and <em>Agenzia delle Entrate</em>.</li>
 </ul>
 <h2 id="223-09-03-26"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.3/">2.2.3</a> - 09-03-26</h2>
-<h3 id="added_4">Added</h3>
+<h3 id="added_5">Added</h3>
 <ul>
 <li>Support to Xcode 26</li>
 </ul>
@@ -2428,7 +2435,7 @@
 <li>Correct service fee type in activities and trading entities</li>
 </ul>
 <h2 id="220-06-03-2025"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.2.0/">2.2.0</a> - 06-03-2025</h2>
-<h3 id="added_5">Added</h3>
+<h3 id="added_6">Added</h3>
 <ul>
 <li><code>BuyActivity</code> model properties: <code>cryptoCurrency</code>, <code>cryptoAmount</code>, <code>fiatAmount</code> and <code>serviceFee</code></li>
 <li><code>SellActivity</code> model properties: <code>cryptoCurrency</code>, <code>cryptoAmount</code>, <code>fiatAmount</code> and <code>serviceFee</code></li>
@@ -2507,7 +2514,7 @@
 <li>Update ConioSDK</li>
 </ul>
 <h2 id="200-13-06-2024"><a href="https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.0.0/">2.0.0</a> - 13-06-2024</h2>
-<h3 id="added_6">Added</h3>
+<h3 id="added_7">Added</h3>
 <ul>
 <li>Trading Info Service</li>
 <li>Btc Transaction Management Service</li>
@@ -2522,7 +2529,7 @@
 <li>Wallet Service</li>
 </ul>
 <h2 id="070-07-06-2022"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.7.0/">0.7.0</a> - 07-06-2022</h2>
-<h3 id="added_7">Added</h3>
+<h3 id="added_8">Added</h3>
 <ul>
 <li>Model <code>CryptoSellParams</code> to replace <code>SellParams</code></li>
 <li><code>ConioError.onNetwork</code> to wrap network communication errors</li>
@@ -2547,7 +2554,7 @@
 <li>Error mapping as <code>unauthorized</code> on 401 status code</li>
 </ul>
 <h2 id="068-28-01-2022"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.6.8/">0.6.8</a> - 28-01-2022</h2>
-<h3 id="added_8">Added</h3>
+<h3 id="added_9">Added</h3>
 <ul>
 <li>Transaction speedup</li>
 <li>Reset password flow APIs</li>
@@ -2571,12 +2578,12 @@
 <ul>
 <li>Wallet service <code>walletPDFActivities</code>, <code>limit</code> in <code>PDFActivitiesParams</code> now optional</li>
 </ul>
-<h3 id="added_9">Added</h3>
+<h3 id="added_10">Added</h3>
 <ul>
 <li>User service <code>getLegalAcceptances</code> , new <code>preContractualInfoUrl</code> param in <code>LegalAcceptances</code> response</li>
 </ul>
 <h2 id="060-02-11-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.6.0/">0.6.0</a> - 02-11-2021</h2>
-<h3 id="added_10">Added</h3>
+<h3 id="added_11">Added</h3>
 <ul>
 <li>User service <code>changeEmail</code></li>
 </ul>
@@ -2601,7 +2608,7 @@
 <li>Rename <code>tradedFiat</code> to <code>weightedBidBalance</code> in <code>TradingInfo.swift</code> as per docs specifications</li>
 </ul>
 <h2 id="032-20-07-2021"><a href="https://bitbucket.org/squadrone/conio-swift-sdk/src/0.3.2/">0.3.2</a> - 20-07-2021</h2>
-<h3 id="added_11">Added</h3>
+<h3 id="added_12">Added</h3>
 <ul>
 <li>Bitcoin network <code>privateMainnet</code> and <code>privateTestnet</code></li>
 </ul>
@@ -2640,7 +2647,7 @@
 <li><code>Models</code> update</li>
 <li><code>Bid</code>, <code>Ask</code> e <code>Transaction</code> properties linked to amount/balance now are declared with type <code>UInt64</code></li>
 </ul>
-<h3 id="added_12">Added</h3>
+<h3 id="added_13">Added</h3>
 <ul>
 <li><code>ConioError</code> entity to map operation errors</li>
 </ul>
@@ -2661,7 +2668,7 @@
 <li>Correzione errore signup operation</li>
 </ul>
 <h2 id="010-12-04-2021">0.1.0 - 12-04-2021</h2>
-<h3 id="added_13">Added</h3>
+<h3 id="added_14">Added</h3>
 <ul>
 <li>Rilascio versione 0.1.0</li>
 </ul>
@@ -2672,14 +2679,14 @@
 <li><code>SendActivity.validationStatus</code> always null due to mapping error</li>
 </ul>
 <h2 id="260-03-08-26_1"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.6.0/">2.6.0</a> - 03-08-26</h2>
-<h3 id="added_14">Added</h3>
+<h3 id="added_15">Added</h3>
 <ul>
 <li><code>Vasp.country</code> (ISO 3166-1 alpha-2): the sender's Vasp country, which can be specified when creating the wallet address in the address book and made available when retrieving the same wallet address. It must be provided in the receiving flow when the sender is a CASP/hosted platform and the received counter value is ≥ €4,999.50 (Travel Rule).</li>
 <li><code>ConioError.invalidCountry</code>: error returned when creating the wallet address if the country does not match the <em>ISO 3166-1 alpha-2</em> standard.</li>
 <li><code>ConioError.walletAddressInvalidParameters</code>: error returned on receive-to-address-book association if <code>Vasp.country</code> is requested, but is not present in the specified wallet-address.</li>
 </ul>
 <h2 id="250-09-07-26_1"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.5.0/">2.5.0</a> - 09-07-26</h2>
-<h3 id="added_15">Added</h3>
+<h3 id="added_16">Added</h3>
 <ul>
 <li><code>UserService.getUserTc</code> service to fetch the current acceptance state of the user's legal acceptances (status and acceptance timestamp per acceptance <code>id</code>)</li>
 </ul>
@@ -2694,12 +2701,14 @@
 <li><strong>[originally applied in 2.6.1]</strong> <code>SendActivity.validationStatus</code> always null due to mapping error</li>
 </ul>
 <h2 id="241-10-09-26"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.4.1/">2.4.1</a> - 10-09-26</h2>
-<h3 id="added_16">Added</h3>
+<h3 id="added_17">Added</h3>
 <ul>
 <li><strong>[originally applied in 2.6.0]</strong> <code>Vasp.country</code> (ISO 3166-1 alpha-2): the sender's Vasp country, which can be specified when creating the wallet address in the address book and made available when retrieving the same wallet address. It must be provided in the receiving flow when the sender is a CASP/hosted platform and the received counter value is ≥ €4,999.50 (Travel Rule).</li>
+<li><strong>[originally applied in 2.6.0]</strong> <code>ConioError.invalidCountry</code>: error returned when creating the wallet address if the country does not match the <em>ISO 3166-1 alpha-2</em> standard.</li>
+<li><strong>[originally applied in 2.6.0]</strong> <code>ConioError.walletAddressInvalidParameters</code>: error returned on receive-to-address-book association if <code>Vasp.country</code> is requested, but is not present in the specified wallet-address.</li>
 </ul>
 <h2 id="240-07-07-26_1"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.4.0/">2.4.0</a> - 07-07-26</h2>
-<h3 id="added_17">Added</h3>
+<h3 id="added_18">Added</h3>
 <ul>
 <li><em>Travel Rule</em> info on send and receive activities: <code>SendActivity</code> and <code>ReceiveActivity</code> now expose the transaction validation status, the amounts and the counterparty information (sender on receives, recipient on sends)</li>
 <li><code>AddressBookService.associateSenderInfoToReceive</code> service to associate the sender of a receive to an address book wallet address, as required by the <em>Travel Rule</em> validation process</li>
@@ -2720,7 +2729,7 @@
 <ul>
 <li><code>BtcTransactionService.send</code> service to meet <em>Travel Rule</em> and <em>Agenzia delle Entrate</em> requirements: now it requires the identifier of a specifc <em>send operation</em> (that can be created with the new services) and it answers with the <em>send operation</em> model with the updated status</li>
 </ul>
-<h3 id="added_18">Added</h3>
+<h3 id="added_19">Added</h3>
 <ul>
 <li><code>BtcTransactionService</code> services to create, update and fetch a new <em>send operation</em></li>
 <li><code>AddressBookService</code> services to manage the user <em>address book</em> entries that can be used in <em>send</em> and <em>receive operations</em> and which will contains all the informations required bt the <em>Travel Rule</em> and <em>Agenzia delle Entrate</em>.</li>
@@ -2735,12 +2744,12 @@
 <ul>
 <li>deadlock on <code>UserService.signup</code> and <code>UserService.login</code></li>
 </ul>
-<h3 id="added_19">Added</h3>
+<h3 id="added_20">Added</h3>
 <ul>
 <li>Mining fees in transfer activity</li>
 </ul>
 <h2 id="210-17-10-2024"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.1.0">2.1.0</a> - 17-10-2024</h2>
-<h3 id="added_20">Added</h3>
+<h3 id="added_21">Added</h3>
 <ul>
 <li>Swap Services</li>
 <li>Transfer Services</li>
@@ -2753,7 +2762,7 @@
 <h3 id="changed_28">Changed</h3>
 <p>First multicrypto SDK release</p>
 <h2 id="0811-7-06-2022"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.8.11">0.8.11</a> - 7-06-2022</h2>
-<h3 id="added_21">Added</h3>
+<h3 id="added_22">Added</h3>
 <ul>
 <li><code>ConioException.OnNetwork</code> to wrap network communication errors</li>
 </ul>
@@ -2773,7 +2782,7 @@
 <li>Improved performance</li>
 <li><code>SellParams</code> deprecated</li>
 </ul>
-<h3 id="added_22">Added</h3>
+<h3 id="added_23">Added</h3>
 <ul>
 <li>Factory method <code>CreateOrRefreshAskParams.withAll</code> to request an Ask with the maximum sellable amount</li>
 <li>Model <code>CryptoChangeEmailParams</code> to replace <code>ChangeEmailParams</code></li>
@@ -2811,17 +2820,17 @@
 <ul>
 <li>Wallet service <code>activityListPdf</code>, <code>limit</code> in <code>ActivityListPdfParams</code> now nullable</li>
 </ul>
-<h3 id="added_23">Added</h3>
+<h3 id="added_24">Added</h3>
 <ul>
 <li>User service <code>getLegalAcceptances</code> , new <code>preContractualInfoUrl</code> param in <code>LegalAcceptances</code> response</li>
 </ul>
 <h2 id="074-02-11-2021"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.7.4">0.7.4</a> - 02-11-2021</h2>
-<h3 id="added_24">Added</h3>
+<h3 id="added_25">Added</h3>
 <ul>
 <li>User service <code>changeEmail</code></li>
 </ul>
 <h2 id="072-20-10-2021"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.7.2">0.7.2</a> - 20-10-2021</h2>
-<h3 id="added_25">Added</h3>
+<h3 id="added_26">Added</h3>
 <ul>
 <li>API to get activities in PDF format</li>
 </ul>
@@ -2853,7 +2862,7 @@
 <li>Made <code>paidAt</code> field of <code>Ask</code> class non-optional</li>
 </ul>
 <h2 id="053-20-07-2021"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.5.3">0.5.3</a> - 20-07-2021</h2>
-<h3 id="added_26">Added</h3>
+<h3 id="added_27">Added</h3>
 <ul>
 <li>Bitcoin network <code>privateMainnet</code> and <code>privateTestnet</code></li>
 </ul>
@@ -2886,7 +2895,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="added_27">Added</h3>
+<h3 id="added_28">Added</h3>
 <ul>
 <li><code>ConioError</code>:<ul>
 <li>INVALID_CRYPTO_PROOF,</li>
@@ -2895,7 +2904,7 @@
 </li>
 </ul>
 <h2 id="047-01-06-2021"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.4.7">0.4.7</a> - 01-06-2021</h2>
-<h3 id="added_28">Added</h3>
+<h3 id="added_29">Added</h3>
 <ul>
 <li>Aggiunta di <code>weightedBidBalance</code> alle <code>TradingInfo</code>: controvalore investito</li>
 </ul>
@@ -2904,12 +2913,12 @@
 <li>Modifica alle <code>TradingFees</code>: supporto fasce di commissioni</li>
 </ul>
 <h2 id="042-13-04-2021"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.4.2">0.4.2</a> - 13-04-2021</h2>
-<h3 id="added_29">Added</h3>
+<h3 id="added_30">Added</h3>
 <ul>
 <li>Rilascio versione 0.4.2</li>
 </ul>
 <h2 id="041-12-04-2021"><a href="https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk2/0.4.1">0.4.1</a> - 12-04-2021</h2>
-<h3 id="added_30">Added</h3>
+<h3 id="added_31">Added</h3>
 <ul>
 <li>Rilascio versione 0.4.1</li>
 </ul>
