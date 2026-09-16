@@ -49,6 +49,14 @@
 - `UserService.fetchLegalAcceptances` service migrated to the id-based acceptances model: each acceptance carries its `id`, the localized `title`, `body` and `url` and the mandatory flag; the result-level *T&C* and *privacy policies* urls and the acceptance type enum are removed
 - `UserService.acceptNewLegalAcceptances` and `UserService.signup` services now take id-based acceptance choices: `LegalAcceptance` is built with `makeAccepted(id:)` / `makeNotAccepted(id:)` and `LegalAcceptancesParams.makeAllAccepted(from:)` marks as accepted all the fetched acceptances
 
+## [2.4.2](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.2/) - 06-08-26
+
+### Added
+
+- **[originally applied in 2.6.0]** `Vasp.country` (ISO 3166-1 alpha-2): the sender's Vasp country, which can be specified when creating the wallet address in the address book and made available when retrieving the same wallet address. It must be provided in the receiving flow when the sender is a CASP/hosted platform and the received counter value is ≥ €4,999.50 (Travel Rule).
+- **[originally applied in 2.6.0]** `ConioError.invalidCountry`: error returned when creating the wallet address if the country does not match the *ISO 3166-1 alpha-2* standard.
+- **[originally applied in 2.6.0]** `ConioError.walletAddressInvalidParameters`: error returned on receive-to-address-book association if `Vasp.country` is requested, but is not present in the specified wallet-address.
+
 ## [2.4.1](https://bitbucket.org/squadrone/conio-sdk-b2b-ios/src/2.4.1/) - 27-07-26
 
 ### Fixed
@@ -336,6 +344,8 @@
 ### Added
 
 - **[originally applied in 2.6.0]** `Vasp.country` (ISO 3166-1 alpha-2): the sender's Vasp country, which can be specified when creating the wallet address in the address book and made available when retrieving the same wallet address. It must be provided in the receiving flow when the sender is a CASP/hosted platform and the received counter value is ≥ €4,999.50 (Travel Rule).
+- **[originally applied in 2.6.0]** `ConioError.invalidCountry`: error returned when creating the wallet address if the country does not match the *ISO 3166-1 alpha-2* standard.
+- **[originally applied in 2.6.0]** `ConioError.walletAddressInvalidParameters`: error returned on receive-to-address-book association if `Vasp.country` is requested, but is not present in the specified wallet-address.
 
 ## [2.4.0](https://artifactory.conio.com/artifactory/webapp/#/artifacts/browse/tree/General/gradle-release-local/com/conio/sdk-b2b/2.4.0/) - 07-07-26
 
