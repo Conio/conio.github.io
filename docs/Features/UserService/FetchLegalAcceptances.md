@@ -27,6 +27,9 @@ The `LegalAcceptancesResult.Acceptance` legal acceptance details.
 - body: the acceptance body text, when available
 - url: the acceptance document url, when available
 - is mandatory: indicates whether the acceptance is mandatory
+- tags: a list of tags identifying the category of the acceptance. The available values are:
+    - termsAndConditions: identifies the single terms and conditions document
+    - marketing: identifies marketing-related acceptances, such as enabling marketing messages and consenting to profiling
 
 ## Code
 
