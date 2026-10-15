@@ -90,6 +90,53 @@ conio.userService.getUserTc().asCallback { result in
 }
 ```
 
+## Accettazione delle nuove condizioni legali
+
+Questa operazione consente di inviare l'accettazione delle nuove condizioni legali e dei Termini e Condizioni da parte dell'utente. Le accettazioni da inviare vengono specificate tramite il parametro `AcceptNewLegalAcceptancesParams`, che contiene l'oggetto `Acceptances` con le scelte effettuate dall'utente. È inoltre possibile fornire le credenziali Conio tramite il parametro opzionale `credentials`.
+
+### Metodo
+
+`userService.acceptNewLegalAcceptances`
+
+### Parametri
+
+Un oggetto di tipo `AcceptNewLegalAcceptancesParams`, contenente:
+- `acceptances`: un oggetto di tipo `Acceptances` che descrive le accettazioni da inviare.
+- `credentials`: un oggetto opzionale di tipo `ConioCredentials`, utilizzato per fornire le credenziali Conio. Se non specificato, il valore predefinito è nil.
+
+### Risposta
+
+Un `ServiceConsumer<Void>` che consente di verificare l'esito dell'operazione. In caso di successo, l'operazione non restituisce alcun dato.
+
+### Codice
+
+#### Android
+
+```java
+AcceptNewLegalAcceptancesParams params = new AcceptNewLegalAcceptancesParams(acceptances, credentials);
+
+conio.userService.acceptNewLegalAcceptances(params)
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = AcceptNewLegalAcceptancesParams(acceptances: ..., credentials: ...)
+
+conio.userService.acceptNewLegalAcceptances().asCallback { result in
+    switch result {
+    case .success:
+        // Success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
 ## Autenticazione
 
 Per poter operare con il portafoglio Conio occorre essere autenticati. Se è la prima volta che l'utente usa il servizio ci si può autenticare con il metodo `userService.signup`, altrimenti con il metodo `userService.login`.
