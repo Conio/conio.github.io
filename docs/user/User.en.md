@@ -2,34 +2,34 @@
 
 ## Terms and conditions
 
-Using this operation you can retrieve the `Acceptances` (terms and conditions), T&C URL and Privacy Policy URL that the user has to accept during the signup.
+The returned `LegalAcceptancesResult` object contains a list of `Acceptance` objects, each representing a specific condition to be presented to the user. Each acceptance includes an identifier (id), a title (title), a descriptive text (body), an optional document URL (url), an indication of whether the acceptance is mandatory (isMandatory), and a list of tags (tags) identifying its type, such as Terms and Conditions or marketing-related conditions.
+
+The descriptive text and document URL may be absent. Tags make it possible to identify the nature of each condition without relying on a predefined acceptance type.
+
+### Method
+
+`userService.getLegalAcceptances`
 
 ### Parameters
 
-An object `LegalAcceptancesParams` with the language you want.
+An object of type `LegalAcceptancesParams` containing the reference language used to retrieve the acceptances and the URLs of the web pages to be displayed to the user.
 
 ### Returns
 
-A `LegalAcceptances` object containing `Acceptances`, the URL `Terms of service`, the URL `Privacy Policies` and the pre-contractual info URL.
-
-### Acceptances localization
-
-An `Acceptance` has 2 localization keys: one for the title and one for the content.
+A `LegalAcceptancesResult` object containing the list of `Acceptance` objects to be presented to the user. Each item includes an identifier, a title, an optional descriptive text, an optional document URL, an indication of whether the acceptance is mandatory, and the associated tags.
 
 ### Code
 
 #### Android
 
 ```java
-LegalAcceptancesParams params =
-    new LegalAcceptancesParams(Language.ITALIAN);
-conio.userService.getLegalAcceptances(params, result -> {
-    result.analysis(acceptances -> {
-        // LegalAcceptances
-    }, error -> {
-        // Exception
-    });
-});
+LegalAcceptancesParams params = new LegalAcceptancesParams(Language.ITALIAN);
+
+conio.userService.getLegalAcceptances(params)
+    .asCallback(result -> result.analysis(
+        acceptances -> { /* Handle LegalAcceptances */ },
+        error -> { /* Handle error */ }
+    ));
 ```
 
 #### iOS
@@ -37,12 +37,13 @@ conio.userService.getLegalAcceptances(params, result -> {
 ```swift
 let params = LegalAcceptancesParams(language: .italian)
 
-conio.userService.getLegalAcceptances(params: params) { result in
-    result.analysis(ifSuccess: { legalAcceptances in
+conio.userService.getLegalAcceptances(params: params).asCallback { result in
+    switch result {
+    case .success(let acceptances):
         // LegalAcceptances
-    }, ifFailure: { error in
-        // ServiceError
-    })
+    case .failure(let error):
+        // Operation Error
+    }
 }
 ```
 
