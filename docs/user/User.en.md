@@ -47,6 +47,49 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
 }
 ```
 
+## Terms and Conditions acceptances status
+
+This operation retrieves the status of the user's Terms and Conditions acceptances. The result contains a list of `Acceptance` objects, each identified by an ID and associated with a status indicating whether the condition still needs to be accepted, has been accepted, or has been rejected. For acceptances that have already been completed, the acceptance date (`acceptedAt`) may also be available.
+
+## Method
+
+`userService.getUserTc`
+
+## Response
+
+A `UserTcResult` object containing the list of `Acceptance` objects associated with the user. Each item includes:
+- `id`: the acceptance identifier.
+- `status`: the acceptance status, represented by one of the following values:
+    - `toAccept`: the condition still needs to be accepted.
+    - `accepted`: the condition has been accepted.
+    - `rejected`: the condition has been rejected.
+    - `acceptedAt`: the acceptance timestamp if available, otherwise nil.
+    
+### Code
+
+#### Android
+
+```java
+conio.userService.getUserTc()
+    .asCallback(result -> result.analysis(
+        userTc -> { /* Handle UserTc */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+conio.userService.getUserTc().asCallback { result in
+    switch result {
+    case .success(let userTc):
+        // UserTc
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
 ## Signup
 
 To use the wallet the user has to be authenticated. If it's the first time you can authenticate using the signup method, otherwise you have to use the login method.
