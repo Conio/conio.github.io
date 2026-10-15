@@ -47,6 +47,95 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
 }
 ```
 
+## Recupero dello stato dei termini e condizioni
+
+Questa operazione consente di recuperare lo stato delle accettazioni dei Termini e Condizioni dell'utente. Il risultato contiene una lista di `Acceptance`, ciascuna identificata da un ID e caratterizzata da uno stato che indica se la condizione deve ancora essere accettata, è stata accettata oppure è stata rifiutata. Per le accettazioni già effettuate, può essere disponibile anche la data di accettazione (`acceptedAt`).
+
+### Metodo
+
+`userService.getUserTc`
+
+### Risposta
+
+Un oggetto di tipo `UserTcResult`, contenente la lista delle `Acceptance` relative all'utente. Ogni elemento include:
+- `id`: identificativo dell'accettazione.
+- `status`: stato dell'accettazione, rappresentato da uno dei seguenti valori:
+    - `toAccept`: la condizione deve ancora essere accettata.
+    - `accepted`: la condizione è stata accettata.
+    - `rejected`: la condizione è stata rifiutata.
+    - `acceptedAt`: timestamp dell'accettazione se disponibile, altrimenti nil.
+
+### Codice
+
+#### Android
+
+```java
+conio.userService.getUserTc()
+    .asCallback(result -> result.analysis(
+        userTc -> { /* Handle UserTc */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+conio.userService.getUserTc().asCallback { result in
+    switch result {
+    case .success(let userTc):
+        // UserTc
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
+## Accettazione delle nuove condizioni legali
+
+Questa operazione consente di inviare l'accettazione delle nuove condizioni legali e dei Termini e Condizioni da parte dell'utente. Le accettazioni da inviare vengono specificate tramite il parametro `AcceptNewLegalAcceptancesParams`, che contiene l'oggetto `Acceptances` con le scelte effettuate dall'utente. È inoltre possibile fornire le credenziali Conio tramite il parametro opzionale `credentials`.
+
+### Metodo
+
+`userService.acceptNewLegalAcceptances`
+
+### Parametri
+
+Un oggetto di tipo `AcceptNewLegalAcceptancesParams`, contenente:
+- `acceptances`: un oggetto di tipo `Acceptances` che descrive le accettazioni da inviare.
+- `credentials`: un oggetto opzionale di tipo `ConioCredentials`, utilizzato per fornire le credenziali Conio. Se non specificato, il valore predefinito è nil.
+
+### Risposta
+
+Un `ServiceConsumer<Void>` che consente di verificare l'esito dell'operazione. In caso di successo, l'operazione non restituisce alcun dato.
+
+### Codice
+
+#### Android
+
+```java
+AcceptNewLegalAcceptancesParams params = new AcceptNewLegalAcceptancesParams(acceptances, credentials);
+
+conio.userService.acceptNewLegalAcceptances(params)
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = AcceptNewLegalAcceptancesParams(acceptances: ..., credentials: ...)
+
+conio.userService.acceptNewLegalAcceptances().asCallback { result in
+    switch result {
+    case .success:
+        // Success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
 
 ## Autenticazione
 
