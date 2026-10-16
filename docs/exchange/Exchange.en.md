@@ -501,3 +501,51 @@ conio.exchangeService.getAvailableTradingReports().asCallback { result in
     }
 }
 ```
+
+## Download a specific financial report
+
+This operation allows the user to request and download a financial report for a specific fiscal period. The period is specified through a `TradingReportPeriod` object, which identifies the fiscal year and, optionally, the relevant quarter.
+
+The request parameters are defined through the `YearlyReportParametable` protocol, which is implemented by the `FinancialReportParams` structure.
+
+### Method
+
+`exchangeService.financialReport`
+
+### Parameters
+
+An object conforming to the `YearlyReportParametable` protocol, such as `FinancialReportParams`, containing:
+- `period`: a `TradingReportPeriod` object identifying the reporting period to download, specifying the fiscal year and, optionally, the quarter.
+
+### Response
+
+A `ServiceConsumer<Data>` that allows the outcome of the operation to be read. Upon success, it returns the downloaded financial report data as a `Data` object.
+
+### Code
+
+#### Android
+
+```java
+FinancialReportParams params = new FinancialReportParams(period);
+
+conio.userService.financialReport(params)
+    .asCallback(result -> result.analysis(
+        data -> { /* Handle Data */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = FinancialReportParams(pediod: ...)
+
+conio.userService.financialReport(with: params).asCallback { result in
+    switch result {
+    case .success(let data):
+        // Handle Data
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
