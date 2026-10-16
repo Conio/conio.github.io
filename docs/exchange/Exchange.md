@@ -610,3 +610,49 @@ conio.exchangeService.createOrRefreshAsk(params: params).asCallback { result in
     }
 }
 ```
+
+## Recupero dei report finanziari disponibili
+
+Questa operazione consente di recuperare l'elenco dei periodi di riferimento per i report di trading disponibili per l'utente Conio. Ogni periodo è rappresentato da un oggetto `TradingReportPeriod`, che specifica l'anno fiscale e, facoltativamente, il trimestre di riferimento.
+
+Il campo `year` può essere nil quando il report si riferisce all'anno fiscale precedente, mentre il campo `quarter` può essere nil quando il report comprende l'intero anno fiscale. Se specificato, il trimestre identifica uno dei quattro periodi dell'anno: primo trimestre (`Q1`), secondo trimestre (`Q2`), terzo trimestre (`Q3`) o quarto trimestre (`Q4`).
+
+### Metodo
+
+`exchangeService.getAvailableTradingReports`
+
+### Risposta
+
+Un oggetto di tipo `AvailableTradingReportsResult`, contenente la lista `reportPeriods` dei periodi di riferimento disponibili. Ogni elemento è un oggetto `TradingReportPeriod` composto da:
+- `year`: l'anno fiscale del report, rappresentato da una stringa. È nil se il report si riferisce all'anno fiscale precedente.
+- `quarter`: il trimestre di riferimento, rappresentato da un valore dell'enumerazione `TradingReportPeriod.Quarter`. È nil se il report riguarda l'intero anno fiscale. I valori possibili per quarter sono:
+    - `q1`: primo trimestre, dal 1° gennaio al 31 marzo.
+    - `q2`: secondo trimestre, dal 1° aprile al 30 giugno.
+    - `q3`: terzo trimestre, dal 1° luglio al 30 settembre.
+    - `q4`: quarto trimestre, dal 1° ottobre al 31 dicembre.
+
+### Codice
+
+#### Android
+
+```java
+conio.exchangeService.getAvailableTradingReports()
+    .asCallback(result -> result.analysis(
+        availableTradingReports -> { /* Handle AvailableTradingReportsResult */ },
+        error -> { /* ... */ }
+    ));
+```
+
+
+#### iOS
+
+```swift
+conio.exchangeService.getAvailableTradingReports().asCallback { result in
+    switch result {
+    case .success(let availableTradingReports):
+        // Handle AvailableTradingReportsResult
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```

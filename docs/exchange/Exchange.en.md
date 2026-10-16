@@ -455,3 +455,49 @@ conio.exchangeService.sell(params: params) { result in
     })
 });
 ```
+
+## Get available trading reports
+
+This operation retrieves the list of trading report periods available for the Conio user. Each period is represented by a `TradingReportPeriod` object, which specifies the fiscal year and, optionally, the relevant quarter.
+
+The `year` field may be nil when the report refers to the previous fiscal year, while the `quarter` field may be nil when the report covers the entire fiscal year. If specified, the quarter identifies one of the four periods of the year: first quarter (`Q1`), second quarter (`Q2`), third quarter (`Q3`), or fourth quarter (`Q4`).
+
+### Method
+
+`exchangeService.getAvailableTradingReports`
+
+### Response
+
+An object of type `AvailableTradingReportsResult`, containing the reportPeriods list of available reporting periods. Each item is a `TradingReportPeriod` object consisting of:
+- `year`: the fiscal year of the report, represented as a string. It is nil if the report refers to the previous fiscal year.
+- `quarter`: the reporting quarter, represented by a value of the TradingReportPeriod.Quarter enumeration. It is nil if the report covers the entire fiscal year. The possible values for quarter are:
+    - `q1`: first quarter, from January 1 to March 31.
+    - `q2`: second quarter, from April 1 to June 30.
+    - `q3`: third quarter, from July 1 to September 30.
+    - `q4`: fourth quarter, from October 1 to December 31.
+
+### Code
+
+#### Android
+
+```java
+conio.exchangeService.getAvailableTradingReports()
+    .asCallback(result -> result.analysis(
+        availableTradingReports -> { /* Handle AvailableTradingReportsResult */ },
+        error -> { /* ... */ }
+    ));
+```
+
+
+#### iOS
+
+```swift
+conio.exchangeService.getAvailableTradingReports().asCallback { result in
+    switch result {
+    case .success(let availableTradingReports):
+        // Handle AvailableTradingReportsResult
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
