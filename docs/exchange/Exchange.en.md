@@ -549,3 +549,51 @@ conio.userService.financialReport(with: params).asCallback { result in
     }
 }
 ```
+
+## Send a specific financial report by email
+
+This operation allows the user to request the sending of a financial report for a specific fiscal period. The period is specified through a `TradingReportPeriod` object, which identifies the fiscal year and, optionally, the relevant quarter.
+
+The request parameters are defined through the `SendYearlyReportParametable` protocol, which is implemented by the `SendFinancialReportParams` structure.
+
+### Method
+
+`exchangeService.sendFinancialReport`
+
+### Parameters
+
+An object conforming to the `SendYearlyReportParametable` protocol, such as `SendFinancialReportParams`, containing:
+- `period`: a `TradingReportPeriod` object identifying the fiscal period of the report to be sent, specifying the fiscal year and, optionally, the quarter.
+
+### Response
+
+A `ServiceConsumer<Void>` that allows the outcome of the financial report sending operation to be checked. Upon success, the operation does not return any data.
+
+### Code
+
+#### Android
+
+```java
+SendFinancialReportParams params = new SendFinancialReportParams(period);
+
+conio.userService.sendFinancialReport(params)
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = SendFinancialReportParams(pediod: ...)
+
+conio.userService.sendFinancialReport(with: params).asCallback { result in
+    switch result {
+    case .success:
+        // Handle success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
