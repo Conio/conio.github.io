@@ -428,3 +428,50 @@ conio.walletService.readMnemonic().asCallback { result in
     }
 }
 ```
+
+## Download dell'esportazione dei movimenti
+
+Questa operazione consente di scaricare un report delle attività del wallet, ovvero dei movimenti effettuati, relativo a uno specifico intervallo temporale. Il periodo da utilizzare per l'esportazione viene specificato tramite un oggetto `TimeFrame`.
+
+### Metodo
+
+`walletService.fetchActivitiesReport`
+
+### Parametri
+
+Un oggetto di tipo `FetchActivitiesReportParams`, contenente:
+- `timeFrame`: un oggetto di tipo `TimeFrame` che definisce l'intervallo temporale per il quale esportare le attività del wallet.
+
+### Risposta
+
+Un oggetto di tipo `FetchActivitiesReportResult`, contenente:
+- `fileData`: i dati del file del report delle attività scaricato, rappresentati come `Data`.
+
+### Codice
+
+#### Android
+
+```java
+FetchActivitiesReportParams params = new FetchActivitiesReportParams(timeFrame);
+
+conio.walletService.fetchActivitiesReport()
+    .asCallback(result -> result.analysis(
+        fetchActivitiesReport -> { /* Handle FetchActivitiesReportResult */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = FetchActivitiesReportParams(timeFrame: ...)
+
+conio.walletService.fetchActivitiesReport().asCallback { result in
+    switch result {
+    case .success(let fetchActivitiesReport):
+        // Handle FetchActivitiesReportResult
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
