@@ -571,3 +571,49 @@ conio.walletService.fetchActivitiesReport().asCallback { result in
     }
 }
 ```
+
+## Send an export of wallet activities by email
+
+This operation allows the user to send an export of wallet activities, including transactions and other movements, via email for a specific time frame. The period to be used for the export is specified through a `TimeFrame` object.
+
+### Method
+
+`walletService.sendActivitiesReport`
+
+### Parameters
+
+An object of type `SendActivitiesReportParams`, containing:
+- `timeFrame`: a `TimeFrame` object defining the time frame for which wallet activities should be exported.
+
+### Response
+
+A `ServiceConsumer<Void>` that allows the outcome of the email delivery operation to be checked. Upon success, the operation does not return any data.
+
+### Code
+
+#### Android
+
+```java
+SendActivitiesReportParams params = new SendActivitiesReportParams(timeFrame);
+
+conio.walletService.sendActivitiesReport()
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = SendActivitiesReportParams(timeFrame: ...)
+
+conio.walletService.sendActivitiesReport().asCallback { result in
+    switch result {
+    case .success:
+        // Handle success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
