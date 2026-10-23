@@ -2,8 +2,9 @@
 
 ## [Recupero dei termini di servizio](recupero-dei-termini-di-servizio)
 
-Questa operazione consente di recuperare le `LegalAcceptances`, ovvero le condizioni che l'utente potrà/dovrà accettare in fase di signup (scelte che, durante l'[operazione signup](#signup), dovranno essere descritte tramite la classe `Acceptances`).
-L'oggetto `LegalAcceptances` recuperato conterrà gli url per mostrare le pagine dei Termini di Servizio e Privacy Policies di Conio e il dettaglio delle *acceptances* (`AcceptanceDetail`) che l'utente dovrà o meno accettare.
+L'oggetto `LegalAcceptancesResult` restituito contiene una lista di `Acceptance`, ciascuna delle quali rappresenta una specifica condizione da presentare all'utente. Per ogni acceptance sono disponibili un identificativo (id), un titolo (title), un testo descrittivo (body), un eventuale URL del documento (url), l'indicazione se l'accettazione è obbligatoria (isMandatory) e una lista di tag (tags) che ne identificano la tipologia, ad esempio i Termini e Condizioni o le condizioni relative al marketing.
+
+Il testo descrittivo e l'URL del documento possono essere assenti. I tag consentono di riconoscere la natura delle singole condizioni senza fare affidamento su un tipo di acceptance predefinito.
 
 ### Metodo
 
@@ -15,7 +16,7 @@ Un oggetto di tipo `LegalAcceptancesParams` contenente la lingua di riferimento 
 
 ### Risposta
 
-Un oggetto di tipo `LegalAcceptances` contenente la lista degli `AcceptanceDetail`, url dei *Termini di Servizio*, url relativo alle *Privacy Policies* e url relativo alle condizioni pre contrattuali.
+Un oggetto di tipo `LegalAcceptancesResult`, contenente la lista delle `Acceptance` da presentare all'utente. Ogni elemento include l'identificativo, il titolo, il testo descrittivo opzionale, l'eventuale URL del documento, l'indicazione di obbligatorietà e i tag associati.
 
 ### Codice
 
@@ -36,7 +37,7 @@ conio.userService.getLegalAcceptances(params)
 ```swift
 let params = LegalAcceptancesParams(language: .italian)
 
-conio.userService.signup(params: params).asCallback { result in
+conio.userService.getLegalAcceptances(params: params).asCallback { result in
     switch result {
     case .success(let acceptances):
         // LegalAcceptances
