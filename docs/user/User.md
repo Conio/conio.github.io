@@ -49,7 +49,8 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
 
 ## Recupero dello stato dei termini e condizioni
 
-Questa operazione consente di recuperare lo stato delle accettazioni dei Termini e Condizioni dell'utente. Il risultato contiene una lista di `Acceptance`, ciascuna identificata da un ID e caratterizzata da uno stato che indica se la condizione deve ancora essere accettata, è stata accettata oppure è stata rifiutata. Per le accettazioni già effettuate, può essere disponibile anche la data di accettazione (`acceptedAt`).
+Questa operazione consente di recuperare lo stato delle accettazioni dei Termini e Condizioni dell'utente. Il risultato contiene una lista di `Acceptance`, ciascuna identificata da un ID e caratterizzata da uno stato che indica se la condizione deve ancora essere accettata, è stata accettata oppure è stata rifiutata. 
+Un'accettazione può subire modifiche che richiedono all'utente di accettarla nuovamente. In questo caso, il suo stato torna a `toAccept`, mentre `acceptedAt` continua a riportare il timestamp dell'ultima accettazione effettuata dall'utente.
 
 ### Metodo
 
@@ -63,7 +64,7 @@ Un oggetto di tipo `UserTcResult`, contenente la lista delle `Acceptance` relati
     - `toAccept`: la condizione deve ancora essere accettata.
     - `accepted`: la condizione è stata accettata.
     - `rejected`: la condizione è stata rifiutata.
-    - `acceptedAt`: timestamp dell'accettazione se disponibile, altrimenti nil.
+- `acceptedAt`: timestamp dell'ultima accettazione effettuata dall'utente, se disponibile, altrimenti nil. Il valore rimane popolato anche se successive modifiche alla condizione riportano lo stato a `toAccept`.
 
 ### Codice
 
@@ -92,7 +93,7 @@ conio.userService.getUserTc().asCallback { result in
 
 ## Accettazione delle nuove condizioni legali
 
-Questa operazione consente di inviare l'accettazione delle nuove condizioni legali e dei Termini e Condizioni da parte dell'utente. Le accettazioni da inviare vengono specificate tramite il parametro `AcceptNewLegalAcceptancesParams`, che contiene l'oggetto `Acceptances` con le scelte effettuate dall'utente. È inoltre possibile fornire le credenziali Conio tramite il parametro opzionale `credentials`.
+Questa operazione consente di inviare l'accettazione delle nuove condizioni legali e dei Termini e Condizioni da parte dell'utente. Le accettazioni da inviare vengono specificate tramite il parametro `AcceptNewLegalAcceptancesParams`, che contiene l'oggetto `Acceptances` con le scelte effettuate dall'utente. Le credenziali Conio sono necessarie per aggiornare la sessione dell'utente.
 
 ### Metodo
 
@@ -102,11 +103,11 @@ Questa operazione consente di inviare l'accettazione delle nuove condizioni lega
 
 Un oggetto di tipo `AcceptNewLegalAcceptancesParams`, contenente:
 - `acceptances`: un oggetto di tipo `Acceptances` che descrive le accettazioni da inviare.
-- `credentials`: un oggetto opzionale di tipo `ConioCredentials`, utilizzato per fornire le credenziali Conio. Se non specificato, il valore predefinito è nil.
+- `credentials`: un oggetto di tipo `ConioCredentials`, contenente le credenziali necessarie per aggiornare la sessione dell'utente.
 
 ### Risposta
 
-Un `ServiceConsumer<Void>` che consente di verificare l'esito dell'operazione. In caso di successo, l'operazione non restituisce alcun dato.
+Un `ServiceConsumer<Void>` che consente di verificare l'esito dell'operazione. In caso di successo, l'operazione non restituisce alcun dato e la sessione dell'utente viene aggiornata.
 
 ### Codice
 

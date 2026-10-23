@@ -49,7 +49,8 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
 
 ## Terms and Conditions acceptances status
 
-This operation retrieves the status of the user's Terms and Conditions acceptances. The result contains a list of `Acceptance` objects, each identified by an ID and associated with a status indicating whether the condition still needs to be accepted, has been accepted, or has been rejected. For acceptances that have already been completed, the acceptance date (`acceptedAt`) may also be available.
+This operation retrieves the status of the user's Terms and Conditions acceptances. The result contains a list of `Acceptance` objects, each identified by an ID and associated with a status indicating whether the condition still needs to be accepted, has been accepted, or has been rejected.
+An acceptance may be modified in a way that requires the user to accept it again. In this case, its status returns to `toAccept`, while acceptedAt continues to hold the timestamp of the user's most recent acceptance.
 
 ## Method
 
@@ -63,7 +64,7 @@ A `UserTcResult` object containing the list of `Acceptance` objects associated w
     - `toAccept`: the condition still needs to be accepted.
     - `accepted`: the condition has been accepted.
     - `rejected`: the condition has been rejected.
-    - `acceptedAt`: the acceptance timestamp if available, otherwise nil.
+- `acceptedAt`: the acceptance of the user's most recent acceptance if available, otherwise nil. The value remains populated even if subsequent changes to the condition cause its status to return to `toAccept`.
     
 ### Code
 
@@ -92,7 +93,7 @@ conio.userService.getUserTc().asCallback { result in
 
 ## Accept New Legal Acceptances
 
-This operation submits the user's acceptance of new legal terms and Terms and Conditions. The acceptances to be submitted are specified through the `AcceptNewLegalAcceptancesParams` parameter, which contains the `Acceptances` object representing the user's choices. Conio credentials can also be provided through the optional credentials parameter.
+This operation submits the user's acceptance of new legal terms and Terms and Conditions. The acceptances to be submitted are specified through the `AcceptNewLegalAcceptancesParams` parameter, which contains the `Acceptances` object representing the user's choices. Conio credentials are required to update the user's session.
 
 ### Method
 
@@ -102,11 +103,11 @@ This operation submits the user's acceptance of new legal terms and Terms and Co
 
 An object of type `AcceptNewLegalAcceptancesParams`, containing:
 - `acceptances`: an object of type `Acceptances` describing the acceptances to be submitted.
-- `credentials`: an optional object of type `ConioCredentials`, used to provide Conio credentials. If not specified, the default value is nil.
+- `credentials`: a `ConioCredentials` object containing the credentials required to update the user's session.
 
 ### Response
 
-A `ServiceConsumer<Void>` that allows the outcome of the operation to be checked. If the operation succeeds, no data is returned.
+A `ServiceConsumer<Void>` that allows the outcome of the operation to be checked. If the operation succeeds, no data is returned, and the user's session is updated.
 
 ### Code
 
