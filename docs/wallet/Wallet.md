@@ -428,3 +428,96 @@ conio.walletService.readMnemonic().asCallback { result in
     }
 }
 ```
+
+## Download dell'esportazione dei movimenti
+
+Questa operazione consente di scaricare un report delle attività del wallet, ovvero dei movimenti effettuati, relativo a uno specifico intervallo temporale. Il periodo da utilizzare per l'esportazione viene specificato tramite un oggetto `TimeFrame`.
+
+### Metodo
+
+`walletService.fetchActivitiesReport`
+
+### Parametri
+
+Un oggetto di tipo `FetchActivitiesReportParams`, contenente:
+- `timeFrame`: un oggetto di tipo `TimeFrame` che definisce l'intervallo temporale per il quale esportare le attività del wallet.
+
+### Risposta
+
+Un oggetto di tipo `FetchActivitiesReportResult`, contenente:
+- `fileData`: i dati del file del report delle attività scaricato.
+
+### Codice
+
+#### Android
+
+```java
+FetchActivitiesReportParams params = new FetchActivitiesReportParams(timeFrame);
+
+conio.walletService.fetchActivitiesReport()
+    .asCallback(result -> result.analysis(
+        fetchActivitiesReport -> { /* Handle FetchActivitiesReportResult */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = FetchActivitiesReportParams(timeFrame: ...)
+
+conio.walletService.fetchActivitiesReport().asCallback { result in
+    switch result {
+    case .success(let fetchActivitiesReport):
+        // Handle FetchActivitiesReportResult
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
+## Invio via email dell'esportazione dei movimenti
+
+Questa operazione consente di inviare via email un report delle attività del wallet, ovvero dei movimenti effettuati, relativo a uno specifico intervallo temporale. Il periodo da utilizzare per l'esportazione viene specificato tramite un oggetto `TimeFrame`.
+
+### Metodo
+
+`walletService.sendActivitiesReport`
+
+### Parametri
+
+Un oggetto di tipo `SendActivitiesReportParams`, contenente:
+- `timeFrame`: un oggetto di tipo `TimeFrame` che definisce l'intervallo temporale per il quale esportare le attività del wallet.
+
+### Risposta
+
+Un `ServiceConsumer<Void>` che consente di verificare l'esito dell'operazione di invio del report via email. In caso di successo, l'operazione non restituisce alcun dato.
+
+### Codice
+
+#### Android
+
+```java
+SendActivitiesReportParams params = new SendActivitiesReportParams(timeFrame);
+
+conio.walletService.sendActivitiesReport()
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = SendActivitiesReportParams(timeFrame: ...)
+
+conio.walletService.sendActivitiesReport().asCallback { result in
+    switch result {
+    case .success:
+        // Handle success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
