@@ -47,6 +47,97 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
 }
 ```
 
+## Terms and Conditions acceptances status
+
+This operation retrieves the status of the user's Terms and Conditions acceptances. The result contains a list of `Acceptance` objects, each identified by an ID and associated with a status indicating whether the condition still needs to be accepted, has been accepted, or has been rejected.
+An acceptance may be modified in a way that requires the user to accept it again. In this case, its status returns to `toAccept`, while acceptedAt continues to hold the timestamp of the user's most recent acceptance.
+
+## Method
+
+`userService.getUserTc`
+
+## Response
+
+A `UserTcResult` object containing the list of `Acceptance` objects associated with the user. Each item includes:
+- `id`: the acceptance identifier.
+- `status`: the acceptance status, represented by one of the following values:
+    - `toAccept`: the condition still needs to be accepted.
+    - `accepted`: the condition has been accepted.
+    - `rejected`: the condition has been rejected.
+- `acceptedAt`: the acceptance of the user's most recent acceptance if available, otherwise nil. The value remains populated even if subsequent changes to the condition cause its status to return to `toAccept`.
+    
+### Code
+
+#### Android
+
+```java
+conio.userService.getUserTc()
+    .asCallback(result -> result.analysis(
+        userTc -> { /* Handle UserTc */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+conio.userService.getUserTc().asCallback { result in
+    switch result {
+    case .success(let userTc):
+        // UserTc
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
+## Accept New Legal Acceptances
+
+This operation submits the user's acceptance of new legal terms and Terms and Conditions. The acceptances to be submitted are specified through the `AcceptNewLegalAcceptancesParams` parameter, which contains the `Acceptances` object representing the user's choices. Conio credentials are required to update the user's session.
+
+### Method
+
+`userService.acceptNewLegalAcceptances`
+
+### Parameters
+
+An object of type `AcceptNewLegalAcceptancesParams`, containing:
+- `acceptances`: an object of type `Acceptances` describing the acceptances to be submitted.
+- `credentials`: a `ConioCredentials` object containing the credentials required to update the user's session.
+
+### Response
+
+A `ServiceConsumer<Void>` that allows the outcome of the operation to be checked. If the operation succeeds, no data is returned, and the user's session is updated.
+
+### Code
+
+#### Android
+
+```java
+AcceptNewLegalAcceptancesParams params = new AcceptNewLegalAcceptancesParams(acceptances, credentials);
+
+conio.userService.acceptNewLegalAcceptances(params)
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = AcceptNewLegalAcceptancesParams(acceptances: ..., credentials: ...)
+
+conio.userService.acceptNewLegalAcceptances().asCallback { result in
+    switch result {
+    case .success:
+        // Success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
 ## Signup
 
 To use the wallet the user has to be authenticated. If it's the first time you can authenticate using the signup method, otherwise you have to use the login method.
@@ -241,6 +332,12 @@ An object, called `Login` on iOS or `UserLogin` on Android, containing:
 ### Returns
 
 An `Acceptances` object with the T&C that the user accepted on signup.
+
+### Errors
+
+- [Unauthorized](../operation/Operation.md#Non-autorizzato)
+- `acceptTc`: indicates that there are updates to the terms and conditions that the user must review and accept
+
 ### Code
 
 #### Android

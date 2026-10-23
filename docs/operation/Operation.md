@@ -62,6 +62,8 @@ case onCryptography
 case onStorage
 // OAuth flow error: unable to retrieve and/or refresh access token
 case unauthorized
+// New T&C to accept
+case acceptTc
 // TBD
 case appImprovementAcceptanceNotAccepted
 // TBD
@@ -140,6 +142,8 @@ sealed class ConioException : Exception {
     class OnStorage : ConioException
     // OAuth flow error: unable to retrieve and/or refresh access token
     class Unauthorized : ConioException
+    // New T&C to accept
+    class AcceptTc : ConioException
     // Conio SDK version is outdated
     class OutdatedSdk : ConioException
     // Server is under maintenance
