@@ -248,6 +248,7 @@ Un oggetto di tipo `Success` che indica che l'utente è stato autenticato.
 ### Errori
 
 - [Non autorizzato](../operation/Operation.md#Non-autorizzato)
+- `acceptTc`: indica che ci sono aggiornamenti sulle accettazioni che l'utente deve visionare ed accettare
 
 ### Codice
 

@@ -332,6 +332,12 @@ An object, called `Login` on iOS or `UserLogin` on Android, containing:
 ### Returns
 
 An `Acceptances` object with the T&C that the user accepted on signup.
+
+### Errors
+
+- [Unauthorized](../operation/Operation.md#Non-autorizzato)
+- `acceptTc`: indicates that there are updates to the terms and conditions that the user must review and accept
+
 ### Code
 
 #### Android
