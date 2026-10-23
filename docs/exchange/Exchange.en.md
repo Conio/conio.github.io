@@ -519,7 +519,7 @@ An object conforming to the `YearlyReportParametable` protocol, such as `Financi
 
 ### Response
 
-A `ServiceConsumer<Data>` that allows the outcome of the operation to be read. Upon success, it returns the downloaded financial report data as a `Data` object.
+A `ServiceConsumer` that allows for the retrieval of the downloaded PDF.
 
 ### Code
 
@@ -554,7 +554,7 @@ conio.userService.financialReport(with: params).asCallback { result in
 
 This operation allows the user to request the sending of a financial report for a specific fiscal period. The period is specified through a `TradingReportPeriod` object, which identifies the fiscal year and, optionally, the relevant quarter.
 
-The request parameters are defined through the `SendYearlyReportParametable` protocol, which is implemented by the `SendFinancialReportParams` structure.
+The request parameters are defined through the `SendFinancialReportParams` structure.
 
 ### Method
 
@@ -562,7 +562,7 @@ The request parameters are defined through the `SendYearlyReportParametable` pro
 
 ### Parameters
 
-An object conforming to the `SendYearlyReportParametable` protocol, such as `SendFinancialReportParams`, containing:
+An object of type `SendFinancialReportParams`, containing:
 - `period`: a `TradingReportPeriod` object identifying the fiscal period of the report to be sent, specifying the fiscal year and, optionally, the quarter.
 
 ### Response

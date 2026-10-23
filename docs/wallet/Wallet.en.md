@@ -541,7 +541,7 @@ An object of type `FetchActivitiesReportParams`, containing:
 ### Response
 
 An object of type `FetchActivitiesReportResult`, containing:
-- `fileData`: the downloaded activities report file data, represented as `Data`.
+- `fileData`: the downloaded activities report file data.
 
 ### Code
 

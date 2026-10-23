@@ -445,7 +445,7 @@ Un oggetto di tipo `FetchActivitiesReportParams`, contenente:
 ### Risposta
 
 Un oggetto di tipo `FetchActivitiesReportResult`, contenente:
-- `fileData`: i dati del file del report delle attività scaricato, rappresentati come `Data`.
+- `fileData`: i dati del file del report delle attività scaricato.
 
 ### Codice
 
