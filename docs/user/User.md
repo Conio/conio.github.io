@@ -47,6 +47,96 @@ conio.userService.getLegalAcceptances(params: params).asCallback { result in
 }
 ```
 
+## Recupero dello stato dei termini e condizioni
+
+Questa operazione consente di recuperare lo stato delle accettazioni dei Termini e Condizioni dell'utente. Il risultato contiene una lista di `Acceptance`, ciascuna identificata da un ID e caratterizzata da uno stato che indica se la condizione deve ancora essere accettata, è stata accettata oppure è stata rifiutata. 
+Un'accettazione può subire modifiche che richiedono all'utente di accettarla nuovamente. In questo caso, il suo stato torna a `toAccept`, mentre `acceptedAt` continua a riportare il timestamp dell'ultima accettazione effettuata dall'utente.
+
+### Metodo
+
+`userService.getUserTc`
+
+### Risposta
+
+Un oggetto di tipo `UserTcResult`, contenente la lista delle `Acceptance` relative all'utente. Ogni elemento include:
+- `id`: identificativo dell'accettazione.
+- `status`: stato dell'accettazione, rappresentato da uno dei seguenti valori:
+    - `toAccept`: la condizione deve ancora essere accettata.
+    - `accepted`: la condizione è stata accettata.
+    - `rejected`: la condizione è stata rifiutata.
+- `acceptedAt`: timestamp dell'ultima accettazione effettuata dall'utente, se disponibile, altrimenti nil. Il valore rimane popolato anche se successive modifiche alla condizione riportano lo stato a `toAccept`.
+
+### Codice
+
+#### Android
+
+```java
+conio.userService.getUserTc()
+    .asCallback(result -> result.analysis(
+        userTc -> { /* Handle UserTc */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+conio.userService.getUserTc().asCallback { result in
+    switch result {
+    case .success(let userTc):
+        // UserTc
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
+## Accettazione delle nuove condizioni legali
+
+Questa operazione consente di inviare l'accettazione delle nuove condizioni legali e dei Termini e Condizioni da parte dell'utente. Le accettazioni da inviare vengono specificate tramite il parametro `AcceptNewLegalAcceptancesParams`, che contiene l'oggetto `Acceptances` con le scelte effettuate dall'utente. Le credenziali Conio sono necessarie per aggiornare la sessione dell'utente.
+
+### Metodo
+
+`userService.acceptNewLegalAcceptances`
+
+### Parametri
+
+Un oggetto di tipo `AcceptNewLegalAcceptancesParams`, contenente:
+- `acceptances`: un oggetto di tipo `Acceptances` che descrive le accettazioni da inviare.
+- `credentials`: un oggetto di tipo `ConioCredentials`, contenente le credenziali necessarie per aggiornare la sessione dell'utente.
+
+### Risposta
+
+Un `ServiceConsumer<Void>` che consente di verificare l'esito dell'operazione. In caso di successo, l'operazione non restituisce alcun dato e la sessione dell'utente viene aggiornata.
+
+### Codice
+
+#### Android
+
+```java
+AcceptNewLegalAcceptancesParams params = new AcceptNewLegalAcceptancesParams(acceptances, credentials);
+
+conio.userService.acceptNewLegalAcceptances(params)
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* Handle error */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = AcceptNewLegalAcceptancesParams(acceptances: ..., credentials: ...)
+
+conio.userService.acceptNewLegalAcceptances().asCallback { result in
+    switch result {
+    case .success:
+        // Success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
 
 ## Autenticazione
 
@@ -158,6 +248,7 @@ Un oggetto di tipo `Success` che indica che l'utente è stato autenticato.
 ### Errori
 
 - [Non autorizzato](../operation/Operation.md#Non-autorizzato)
+- `acceptTc`: indica che ci sono aggiornamenti sulle accettazioni che l'utente deve visionare ed accettare
 
 ### Codice
 
