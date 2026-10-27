@@ -455,3 +455,145 @@ conio.exchangeService.sell(params: params) { result in
     })
 });
 ```
+
+## Get available trading reports
+
+This operation retrieves the list of trading report periods available for the Conio user. Each period is represented by a `TradingReportPeriod` object, which specifies the fiscal year and, optionally, the relevant quarter.
+
+The `year` field may be nil when the report refers to the previous fiscal year, while the `quarter` field may be nil when the report covers the entire fiscal year. If specified, the quarter identifies one of the four periods of the year: first quarter (`Q1`), second quarter (`Q2`), third quarter (`Q3`), or fourth quarter (`Q4`).
+
+### Method
+
+`exchangeService.getAvailableTradingReports`
+
+### Response
+
+An object of type `AvailableTradingReportsResult`, containing the reportPeriods list of available reporting periods. Each item is a `TradingReportPeriod` object consisting of:
+- `year`: the fiscal year of the report, represented as a string. It is nil if the report refers to the previous fiscal year.
+- `quarter`: the reporting quarter, represented by a value of the TradingReportPeriod.Quarter enumeration. It is nil if the report covers the entire fiscal year. The possible values for quarter are:
+    - `q1`: first quarter, from January 1 to March 31.
+    - `q2`: second quarter, from April 1 to June 30.
+    - `q3`: third quarter, from July 1 to September 30.
+    - `q4`: fourth quarter, from October 1 to December 31.
+
+### Code
+
+#### Android
+
+```java
+conio.exchangeService.getAvailableTradingReports()
+    .asCallback(result -> result.analysis(
+        availableTradingReports -> { /* Handle AvailableTradingReportsResult */ },
+        error -> { /* ... */ }
+    ));
+```
+
+
+#### iOS
+
+```swift
+conio.exchangeService.getAvailableTradingReports().asCallback { result in
+    switch result {
+    case .success(let availableTradingReports):
+        // Handle AvailableTradingReportsResult
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
+## Download a specific financial report
+
+This operation allows the user to request and download a financial report for a specific fiscal period. The period is specified through a `TradingReportPeriod` object, which identifies the fiscal year and, optionally, the relevant quarter.
+
+The request parameters are defined through the `YearlyReportParametable` protocol, which is implemented by the `FinancialReportParams` structure.
+
+### Method
+
+`exchangeService.financialReport`
+
+### Parameters
+
+An object conforming to the `YearlyReportParametable` protocol, such as `FinancialReportParams`, containing:
+- `period`: a `TradingReportPeriod` object identifying the reporting period to download, specifying the fiscal year and, optionally, the quarter.
+
+### Response
+
+A `ServiceConsumer` that allows for the retrieval of the downloaded PDF.
+
+### Code
+
+#### Android
+
+```java
+FinancialReportParams params = new FinancialReportParams(period);
+
+conio.userService.financialReport(params)
+    .asCallback(result -> result.analysis(
+        data -> { /* Handle Data */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = FinancialReportParams(pediod: ...)
+
+conio.userService.financialReport(with: params).asCallback { result in
+    switch result {
+    case .success(let data):
+        // Handle Data
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
+## Send a specific financial report by email
+
+This operation allows the user to request the sending of a financial report for a specific fiscal period. The period is specified through a `TradingReportPeriod` object, which identifies the fiscal year and, optionally, the relevant quarter.
+
+The request parameters are defined through the `SendFinancialReportParams` structure.
+
+### Method
+
+`exchangeService.sendFinancialReport`
+
+### Parameters
+
+An object of type `SendFinancialReportParams`, containing:
+- `period`: a `TradingReportPeriod` object identifying the fiscal period of the report to be sent, specifying the fiscal year and, optionally, the quarter.
+
+### Response
+
+A `ServiceConsumer<Void>` that allows the outcome of the financial report sending operation to be checked. Upon success, the operation does not return any data.
+
+### Code
+
+#### Android
+
+```java
+SendFinancialReportParams params = new SendFinancialReportParams(period);
+
+conio.userService.sendFinancialReport(params)
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = SendFinancialReportParams(pediod: ...)
+
+conio.userService.sendFinancialReport(with: params).asCallback { result in
+    switch result {
+    case .success:
+        // Handle success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```

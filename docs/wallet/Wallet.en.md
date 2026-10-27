@@ -524,3 +524,96 @@ conio.walletService.readMnemonic { result in
     })
 }
 ```
+
+## Downloads an export of the wallet activities
+
+This operation allows the user to download a report of wallet activities, including transactions and other movements, for a specific time frame. The period to be used for the export is specified through a `TimeFrame` object.
+
+### Method
+
+`walletService.fetchActivitiesReport`
+
+### Parameters
+
+An object of type `FetchActivitiesReportParams`, containing:
+- `timeFrame`: a `TimeFrame` object defining the time frame for which wallet activities should be exported.
+
+### Response
+
+An object of type `FetchActivitiesReportResult`, containing:
+- `fileData`: the downloaded activities report file data.
+
+### Code
+
+#### Android
+
+```java
+FetchActivitiesReportParams params = new FetchActivitiesReportParams(timeFrame);
+
+conio.walletService.fetchActivitiesReport()
+    .asCallback(result -> result.analysis(
+        fetchActivitiesReport -> { /* Handle FetchActivitiesReportResult */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = FetchActivitiesReportParams(timeFrame: ...)
+
+conio.walletService.fetchActivitiesReport().asCallback { result in
+    switch result {
+    case .success(let fetchActivitiesReport):
+        // Handle FetchActivitiesReportResult
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
+
+## Send an export of wallet activities by email
+
+This operation allows the user to send an export of wallet activities, including transactions and other movements, via email for a specific time frame. The period to be used for the export is specified through a `TimeFrame` object.
+
+### Method
+
+`walletService.sendActivitiesReport`
+
+### Parameters
+
+An object of type `SendActivitiesReportParams`, containing:
+- `timeFrame`: a `TimeFrame` object defining the time frame for which wallet activities should be exported.
+
+### Response
+
+A `ServiceConsumer<Void>` that allows the outcome of the email delivery operation to be checked. Upon success, the operation does not return any data.
+
+### Code
+
+#### Android
+
+```java
+SendActivitiesReportParams params = new SendActivitiesReportParams(timeFrame);
+
+conio.walletService.sendActivitiesReport()
+    .asCallback(result -> result.analysis(
+        success -> { /* Handle success */ },
+        error -> { /* ... */ }
+    ));
+```
+
+#### iOS
+
+```swift
+let params = SendActivitiesReportParams(timeFrame: ...)
+
+conio.walletService.sendActivitiesReport().asCallback { result in
+    switch result {
+    case .success:
+        // Handle success
+    case .failure(let error):
+        // Operation Error
+    }
+}
+```
